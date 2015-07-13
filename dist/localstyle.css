@@ -1,0 +1,125 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 2, 2015, 4:58:09 PM
+    Author     : YE
+*/
+
+.login-icon{
+	height: 400px;
+	width: 300px;
+	padding: 0px;
+	margin: 0px;
+}
+
+.box{
+	padding: 3px;
+	border: 3px #e38d13 solid
+	
+}
+
+.test-top{
+	padding: 0px;
+	background-color: #e2e2e2;
+}
+
+.left{
+	padding: 6px;
+	text-align: left;
+}
+
+.right{
+	padding: 6px;
+	text-align: right;
+}
+
+.panel-test{
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 20px;
+}
+
+.testing-tool-list{
+	padding: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	margin: 0px;
+}
+
+.panel-que-ans,
+.panel-question,
+.panel-answer{
+	background-color: #fbfbfb;
+	border-top: 0px #d0e9c6 solid;
+	border-bottom: 0px #d0e9c6 solid;
+}
+
+.answer-footer{
+	padding: 0px;	
+	border: none;
+}
+
+.test-tools{
+	text-align: right;
+	background-color: #fbfbfb;
+}
+
+.btn-progress-question-index{
+	width: 36px;
+	height: 36px;
+	font-size: 12px;
+}
+
+.knowledgetree
+{
+	background-color: #d0e9c6;
+	width: 80%;
+	text-align: left;
+}
+.ktlv0{
+	padding-left: 0px;
+	font-size: 20px;
+}
+.ktlv1{
+	padding-left: 8px;
+	font-size: 18px;
+}
+.ktlv2{
+	padding-left: 16px;
+	font-size: 16px;
+}
+.ktlv3{
+	padding-left: 24px;
+	font-size: 14px;
+}
+.ktlv4{
+	padding-left: 32px;
+	font-size: 12px;
+}
+.master{
+	background-color: palegreen
+}
+.learned{
+	background-color: #FFFF88
+}
+.open{
+	background-color: #fbfbfb;
+}
+.leftpanel-innerpanel{
+	width: 248px;
+	padding: 0px;
+	margin-bottom: 0px;	
+}
+.leftpanel-innerpanel > .panel-body{
+	width: 248px;
+	height: 350px;
+	color: #00b3ee;
+	
+}
+.leftpanel-button{
+	width: 248px;
+	height: 80px;
+}
