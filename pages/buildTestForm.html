@@ -272,74 +272,127 @@
         </nav>
 
         <div id="test-wrapper">
-			<div id="buildtestheader" class="row">
-				<div class="panel panel-green col-lg-12" style="padding: 0px; margin: 0px">
-					<div class="form-group">
-						<div class="panel-body" style="text-align: center">
+			<!-- /.row -->
+            <div class="col-lg-12" style="text-align: center">
+				
+				<h3>
+					配置试卷
+				</h3>
+				<div id="accordion" class="panel-group col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1" style="text-align: left">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+								<a href="#collapseOne" data-parent="#accordion" data-toggle="collapse">基本设置</a>
+							</h4>
+						</div>
+						<div class="panel-collapse collapse in" id="collapseOne">
+							<div class="panel-body">
+								<div class="row">
+									<div class="col-lg-8 col-md-8">
+										<label>试卷标题：</label><input class="form-control" placeholder="试卷标题">
+										<hr/>
+									</div>
+									
+								</div>
+								<div class="row">
+									<div class="col-lg-12 col-md-12"><label>选择题源</label></div>
+									<div class="col-lg-2 col-md-2">
+										<div class="checkbox">
+											<label>
+												<input type="checkbox" value="">我的题库
+											</label>
+										</div>
+									</div>
+									<div class="col-lg-2 col-md-2">
+										<div class="checkbox">
+											<label>
+												<input type="checkbox" value="">网络题库
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-lg-12 col-md-12"><label>难度设置</label></div>
+									<div class="col-lg-2 col-md-2">
+										<div class="radio">
+											<label>
+												<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>30%平均难度
+											</label>
+										</div>
+									</div>
 
-							
-							<div class="col-lg-2" >
-								<label>选择题源</label>
-												<div class="checkbox">
-													<label>
-														<input type="checkbox" value="">我的题库
-													</label>
-												</div>
-												<div class="checkbox">
-													<label>
-														<input type="checkbox" value="">网络题库
-													</label>
-												</div>
-							</div>
-							<div class="col-lg-2" >
-								<label>试卷结构</label>
-								<input class="form-control build-test-setting" placeholder="选择题数量">
-								<input class="form-control build-test-setting" placeholder="填空题数量">
-								<input class="form-control build-test-setting" placeholder="计算题数量">
-							</div>
-							<div class="col-lg-2" >
-								<label>时间设置</label>
-								<input class="form-control build-test-setting" placeholder="设置限制时间">
-								<input class="form-control build-test-setting" placeholder="设置开始日期">
-								<input class="form-control build-test-setting" placeholder="设置截止日期">
-							</div>
-							<div class="col-lg-2" >
-								<label>其他设置</label>
+									<div class="col-lg-2 col-md-2">
+										<div class="radio">
+											<label>
+												<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">60%平均难度
+											</label>
+										</div>
+									</div>
+									<div class="col-lg-2 col-md-2">
+										<div class="radio">
+											<label>
+												<input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">90%平均难度
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-lg-12 col-md-12"><label>试卷结构</label></div>
+									<div class="col-lg-2 col-md-2">
+											单选题： <input class="form-control build-test-setting" placeholder="题数" value="0" name="单选题">
+									</div>
+									<div class="col-lg-2 col-md-2">
+											多选题： <input class="form-control build-test-setting" placeholder="题数" value="0" name="多选题">
+									</div>
+									<div class="col-lg-2 col-md-2">
+											填空题： <input class="form-control build-test-setting" placeholder="题数" value="0" name="填空题">
+									</div>
+									<div class="col-lg-2 col-md-2">
+											应用题： <input class="form-control build-test-setting" placeholder="题数" value="0" name="应用题">
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-lg-12 col-md-12"><label>时间设置</label></div>
+									<div class="col-lg-2 col-md-2">
+										试卷限时<input class="form-control build-test-setting" placeholder="时间限制" value="30">
+										
+									</div>
+									<div class="col-lg-2 col-md-2">
+										开始时间<input class="form-control build-test-setting" placeholder="开始日期">	
+									</div>
+									<div class="col-lg-2 col-md-2">
+										截止时间<input class="form-control build-test-setting" placeholder="截止日期">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-lg-12 col-md-12"><label>其他设置</label></div>
+									<div class="col-lg-2 col-md-2">
 										<div class="checkbox">
 											<label>
 												<input type="checkbox" value="">允许计算器
 											</label>
 										</div>
+									</div>
+									<div class="col-lg-2 col-md-2">
 										<div class="checkbox">
 											<label>
 												<input type="checkbox" value="">开卷
 											</label>
 										</div>
-							</div>
-							<div class="col-lg-2" >
-								<button class="btn btn-default build-test-setting">布置做题</button>
-								<button class="btn btn-default build-test-setting">布置做题</button>
-								<button class="btn btn-default build-test-setting">生成试卷</button>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-			</div>
-
-            <!-- /.row -->
-            <div class="col-lg-12">
-				
-				<h3>
-					配置试卷
-				</h3>
-				<div id="accordion" class="panel-group">
+					
 					<div class="panel panel-default">
 						<div class="panel-heading">
 							<h4 class="panel-title">
-								<a href="#collapseOne" data-parent="#accordion" data-toggle="collapse">选择知识点</a>
+								<a href="#collapseTwo" data-parent="#accordion" data-toggle="collapse">选择知识点</a>
 							</h4>
 						</div>
-						<div class="panel-collapse collapse in" id="collapseOne">
+						<div class="panel-collapse collapse"  id="collapseTwo">
 							<div class="panel-body">
 								<div id="knowledgeheader0001" class="knowledgetree ktlv0 open">
 									<div class="checkbox">
@@ -506,24 +559,60 @@
 					<div class="panel panel-default">
 						<div class="panel-heading">
 							<h4 class="panel-title">
-								<a href="#collapseTwo" data-parent="#accordion" data-toggle="collapse">Collapsible Group Item #2</a>
+								<a href="#collapseThree" data-parent="#accordion" data-toggle="collapse">发布设置</a>
 							</h4>
 						</div>
-						<div class="panel-collapse collapse" id="collapseTwo">
+						<div class="panel-collapse collapse" id="collapseThree">
 							<div class="panel-body">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-							</div>
+								<div class="col-lg-2 col-md-2">
+										<div class="radio">
+											<label>
+												<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>私人可见
+											</label>
+										</div>
+									</div>
+
+									<div class="col-lg-2 col-md-2">
+										<div class="radio">
+											<label>
+												<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">公共可见
+											</label>
+										</div>
+									</div>
+									<div class="col-lg-2 col-md-2">
+										<div class="radio">
+											<label>
+												<input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">所在学校
+											</label>
+										</div>
+									</div>
+								<div class="col-lg-2 col-md-2">
+										<div class="radio">
+											<label>
+												<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>所在学年
+											</label>
+										</div>
+									</div>
+
+									<div class="col-lg-2 col-md-2">
+										<div class="radio">
+											<label>
+												<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">任课班级
+											</label>
+										</div>
+									</div>
+								</div>
 						</div>
 					</div>
 					<div class="panel panel-default">
 						<div class="panel-heading">
 							<h4 class="panel-title">
-								<a href="#collapseThree" data-parent="#accordion" data-toggle="collapse">Collapsible Group Item #3</a>
+								<a href="#collapseThree" data-parent="#accordion" data-toggle="collapse">配置收费</a>
 							</h4>
 						</div>
 						<div class="panel-collapse collapse" id="collapseThree">
 							<div class="panel-body">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								本功能适用于上传试题到网络题库
 							</div>
 						</div>
 					</div>
@@ -532,7 +621,11 @@
 				<div class="row">
 					<div class="panel panel-green col-lg-12" style="padding: 0px; margin: 0px">
 						<div class="panel-body" style="text-align: center">
-
+							<button class="btn btn-default build-test-setting">生成试卷</button>
+							<button class="btn btn-default build-test-setting">保存草稿</button>
+							<button class="btn btn-default build-test-setting">打印预览</button>
+							<button class="btn btn-default build-test-setting">发布试卷</button>
+							<button class="btn btn-default build-test-setting">保存配置</button>
 						</div>
 					</div>
                 <!-- /.col-lg-12 -->
