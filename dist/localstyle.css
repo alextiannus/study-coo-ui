@@ -124,6 +124,9 @@ and open the template in the editor.
 	height: 80px;
 }
 
+.build-test-setting{
+	width: 120px
+}
 .brand-button{
 	margin: 15px 15px 15px 15px
 }
