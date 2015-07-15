@@ -52,22 +52,49 @@
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>
 
+
+    <!-- Bai Du Editor-->
+    <script type="text/javascript" charset="utf-8" src="../ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../ueditor/ueditor.all.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../ueditor/lang/zh-cn/zh-cn.js"></script>
+
+    <!-- ding-->
+    <script type="text/javascript" src="../js/stickUp.min.js"></script>
+
+    <!--scroll up -->
+    <script src="../js/jquery.scrollUp.min.js"></script>
+
     <script>
 
 
-        function insertDxt(){
+        jQuery(function ($) {
+            $(document).ready(function () {
+                $("#toolbar").stickUp();
+            });
+        });
+
+        $(function () {
+            $.scrollUp({
+                animation: 'fade',
+                scrollImg: {
+                    active: true
+                }
+            });
+        });
+
+        function insertDxt() {
             var contentLength = $("div[id^=_content]").length;
 
-            var newContentLength = contentLength+1;
-            var previousContentId = "_content-"+contentLength;
-            var newContentId ="_content-"+newContentLength;
+            var newContentLength = contentLength + 1;
+            var previousContentId = "_content-" + contentLength;
+            var newContentId = "_content-" + newContentLength;
 
-            var newContent ='<div id="'+newContentId+'" class="col-lg-6 col-md-offset-3 panel panel-default ">' +
+            var newContent = '<div id="' + newContentId + '" class="col-lg-6 col-md-offset-3 panel panel-default ">' +
                     ' <div class="input-group form-group">' +
-                    ' <span class="input-group-addon">题目 '+newContentLength+'.</span>' +
-                    ' <input class="form-control" type="text" placeholder="单选题题干内容">' +
+                    ' <span class="input-group-addon">题目 ' + newContentLength + '.</span>' +
+                    ' <input class="form-control" type="text" placeholder="单选题题干内容" onclick="showModal(this)">' +
                     ' </div>' +
-                    ' <div class="radio row" id="content-'+newContentLength+'-row-1"> ' +
+                    ' <div class="radio row" id="content-' + newContentLength + '-row-1"> ' +
                     ' <div class="col-lg-1 form-group">' +
                     ' <label>' +
                     ' <input type="radio" checked="" value="A" id="optionsRadios1" name="optionsRadios">A.' +
@@ -89,17 +116,18 @@
                     '  <span class="input-group-addon">题目分数</span>' +
                     ' <input class="form-control" type="text" placeholder="输入题目分数">' +
                     '   </div>' +
-                    '</div>' ;
+                    '</div>';
 
-            if(0==contentLength){
+            if (0 == contentLength) {
 
                 $("#exam-content").append(newContent);
 
-            }else{
-                $("#"+previousContentId).after(newContent);
+            } else {
+                $("#" + previousContentId).after(newContent);
             }
-        }
 
+            scrollToBtm();
+        }
 
 
         function addCheckBox(obj) {
@@ -136,22 +164,22 @@
 
             $("#" + parentId).after(newElement);
 
-
+            scrollToBtm();
         }
 
-        function insertMultiChecks(){
+        function insertMultiChecks() {
             var contentLength = $("div[id^=_content]").length;
 
-            var newContentLength = contentLength+1;
-            var previousContentId = "_content-"+contentLength;
-            var newContentId ="_content-"+newContentLength;
+            var newContentLength = contentLength + 1;
+            var previousContentId = "_content-" + contentLength;
+            var newContentId = "_content-" + newContentLength;
 
-            var newContent ='<div id="'+newContentId+'" class="col-lg-6 col-md-offset-3 panel panel-default ">' +
+            var newContent = '<div id="' + newContentId + '" class="col-lg-6 col-md-offset-3 panel panel-default ">' +
                     ' <div class="input-group form-group">' +
-                    ' <span class="input-group-addon">题目 '+newContentLength+'.</span>' +
-                    ' <input class="form-control" type="text" placeholder="多选题题干内容">' +
+                    ' <span class="input-group-addon">题目 ' + newContentLength + '.</span>' +
+                    ' <input class="form-control" type="text" placeholder="多选题题干内容" onclick="showModal(this)">' +
                     ' </div>' +
-                    ' <div class="checkbox row" id="content-'+newContentLength+'-row-1"> ' +
+                    ' <div class="checkbox row" id="content-' + newContentLength + '-row-1"> ' +
                     ' <div class="col-lg-1 form-group">' +
                     ' <label>' +
                     ' <input type="checkbox" checked="" value="A"  name="optionsCheckboxs">A.' +
@@ -173,18 +201,17 @@
                     '  <span class="input-group-addon">题目分数</span>' +
                     ' <input class="form-control" type="text" placeholder="输入题目分数">' +
                     '   </div>' +
-                    '</div>' ;
+                    '</div>';
 
-            if(0==contentLength){
+            if (0 == contentLength) {
 
                 $("#exam-content").append(newContent);
 
-            }else{
-                $("#"+previousContentId).after(newContent);
+            } else {
+                $("#" + previousContentId).after(newContent);
             }
+            scrollToBtm();
         }
-
-
 
 
         function addMultiCheckBox(obj) {
@@ -221,22 +248,21 @@
 
             $("#" + parentId).after(newElement);
 
-
+            scrollToBtm();
         }
 
 
-
-        function insertJudgment(){
+        function insertJudgment() {
             var contentLength = $("div[id^=_content]").length;
 
-            var newContentLength = contentLength+1;
-            var previousContentId = "_content-"+contentLength;
-            var newContentId ="_content-"+newContentLength;
+            var newContentLength = contentLength + 1;
+            var previousContentId = "_content-" + contentLength;
+            var newContentId = "_content-" + newContentLength;
 
-            var newContent ='<div id="'+newContentId+'" class="col-lg-6 col-md-offset-3 panel panel-default ">' +
+            var newContent = '<div id="' + newContentId + '" class="col-lg-6 col-md-offset-3 panel panel-default ">' +
                     ' <div class="input-group form-group">' +
-                    ' <span class="input-group-addon">题目 '+newContentLength+'.</span>' +
-                    ' <input class="form-control" type="text" placeholder="判断题题干内容">' +
+                    ' <span class="input-group-addon">题目 ' + newContentLength + '.</span>' +
+                    ' <input class="form-control" type="text" placeholder="判断题题干内容" onclick="showModal(this)">' +
                     ' </div>' +
                     ' <div class="form-group input-group">' +
                     ' <span class="input-group-addon">题目答案</span>' +
@@ -246,29 +272,30 @@
                     '  <span class="input-group-addon">题目分数</span>' +
                     ' <input class="form-control" type="text" placeholder="输入题目分数">' +
                     '   </div>' +
-                    '</div>' ;
+                    '</div>';
 
-            if(0==contentLength){
+            if (0 == contentLength) {
 
                 $("#exam-content").append(newContent);
 
-            }else{
-                $("#"+previousContentId).after(newContent);
+            } else {
+                $("#" + previousContentId).after(newContent);
             }
+            scrollToBtm();
         }
 
 
-        function insertFillBlank(){
+        function insertFillBlank() {
             var contentLength = $("div[id^=_content]").length;
 
-            var newContentLength = contentLength+1;
-            var previousContentId = "_content-"+contentLength;
-            var newContentId ="_content-"+newContentLength;
+            var newContentLength = contentLength + 1;
+            var previousContentId = "_content-" + contentLength;
+            var newContentId = "_content-" + newContentLength;
 
-            var newContent ='<div id="'+newContentId+'" class="col-lg-6 col-md-offset-3 panel panel-default ">' +
+            var newContent = '<div id="' + newContentId + '" class="col-lg-6 col-md-offset-3 panel panel-default ">' +
                     ' <div class="input-group form-group">' +
-                    ' <span class="input-group-addon">题目 '+newContentLength+'.</span>' +
-                    '  <textarea rows="3" class="form-control" placeholder="填空题干内容，下划线：_ 表示需要填的内容"></textarea>' +
+                    ' <span class="input-group-addon">题目 ' + newContentLength + '.</span>' +
+                    '  <textarea rows="3" class="form-control" placeholder="填空题干内容，下划线：_ 表示需要填的内容" onclick="showModal(this)"></textarea>' +
                     ' </div>' +
                     ' <div class="form-group input-group">' +
                     ' <span class="input-group-addon">题目答案</span>' +
@@ -282,30 +309,31 @@
                     ' <span class="input-group-addon">题目分数（总分）</span>' +
                     ' <input class="form-control" type="text" placeholder="题目总分">' +
                     ' </div>' +
-                     '</div>' ;
+                    '</div>';
 
 
-            if(0==contentLength){
+            if (0 == contentLength) {
 
                 $("#exam-content").append(newContent);
 
-            }else{
-                $("#"+previousContentId).after(newContent);
+            } else {
+                $("#" + previousContentId).after(newContent);
             }
+            scrollToBtm();
         }
 
 
-        function insertQuestions(){
+        function insertQuestions() {
             var contentLength = $("div[id^=_content]").length;
 
-            var newContentLength = contentLength+1;
-            var previousContentId = "_content-"+contentLength;
-            var newContentId ="_content-"+newContentLength;
+            var newContentLength = contentLength + 1;
+            var previousContentId = "_content-" + contentLength;
+            var newContentId = "_content-" + newContentLength;
 
-            var newContent ='<div id="'+newContentId+'" class="col-lg-6 col-md-offset-3 panel panel-default ">' +
+            var newContent = '<div id="' + newContentId + '" class="col-lg-6 col-md-offset-3 panel panel-default ">' +
                     ' <div class="input-group form-group">' +
-                    ' <span class="input-group-addon">题目 '+newContentLength+'.</span>' +
-                    '  <textarea rows="3" class="form-control" placeholder="文字题题干内容（简单/计算/分析 等）"></textarea>' +
+                    ' <span class="input-group-addon">题目 ' + newContentLength + '.</span>' +
+                    '  <textarea rows="3" class="form-control" placeholder="文字题题干内容（简单/计算/分析 等）" onclick="showModal(this)" ></textarea>' +
                     ' </div>' +
                     ' <div class="form-group input-group">' +
                     ' <span class="input-group-addon">题目答案</span>' +
@@ -315,16 +343,18 @@
                     ' <span class="input-group-addon">题目分数</span>' +
                     ' <input class="form-control" type="text" placeholder="题目总分">' +
                     ' </div>' +
-                    '</div>' ;
+                    '</div>';
 
 
-            if(0==contentLength){
+            if (0 == contentLength) {
 
                 $("#exam-content").append(newContent);
 
-            }else{
-                $("#"+previousContentId).after(newContent);
+            } else {
+                $("#" + previousContentId).after(newContent);
             }
+
+            scrollToBtm();
         }
 
 
@@ -333,6 +363,28 @@
 
             return initOptions.substring(index, index + 1);
 
+        }
+
+
+        var contentObj;
+        function showModal(obj) {
+            contentObj = obj;
+            var openUrl = "./ueditorDialog.html?obj=" + obj;
+            var iWidth = 600;
+            var iHeight = 400; //弹出窗口的高度;
+            var iTop = (window.screen.availHeight - 30 - iHeight) / 2; //获得窗口的垂直位置;
+            var iLeft = (window.screen.availWidth - 10 - iWidth) / 2; //获得窗口的水平位置;
+            window.open(openUrl, "", "height=" + iHeight + ", width=" + iWidth + ", top=" + iTop + ", left=" + iLeft + ",toolbar=no,resizable=no，location=no");
+        }
+
+
+        function callBacksaveContext(content) {
+            $(contentObj).val(content);
+
+        }
+
+        function scrollToBtm() {
+            $('html, body').animate({scrollTop: $(document).height()}, 'slow');
         }
     </script>
 </head>
@@ -575,95 +627,50 @@
         <!-- /.navbar-static-side -->
     </nav>
 
-    <div>
-
-        <!-- tool bar-->
-        <div id="toolbar" class="navbar navbar-default navbar-static-top test-top">
-            <div class="nav navbar-top-links navbar-left">
-                <div class="xmCont">
-                    <em id="kmItem" class="navbar-brand">编辑试卷</em>
-                    <em class="navbar-brand" style="font-size: 40px">|</em>
-                    <!--  <button class="btn btn-primary brand-button" type="button">插入文本行</button>-->
-                    <button class="btn btn-primary brand-button" type="button" onclick="insertDxt();">插入单选题</button>
-                    <button class="btn btn-primary brand-button" type="button" onclick="insertMultiChecks();">插入多选题</button>
-                    <button class="btn btn-primary brand-button" type="button" onclick="insertJudgment();">插入判断题</button>
-                    <button class="btn btn-primary brand-button" type="button" onclick="insertFillBlank();">插入填空题</button>
-                    <button class="btn btn-primary brand-button" type="button" onclick="insertQuestions();">插入文字题</button>
-                    <button class="btn btn-primary brand-button" type="button">插入图片</button>
-                    <button class="btn btn-primary brand-button" type="button">插入表格</button>
-                </div>
-            </div>
-
-        </div>
-        <!--end tool bar-->
-
-        <!-- /.row -->
-        <div class="row">
-            <div class="panel panel-green col-lg-12" style="padding: 0px; margin: 0px">
-                <div class="panel-body" style="text-align: center">
-                    <p>试卷编号：273404
-                        录入者：tester
-                        试卷总分：100
-                        出卷时间：2015-07-14 10:42
-                        答题时间（45分钟）</p>
-
-
-                </div>
-
-                <div id="exam-content" class="panel-body">
-
-                   <!--<div id="_content-1" class="col-lg-6 col-md-offset-3 panel panel-default ">
-                        <div class="input-group form-group">
-                            <span class="input-group-addon">题目 1.</span>
-                            <input class="form-control" type="text" placeholder="单选题题干内容">
-                        </div>
-
-                        <div class="checkbox row" id="content-1-row-1">
-                            <div class="col-lg-1 form-group">
-                                <label>
-                                    <input type="checkbox" value="A">A.
-                                </label>
-
-                            </div>
-                            <div class="col-lg-10 form-group">
-                                <input class="form-control" type="text" placeholder="选项内容">
-
-                            </div>
-                            <div class="col-lg-1 form-group">
-                                <button class="btn btn-info" id="optionAdd" type="button" onclick="addCheckBox(this);" style="width: 40px"
-                                        >增加
-                                </button>
-                            </div>
-
-                        </div>
-
-
-                        <div class="form-group input-group">
-                            <span class="input-group-addon">题目答案</span>
-                            <input class="form-control" type="text" placeholder="输入题目答案">
-                        </div>
-
-                        <div class="form-group input-group">
-                            <span class="input-group-addon">题目分数</span>
-                            <input class="form-control" type="text" placeholder="输入题目分数">
-                        </div>
-
-                    </div>-->
-
-
-
-                </div>
-
-            </div>
-            <!-- /.col-lg-12 -->
-        </div>
-    </div>
-    <!-- /#page-wrapper -->
-
 </div>
 <!-- /#wrapper -->
 
+<!-- tool bar-->
+<div id="toolbar" class="navbar navbar-default navbar-static-top test-top" style="width: 100%;">
 
+    <em id="kmItem" class="navbar-brand">编辑试卷</em>
+    <em class="navbar-brand" style="font-size: 40px">|</em>
+    <!--  <button class="btn btn-primary brand-button" type="button">插入文本行</button>-->
+    <button class="btn btn-primary brand-button" type="button" onclick="insertDxt();">插入单选题</button>
+    <button class="btn btn-primary brand-button" type="button" onclick="insertMultiChecks();">插入多选题</button>
+    <button class="btn btn-primary brand-button" type="button" onclick="insertJudgment();">插入判断题</button>
+    <button class="btn btn-primary brand-button" type="button" onclick="insertFillBlank();">插入填空题</button>
+    <button class="btn btn-primary brand-button" type="button" onclick="insertQuestions();">插入文字题</button>
+    <!--<button class="btn btn-primary brand-button" type="button" onclick="showModal();">插入图片</button>
+    <button class="btn btn-primary brand-button" type="button">插入表格</button>-->
+
+</div>
+<!--end tool bar-->
+
+
+<div>
+    <!-- /.row -->
+    <div class="row">
+        <div class="panel panel-green col-lg-12" style="padding: 0px; margin: 0px">
+            <div class="panel-body" style="text-align: center">
+                <p>试卷编号：273404
+                    录入者：tester
+                    试卷总分：100
+                    出卷时间：2015-07-14 10:42
+                    答题时间（45分钟）</p>
+
+
+            </div>
+
+            <div id="exam-content" class="panel-body">
+
+            </div>
+
+
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+</div>
 
 
 </body>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Bootstrap Core CSS -->
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- Local customization styles -->
+    <link rel="stylesheet" href="../dist/localstyle.css" type="text/css"/>
+
+    <!-- jQuery -->
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Bai Du Editor-->
+    <script type="text/javascript" charset="utf-8" src="../ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../ueditor/ueditor.all.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../ueditor/lang/zh-cn/zh-cn.js"></script>
+    <script>
+
+        function saveContent(){
+            var content = UE.getEditor('editor').getContent();
+            UE.getEditor('editor').execCommand('cleardoc');
+            if(window.opener && !window.opener.closed){
+                window.opener.callBacksaveContext(content);
+                window.close();
+            }
+        }
+
+        function cancel(){
+            window.close();
+        }
+
+    </script>
+</head>
+<body>
+<div id="wrapper">
+<script id="editor" type="text/plain" ></script>
+    <script>
+        var ue = UE.getEditor('editor');
+    </script>
+    <div class="panel-body" style="margin-left: 200px">
+        <button class="btn btn-primary" type="button" onclick="saveContent()">确定</button>
+        <button class="btn btn-primary" type="button" onclick="cancel()">取消</button>
+    </div>
+
+</div>
+</body>
+
+</html>

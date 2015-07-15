@@ -144,3 +144,10 @@ and open the template in the editor.
 	width: 100%;
 	height: 100%;
 }
+#scrollUp {
+	background-image: url("../dist/images/top.png");
+	bottom: 20px;
+	right: 20px;
+	width: 38px;    /* Width of image */
+	height: 38px;   /* Height of image */
+}
