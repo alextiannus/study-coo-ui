@@ -27,6 +27,8 @@
 
     <!-- Custom Fonts -->
     <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="../dist/localstyle.css" type="text/css"/>
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -265,26 +267,40 @@
             <!-- /.navbar-top-links -->
 
         </nav>
-
-        <div id="">
-            <div class="row">
-                <div class="col-lg-12" style="text-align: center">
-                    <h1 class="page-header">新题优选</h1>
-                </div>
-                <!-- /.col-lg-12 -->
-            </div>
+            <!--navTop-->
+			<div id="testheader" class="navbar navbar-default navbar-static-top test-top">
+				<div class="nav navbar-top-links navbar-left">
+					<div class="xmCont">
+						<a class="navbar-brand" href="studentDashBoard.html">初中物理</a>
+						<a class="navbar-brand" href="#">新题优选</a>
+					</div>
+				</div>
+				
+				<div class="nav navbar-top-links navbar-right" >
+					<div class="xmCont">
+						<a class="navbar-brand" href="knowledgeTree.html">我的题库</a>
+				<!--	<a class="navbar-brand" href="knowledgeTree.html">能力评估</a>
+					<a class="navbar-brand" href="knowledgeTree.html">我的练习</a>-->
+					</div>
+				</div>   
+				
+			   <div class="header-shadow"></div>
+			</div>
+			<!--end navTop-->
+        <div id="newTest">
+         
             <!-- /.row -->
             <div class="row">
 				<div class="col-lg-1"></div>
                 <div class="col-lg-10">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            初中物理习题
+                            最新习题
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
                             <div class="dataTable_wrapper">
-                                <table class="table table-striped table-bordered table-hover" id="dataTables-taskassigned">
+                                <table class="table table-striped table-hover" id="dataTables-taskassigned">
                                     <thead>
                                         <tr>
                                             <th>题目代号</th>

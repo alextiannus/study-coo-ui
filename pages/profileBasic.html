@@ -278,16 +278,25 @@
 							<label>丁博</label>
 						</div>
 						<div class="panel-footer">
-							 <span class="glyphicon glyphicon-user"> 添加好友 </span>
+							 <span class="glyphicon glyphicon-user"> 关注 </span>
 						</div>
 						<ul class="nav" id="side-menu">
 							<li>
-								<a href="index.html"><i class="fa fa-dashboard fa-fw"></i> 发送通知 </a>
+								<a href="#bio-data"><i class="fa fa-dashboard fa-fw"></i> 联系方式 </a>
 							</li>
-
 							<li>
-								<a href="calendarBasic.html"><i class="fa fa-table fa-fw"></i> 学习进度</a>
+								<a href="#learning-progress"><i class="fa fa-table fa-fw"></i> 学习进度</a>
+							</li>			
+							<li>
+								<a href="myTCBasic.html"><i class="fa fa-dashboard fa-fw"></i> 学习园地</a>
 							</li>
+							<li>
+								<a href="myTCBasic.html"><i class="fa fa-dashboard fa-fw"></i> 学习笔记</a>
+							</li>
+							<li>
+								<a href="myTCBasic.html"><i class="fa fa-dashboard fa-fw"></i> 讨论组</a>
+							</li>
+							
 						</ul>
 					</div>
                     
@@ -300,121 +309,129 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">学习空间</h1>
+                    <h1 class="page-header">个人资料基本页面</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
             
             <!-- /.row -->
-            <div class="row">
+            <div id="bio-data" class="row"> <!--start of bio profile section -->
                 <!-- /.col-lg-8 -->
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <i class="fa fa-bell fa-fw"></i> 学生资料
+                            <i class="fa fa-bell fa-fw"></i> 个人资料
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                            <span class="">班级：</span>
-							<span class="">班主任：</span>
-							<span class="">个人联系方式：</span>
-							<span class="">家庭联系方式：</span>
-							<span class="">兴趣爱好：</span>
+                            <div class="col-lg-6"><span class="">学校班级：</span></div>
+							<div class="col-lg-6"><span class="">班主任：</span></div>
+							<div class="col-lg-12"><span class="">个人联系方式</span></div>
+							<div class="col-lg-6"><span class="">电话：</span></div>
+							<div class="col-lg-6"><span class="">邮箱：</span></div>
+							<div class="col-lg-12"><span class="">家庭联系方式</span></div>
+							<div class="col-lg-12"><span class="">联系人：</span></div>
+							<div class="col-lg-6"><span class="">电话：</span></div>
+							<div class="col-lg-6"><span class="">邮箱：</span></div>
+							<div class="col-lg-6"><span class="">兴趣爱好：</span></div>
+							
                         </div>
                         <!-- /.panel-body -->
                     </div>
 					<!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <div id="morris-area-chart" hidden=""></div>
-                        </div>
-					<div class="row col-lg-12"> 
-						<div class="col-lg-4">
-							<!-- /.panel -->
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<a href="knowledgetree.html"><i class="fa fa-bar-chart-o fa-fw"></i> 初中语文学习进度</a>
-								</div>
-								<div class="panel-body">
-									<div id="mdc-jm-chinese"></div>
-									<!--<a href="#" class="btn btn-default btn-block">查看</a>-->
-								</div>
-								<!-- /.panel-body -->
-							</div>
+				</div>
+			</div><!-- end of bioprofiles -->
+			<!-- start of learning progress -->
+			<div id="learning-progress" class="row col-lg-12">
+				<div class="col-lg-4">
+					<!-- /.panel -->
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<a href="knowledgetree.html"><i class="fa fa-bar-chart-o fa-fw"></i> 初中语文学习进度</a>
 						</div>
-						<!-- /.panel -->
-						<div class="col-lg-4">
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<a href="knowledgetree.html"><i class="fa fa-bar-chart-o fa-fw"></i> 初中数学学习进度</a>
-								</div>
-								<div class="panel-body">
-									<div id="mdc-jm-mathmatics"></div>
-									<!--<a href="#" class="btn btn-default btn-block">查看</a>-->
-								</div>
-								<!-- /.panel-body -->
-							</div>
+						<div class="panel-body">
+							<div id="mdc-jm-chinese"></div>
+							<!--<a href="#" class="btn btn-default btn-block">查看</a>-->
 						</div>
-
-						<!-- /.panel -->
-						<div class="col-lg-4">
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<a href="knowledgetree.html"><i class="fa fa-bar-chart-o fa-fw"></i> 初中英文学习进度</a>
-								</div>
-								<div class="panel-body">
-									<div id="mdc-jm-english"></div>
-									<!--<a href="#" class="btn btn-default btn-block">查看</a>-->
-								</div>
-								<!-- /.panel-body -->
-							</div>
-						</div>
-
-						<!-- /.panel -->
-						<div class="col-lg-4">
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<a href="knowledgetree.html"><i class="fa fa-bar-chart-o fa-fw"></i> 初中化学学习进度</a>
-								</div>
-								<div class="panel-body">
-									<div id="mdc-jm-chemical"></div>
-									<!--<a href="#" class="btn btn-default btn-block">查看</a> -->
-								</div>
-								<!-- /.panel-body -->
-							</div>
-						</div> 
-					
-						<div class="col-lg-4">
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<a href="knowledgetree.html"><i class="fa fa-bar-chart-o fa-fw"></i> 初中物理学习进度</a>
-								</div>
-								<div class="panel-body">
-									<div id="mdc-jm-physics"></div>
-								</div>
-								<!-- /.panel-body -->
-							</div>
-						</div>
-
-						<!-- /.panel -->
-						
-						<div class="col-lg-4">
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<a href="knowledgetree.html"><i class="fa fa-bar-chart-o fa-fw"></i> 初中生物学习进度</a>
-								</div>
-								<div class="panel-body">
-									<a href="#"><div id="mdc-jm-biology"></div></a>
-								</div>
-								<!-- /.panel-body -->
-							</div>
-						</div> <!-- End of Progress row 3 -->
+						<!-- /.panel-body -->
 					</div>
-				</div><!-- end of noification -->
+				</div>
+				<!-- /.panel -->
+				<div class="col-lg-4">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<a href="knowledgetree.html"><i class="fa fa-bar-chart-o fa-fw"></i> 初中数学学习进度</a>
+						</div>
+						<div class="panel-body">
+							<div id="mdc-jm-mathmatics"></div>
+							<!--<a href="#" class="btn btn-default btn-block">查看</a>-->
+						</div>
+						<!-- /.panel-body -->
+					</div>
+				</div>
+
+				<!-- /.panel -->
+				<div class="col-lg-4">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<a href="knowledgetree.html"><i class="fa fa-bar-chart-o fa-fw"></i> 初中英文学习进度</a>
+						</div>
+						<div class="panel-body">
+							<div id="mdc-jm-english"></div>
+							<!--<a href="#" class="btn btn-default btn-block">查看</a>-->
+						</div>
+						<!-- /.panel-body -->
+					</div>
+				</div>
+
+				<!-- /.panel -->
+				<div class="col-lg-4">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<a href="knowledgetree.html"><i class="fa fa-bar-chart-o fa-fw"></i> 初中化学学习进度</a>
+						</div>
+						<div class="panel-body">
+							<div id="mdc-jm-chemical"></div>
+							<!--<a href="#" class="btn btn-default btn-block">查看</a> -->
+						</div>
+						<!-- /.panel-body -->
+					</div>
+				</div> 
+
+				<div class="col-lg-4">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<a href="knowledgetree.html"><i class="fa fa-bar-chart-o fa-fw"></i> 初中物理学习进度</a>
+						</div>
+						<div class="panel-body">
+							<div id="mdc-jm-physics"></div>
+						</div>
+						<!-- /.panel-body -->
+					</div>
+				</div>
+
+				<!-- /.panel -->
+
+				<div class="col-lg-4">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<a href="knowledgetree.html"><i class="fa fa-bar-chart-o fa-fw"></i> 初中生物学习进度</a>
+						</div>
+						<div class="panel-body">
+							<a href="#"><div id="mdc-jm-biology"></div></a>
+						</div>
+						<!-- /.panel-body -->
+					</div>
+				</div> <!-- End of Progress row 3 -->
 				
-                <!-- /.col-lg-4 -->
-            </div>
-            <!-- /.row -->
+            </div> <!-- /.row end of learning progress -->
+			
+			<!--start of 学习园地 -->
+			<div id="my-tests" class="row col-lg-12">
+				
+			</div>
+			<!--end of 学习园地 -->
         </div>
         <!-- /#page-wrapper -->
 

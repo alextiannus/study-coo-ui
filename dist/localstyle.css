@@ -23,7 +23,8 @@ and open the template in the editor.
 
 .test-top{
 	padding: 0px;
-	background-color: #e2e2e2;
+	background-color: #fbfbfb;
+	color: #090;
 }
 
 .left{
@@ -150,4 +151,9 @@ and open the template in the editor.
 	right: 20px;
 	width: 38px;    /* Width of image */
 	height: 38px;   /* Height of image */
+}
+
+.body-wraper{
+	margin: 15px;
+	text-align: center;
 }
