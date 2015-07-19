@@ -254,12 +254,12 @@
                         <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        <li><a href="profileBasic.html"><i class="fa fa-user fa-fw"></i> 个人资料</a>
                         </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        <li><a href="settings.html"><i class="fa fa-gear fa-fw"></i> 设置</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> 退出</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -271,26 +271,27 @@
             <!-- /.navbar-static-side -->
         </nav>
 
-        <div id="test-wrapper">
+        
             <!--navTop-->
 			<div id="testheader" class="navbar navbar-default navbar-static-top test-top">
 				<div class="nav navbar-top-links navbar-left">
 					<div class="xmCont">
 						<a class="navbar-brand" href="studentDashBoard.html">初中物理</a>
-						<a class="navbar-brand" href="tasklist.html">作业安排</a><em id="kmItem" class="navbar-brand">jmm20130623</em>
+						<a class="navbar-brand" href="tasklist.html">能力评估</a>
 					</div>
 				</div>
 				<div class="nav navbar-top-links navbar-right" >
 					<div class="xmCont">
-						<a class="navbar-brand" href="testBasic.html">练习与模考</a>
-					<a class="navbar-brand" href="knowledgeTree.html">能力评估</a>
-					<a class="navbar-brand" href="knowledgeTree.html">我的练习</a></div>
+					<a class="navbar-brand" href="myTestList.html">练习与模考</a>
+					<a class="navbar-brand" href="#">学习笔记</a>
+					<a class="navbar-brand" href="#">视频资料</a>
+					</div>
 				</div> 
 
 			   <div class="header-shadow"></div>
 			</div>
 			<!--end navTop-->
-
+		<div id="test-wrapper" class="body-wraper">
             <!-- /.row -->
             <div class="row">
 				<div class="panel panel-green col-lg-12" style="padding: 0px; margin: 0px">
@@ -304,29 +305,32 @@
 				
 						</div>
 						-->
-						<div class="col-md-3 testing-tool-list" >
-								<div class="col-lg-1"></div>
-								<div class="col-lg-2">
-									
-									<div class="panel panel-info col-lg-2 leftpanel-innerpanel">
-										
+						<div class="col-lg-12 col-md-12" >
+							<!--Learning Progress Summary-->
+							<div class="row">
+								<div class="col-lg-3">
+									<div class="panel panel-info">
 										<div class="panel-body" >
 											<p>学习进度概况</p>
 											<div id="mdc-jm-mathmatics"></div>
 										</div>
 										<!-- /.panel-body -->
 									</div>	
-									<button class="btn btn-outline btn-info leftpanel-button" >
-										生成习题
-									</button>
-									<button class="btn btn-outline btn-info leftpanel-button" >教学视频</button>
-									<button class="btn btn-outline btn-info leftpanel-button" >查看讲义</button>
-									<button class="btn btn-outline btn-info leftpanel-button" >自动测试</button>
-									
-									
+								</div>	
+								<div class="col-lg-9">
+									<div class="panel panel-info ">
+										<div class="panel-body" >
+											<p>学习进度s分析</p>
+										</div>
+										<!-- /.panel-body -->
+									</div>	
 								</div>
+							</div>
 						</div>
-						<div class="col-lg-9">
+						<!-- learning progress summary ed-->
+						<!-- Learning progress knowledge tree illustration st-->
+						<div class="row">
+							<div class="col-lg-12">
 							<div id="knowledgeheader0001" class="knowledgetree ktlv0 open">
 								<div class="checkbox">
 									<label>
@@ -489,6 +493,9 @@
 							
 						
 						</div>
+						</div>
+						<!-- knowledge tree illustration ed-->
+						
 					</div>
                 <!-- /.col-lg-12 -->
 				</div>
