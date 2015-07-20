@@ -404,3 +404,259 @@ and open the template in the editor.
     right: -21px;
     width: 464px;
 }
+
+
+/** 知识点选题css start**/
+.treeLst {
+    border: 1px solid #ccc;
+    height: 350px;
+    margin-top: 10px;
+    overflow-y: scroll;
+    position: relative;
+
+}
+
+.treeLst ul {
+    margin: inherit;
+    padding-left: 20px;
+}
+
+.treeLst ul input {
+    cursor: default;
+    margin: -3px 4px 0 0;
+}
+.treeNav {
+    background: #eee none repeat scroll 0 0;
+    height: 36px;
+    position: relative;
+}
+.treeNav span strong {
+    padding: 0 10px 0 15px;
+}
+.treeNav .total{
+    margin-left: 230px;
+}
+
+.daredevel-tree li {
+    border-top: 1px dotted #ccc;
+    list-style-type: none;
+    margin: 9px 0;
+    padding-top: 7px;
+    position: relative;
+}
+
+#catetree .total {
+    float: right;padding-right: 20px
+}
+
+/** 智能选题css start**/
+
+.smartLst {
+    display: none;
+    height: 145px;
+}
+.smartLst ul {
+    margin: 5px 15px;
+}
+.smartLst li {
+    list-style-type: none;
+    padding-top: 7px;
+
+}
+.smartLst li label {
+    display: inline-block;
+    margin-right: 8px;
+}
+.smartLst li input {
+    margin: -3px 4px 0 0;
+}
+
+/** 真题模考css start**/
+
+.exerWrap {
+    color: #666;
+    font-size: 12px;
+    height: 400px;
+}
+.exerWrap .tabCls {
+    border-bottom: 1px solid #ccc;
+    height: 30px;
+    line-height: 28px;
+    margin: 15px 0 10px;
+    padding-left: 20px;
+}
+.exerWrap .tabCls em {
+    color: #999;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 15px;
+}
+.exerWrap .tabCls em.current {
+    background: #fff none repeat scroll 0 0;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-top: 2px solid #6dae52;
+    position: relative;
+    z-index: 10;
+}
+.exerWrap .tab_box {
+    margin: 0 0 20px;
+    padding: 0 20px;
+}
+.exerWrap .tab_box li {
+    border-top: 1px dotted #ccc;
+    margin-top: -1px;
+    overflow: hidden;
+    padding: 15px 0;
+    width: 100%;
+}
+.exerWrap .tab_box li .a1 {
+    width: 65%;
+}
+.exerWrap .tab_box li .a1 div {
+    margin-top: 2px;
+}
+.exerWrap .tab_box li .a1 div span {
+    display: inline-block;
+    margin-right: 15px;
+}
+.exerWrap .tab_box li .a1 h5 {
+    white-space: normal;
+    word-break: normal;
+    word-wrap: break-word;
+}
+.exerWrap .tab_box li .a1 h5 .jxbz {
+    background: #f00 none repeat scroll 0 0;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: normal;
+    margin-left: 10px;
+    padding: 1px 6px;
+}
+.exerWrap .tab_box li .a2 {
+    margin-right: 1%;
+    width: 15%;
+}
+.exerWrap .tab_box li .printCls, .exerWrap .tab_box li .rgt {
+    background-position: 0 -147px;
+    float: right;
+    height: 18px;
+    margin-top: 3px;
+    width: 18px;
+}
+.exerWrap .tab_box li .btn-mini {
+    float: right;
+    margin-right: 10px;
+}
+.exerWrap .tab_box li a.fB {
+    float: left;
+    margin-left: 10px;
+}
+
+/** 能力评估css start**/
+#right.assessWrap {
+    margin: 0 !important;
+    padding-bottom: 20px;
+}
+.assessWrap .createTime {
+    line-height: 18px;
+    margin-bottom: 15px;
+    text-align: right;
+}
+.assessWrap .createTime span {
+    display: inline-block;
+    margin-right: 10px;
+}
+.assessWrap .bgTit {
+    background: #f2f2f2 none repeat scroll 0 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+.assessWrap .assessLRcont {
+    margin: 20px 20px 30px;
+}
+.assessWrap .assessLRcont .lft {
+    height: 273px;
+    position: relative;
+    width: 443px;
+}
+.assessWrap .assessLRcont .lft em {
+    background: rgba(0, 0, 0, 0) url("./images/gradeBg.png") no-repeat scroll 0 0;
+    display: inline-block;
+    font-family: Arial;
+    font-size: 50px;
+    height: 202px;
+    line-height: 182px;
+    margin: 20px 0 0 20px;
+    text-align: center;
+    width: 184px;
+}
+.assessWrap .assessLRcont .lft em.subject {
+    background-position: -220px 0;
+}
+.assessWrap .assessLRcont .rgt {
+    border-left: 1px solid #ddd;
+    height: 273px;
+    width: 395px;
+}
+.assessWrap .assessLRcont .rgt dl {
+    margin: 0 0 0 30px;
+}
+.assessWrap .assessLRcont .rgt .propose {
+    border-top: 1px solid #ccc;
+    margin-top: 30px;
+    padding-top: 20px;
+}
+.assessWrap .assessLRcont .rgt dt {
+    font-size: 30px;
+    font-weight: 600;
+}
+.assessWrap .assessLRcont .rgt dd {
+    line-height: 24px;
+}
+
+.chartWrap {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+.assessWrap .chartWrap .bgTit {
+    border: medium none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.chartWrap .chartCont {
+    height: 300px;
+    margin: 20px;
+}
+.assessWrap .daredevel-tree li .total, .assessWrap .treeNav .total {
+    right: 340px;
+}
+.assessWrap .daredevel-tree li .wrongNum, .assessWrap .treeNav .wrongNum {
+    right: 250px;
+    width: 60px;
+}
+.assessWrap .daredevel-tree li .favNub, .assessWrap .treeNav .favNub {
+    right: 190px;
+    width: 60px;
+}
+.assessWrap .daredevel-tree li .asStar {
+    background: rgba(0, 0, 0, 0) url("../images/starBg.png") no-repeat scroll 0 0;
+    height: 14px;
+    overflow: hidden;
+    right: 90px;
+    top: 6px;
+    width: 79px;
+}
+.assessWrap .daredevel-tree li .asStar strong {
+    background: rgba(0, 0, 0, 0) url("../images/starBg.png") no-repeat scroll 0 -19px;
+    display: block;
+    height: 14px;
+}
+.assessWrap .daredevel-tree li span.daredevel-tree-label {
+    width: 50%;
+}
+.cRed, .cRed a {
+    color: #ff0000;
+}

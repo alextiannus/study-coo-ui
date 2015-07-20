@@ -51,6 +51,26 @@
     <!-- dropdown -->
 
     <script src="../dist/js/comm.js"></script>
+
+    <script>
+
+        function zhishidian() {
+            $('#zhishiModal').modal();
+        }
+
+        function zhineng() {
+            $('#zhinengModal').modal();
+        }
+
+        function zhenti() {
+            $('#zhentiModal').modal();
+        }
+
+        function zujuan(){
+            $('#zujuanModal').modal();
+        }
+
+    </script>
 </head>
 <body>
 
@@ -531,7 +551,7 @@
                         <p>针对单个或多个知识点来选题。 适合课后练习。</p>
                     </div>
                     <div class="button-row">
-                        <a class="btn btn-success smartBtn tongjiClk execise_click" id="tongji-tiku-chp">开始练习</a>
+                        <a class="btn btn-success" id="zhishi_btn" onclick="zhishidian();">开始练习</a>
                     </div>
                 </div>
             </div>
@@ -548,7 +568,7 @@
                         <p>针对所学过的多个科目，以及过去的练习情况，结合智能筛选来选题。 适合阶段性复习。</p>
                     </div>
                     <div class="button-row">
-                        <a class="btn btn-success smartBtn tongjiClk execise_click" id="tongji-tiku-chp">开始练习</a>
+                        <a class="btn btn-success" id="zhineng_btn" onclick="zhineng();">开始练习</a>
                     </div>
                 </div>
             </div>
@@ -565,7 +585,7 @@
                         <p>历年真题和最高质量的模拟练习。适合考前练习。</p>
                     </div>
                     <div class="button-row">
-                        <a class="btn btn-success smartBtn tongjiClk execise_click" id="tongji-tiku-chp">开始练习</a>
+                        <a class="btn btn-success" id="zhenti_btn" onclick="zhenti()">开始练习</a>
                     </div>
                 </div>
             </div>
@@ -582,7 +602,7 @@
                         <p>自由组卷，可选题型、难度、错误率，等多种方式。适合考前冲刺。</p>
                     </div>
                     <div class="button-row">
-                        <a class="btn btn-success smartBtn tongjiClk execise_click" id="tongji-tiku-chp">开始练习</a>
+                        <a class="btn btn-success" id="zujuan_btn" onclick="zujuan();">开始练习</a>
                     </div>
                 </div>
             </div>
@@ -590,5 +610,466 @@
         </div>
     </div>
 </div>
+
+<!--知识点选题 -->
+<div class="modal fade" id="zhishiModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">按知识点选题</h4>
+            </div>
+            <div class="modal-body">
+                <div id="tree-5" class="treeLst" style="height: 350px;">
+                    <div class="treeNav ">
+                        <span>
+                        <strong>知识点</strong>
+                        <button id="tree-5-checkAll">全选</button>
+                        <button id="tree-5-uncheckAll">取消全选</button>
+                        </span>
+                        <em class="total">错题/已做/总题量</em>
+
+                    </div>
+                    <div id="catetree" class="daredevel-tree">
+                        <ul>
+                            <li><span></span><input type="checkbox"
+                                                    value="11010"
+                                                    name="icid"><span>F1_Mock1&nbsp;<em
+                                    style="color:green;">(权限控制)</em></span><em class="total"><em>0/0/75</em><em
+                                    class="bgGray"><strong style="width:0%"><span style="width:NaN%;"
+                                                                                  class="wrongBg"></span></strong></em></em>
+                            </li>
+                            <li><span class="daredevel-tree-anchor"></span><input type="checkbox"
+                                                                                  value="538"
+                                                                                  name="icid"><span
+                                    class="daredevel-tree-label">Business organisations and their stakeholders&nbsp;<em
+                                    style="color:red;">(免费)</em></span><em class="f-pa total"><em>0/0/9</em><em
+                                    class="bgGray"><strong style="width:0%"><span style="width:NaN%;"
+                                                                                  class="wrongBg"></span></strong></em></em>
+                            </li>
+                            <li><span class="daredevel-tree-anchor"></span><input type="checkbox"
+                                                                                  value="539"
+                                                                                  name="icid"><span
+                                    class="daredevel-tree-label">The business environment&nbsp;<em style="color:red;">(免费)</em></span><em
+                                    class="f-pa total"><em>0/0/18</em><em class="bgGray"><strong style="width:0%"><span
+                                    style="width:NaN%;" class="wrongBg"></span></strong></em></em></li>
+                            <li><span class="daredevel-tree-anchor"></span><input type="checkbox"
+                                                                                  value="540"
+                                                                                  name="icid"><span
+                                    class="daredevel-tree-label">The macro-economic environment&nbsp;<em
+                                    style="color:red;">(免费)</em></span><em class="f-pa total"><em>0/0/13</em><em
+                                    class="bgGray"><strong style="width:0%"><span style="width:NaN%;"
+                                                                                  class="wrongBg"></span></strong></em></em>
+                            </li>
+                            <li><span class="daredevel-tree-anchor"></span><input type="checkbox"
+                                                                                  value="541"
+                                                                                  name="icid"><span
+                                    class="daredevel-tree-label">Micro economic factors&nbsp;<em
+                                    style="color:red;">(免费)</em></span><em class="f-pa total"><em>0/0/17</em><em
+                                    class="bgGray"><strong style="width:0%"><span style="width:NaN%;"
+                                                                                  class="wrongBg"></span></strong></em></em>
+                            </li>
+                            <li><span class="daredevel-tree-anchor"></span><input type="checkbox"
+                                                                                  value="542"
+                                                                                  name="icid"><span
+                                    class="daredevel-tree-label">Business organisation, structure and strategy&nbsp;<em
+                                    style="color:red;">(免费)</em></span><em class="f-pa total"><em>0/0/9</em><em
+                                    class="bgGray"><strong style="width:0%"><span style="width:NaN%;"
+                                                                                  class="wrongBg"></span></strong></em></em>
+                            </li>
+                            <li><span class="daredevel-tree-anchor"></span><input type="checkbox"
+                                                                                  value="543"
+                                                                                  name="icid"><span
+                                    class="daredevel-tree-label">Organisational culture and committees&nbsp;<em
+                                    style="color:red;">(免费)</em></span><em class="f-pa total"><em>0/0/17</em><em
+                                    class="bgGray"><strong style="width:0%"><span style="width:NaN%;"
+                                                                                  class="wrongBg"></span></strong></em></em>
+                            </li>
+                            <li><span class="daredevel-tree-anchor"></span><input type="checkbox"
+                                                                                  value="544"
+                                                                                  name="icid"><span
+                                    class="daredevel-tree-label">Corporate governance and social responsibility&nbsp;<em
+                                    style="color:red;">(免费)</em></span><em class="f-pa total"><em>0/0/14</em><em
+                                    class="bgGray"><strong style="width:0%"><span style="width:NaN%;"
+                                                                                  class="wrongBg"></span></strong></em></em>
+                            </li>
+                            <li><span class="daredevel-tree-anchor"></span><input type="checkbox"
+                                                                                  value="545"
+                                                                                  name="icid"><span
+                                    class="daredevel-tree-label">The role of accounting&nbsp;<em
+                                    style="color:red;">(免费)</em></span><em class="f-pa total"><em>0/0/18</em><em
+                                    class="bgGray"><strong style="width:0%"><span style="width:NaN%;"
+                                                                                  class="wrongBg"></span></strong></em></em>
+                            </li>
+                            <li><span class="daredevel-tree-anchor"></span><input type="checkbox"
+                                                                                  value="546"
+                                                                                  name="icid"><span
+                                    class="daredevel-tree-label">Control, security and audit&nbsp;<em
+                                    style="color:red;">(免费)</em></span><em class="f-pa total"><em>0/0/10</em><em
+                                    class="bgGray"><strong style="width:0%"><span style="width:NaN%;"
+                                                                                  class="wrongBg"></span></strong></em></em>
+                            </li>
+                            <li><span class="daredevel-tree-anchor"></span><input type="checkbox"
+                                                                                  value="547"
+                                                                                  name="icid"><span
+                                    class="daredevel-tree-label">Identifying and preventing fraud&nbsp;<em
+                                    style="color:red;">(免费)</em></span><em class="f-pa total"><em>0/0/17</em><em
+                                    class="bgGray"><strong style="width:0%"><span style="width:NaN%;"
+                                                                                  class="wrongBg"></span></strong></em></em>
+                            </li>
+                            <li><span class="daredevel-tree-anchor"></span><input type="checkbox"
+                                                                                  value="548"
+                                                                                  name="icid"><span
+                                    class="daredevel-tree-label">Leading and managing people&nbsp;<em
+                                    style="color:red;">(免费)</em></span><em class="f-pa total"><em>0/0/19</em><em
+                                    class="bgGray"><strong style="width:0%"><span style="width:NaN%;"
+                                                                                  class="wrongBg"></span></strong></em></em>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer" style="text-align: center">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">来15道</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">来30道</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">来60道</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<!--智能 -->
+<div class="modal fade" id="zhinengModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">智能选题</h4>
+            </div>
+            <div class="modal-body">
+                <div class="smartLst" style="display: block;">
+                    <ul>
+                        <li>
+                            <em>试卷类型：</em><label><input type="radio" value="0" class="items_type"
+                                                        name="items_type">随机</label><label><input type="radio" value="1"
+                                                                                                  class="items_type"
+                                                                                                  name="items_type">单选</label><label><input
+                                type="radio" value="2" class="items_type" name="items_type">多选</label><label><input
+                                type="radio" value="3" class="items_type" name="items_type">判断题</label><label><input
+                                type="radio" value="4" class="items_type" name="items_type">填空</label><label><input
+                                type="radio" value="5" class="items_type" name="items_type">综合题</label>
+                        </li>
+                        <li>
+                            <em>试题难度：</em><label><input type="radio" value="0" class="rank"
+                                                        name="rank">简单</label><label><input type="radio" value="1"
+                                                                                            class="rank" name="rank">一般</label><label><input
+                                type="radio" value="2" class="rank" name="rank">困难</label>
+                        </li>
+                        <li>
+                            <em>针对练习：</em><label><input type="radio" value="0" class="type"
+                                                        name="type">全新题</label><label><input type="radio" value="1"
+                                                                                             class="type" name="type">已做题目</label><label><input
+                                type="radio" value="2" class="type" name="type">错题</label>
+                        </li>
+                        <li>
+                            <em>知识点范围：</em>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="tree-5" class="treeLst" style="height: 350px;">
+                    <div class="treeNav ">
+                        <span>
+                        <strong>知识点</strong>
+                        <button id="tree-5-checkAll">全选</button>
+                        <button id="tree-5-uncheckAll">取消全选</button>
+                        </span>
+                        <em class="total">错题/已做/总题量</em>
+
+                    </div>
+                    <div id="catetree" class="daredevel-tree">
+                        <ul>
+                            <li><span></span><input type="checkbox"
+                                                    value="11010"
+                                                    name="icid"><span>F1_Mock1&nbsp;<em
+                                    style="color:green;">(权限控制)</em></span><em class="total"><em>0/0/75</em><em
+                                    class="bgGray"><strong style="width:0%"><span style="width:NaN%;"
+                                                                                  class="wrongBg"></span></strong></em></em>
+                            </li>
+                            <li><span class="daredevel-tree-anchor"></span><input type="checkbox"
+                                                                                  value="538"
+                                                                                  name="icid"><span
+                                    class="daredevel-tree-label">Business organisations and their stakeholders&nbsp;<em
+                                    style="color:red;">(免费)</em></span><em class="f-pa total"><em>0/0/9</em><em
+                                    class="bgGray"><strong style="width:0%"><span style="width:NaN%;"
+                                                                                  class="wrongBg"></span></strong></em></em>
+                            </li>
+                            <li><span class="daredevel-tree-anchor"></span><input type="checkbox"
+                                                                                  value="539"
+                                                                                  name="icid"><span
+                                    class="daredevel-tree-label">The business environment&nbsp;<em style="color:red;">(免费)</em></span><em
+                                    class="f-pa total"><em>0/0/18</em><em class="bgGray"><strong style="width:0%"><span
+                                    style="width:NaN%;" class="wrongBg"></span></strong></em></em></li>
+                            <li><span class="daredevel-tree-anchor"></span><input type="checkbox"
+                                                                                  value="540"
+                                                                                  name="icid"><span
+                                    class="daredevel-tree-label">The macro-economic environment&nbsp;<em
+                                    style="color:red;">(免费)</em></span><em class="f-pa total"><em>0/0/13</em><em
+                                    class="bgGray"><strong style="width:0%"><span style="width:NaN%;"
+                                                                                  class="wrongBg"></span></strong></em></em>
+                            </li>
+                            <li><span class="daredevel-tree-anchor"></span><input type="checkbox"
+                                                                                  value="541"
+                                                                                  name="icid"><span
+                                    class="daredevel-tree-label">Micro economic factors&nbsp;<em
+                                    style="color:red;">(免费)</em></span><em class="f-pa total"><em>0/0/17</em><em
+                                    class="bgGray"><strong style="width:0%"><span style="width:NaN%;"
+                                                                                  class="wrongBg"></span></strong></em></em>
+                            </li>
+                            <li><span class="daredevel-tree-anchor"></span><input type="checkbox"
+                                                                                  value="542"
+                                                                                  name="icid"><span
+                                    class="daredevel-tree-label">Business organisation, structure and strategy&nbsp;<em
+                                    style="color:red;">(免费)</em></span><em class="f-pa total"><em>0/0/9</em><em
+                                    class="bgGray"><strong style="width:0%"><span style="width:NaN%;"
+                                                                                  class="wrongBg"></span></strong></em></em>
+                            </li>
+                            <li><span class="daredevel-tree-anchor"></span><input type="checkbox"
+                                                                                  value="543"
+                                                                                  name="icid"><span
+                                    class="daredevel-tree-label">Organisational culture and committees&nbsp;<em
+                                    style="color:red;">(免费)</em></span><em class="f-pa total"><em>0/0/17</em><em
+                                    class="bgGray"><strong style="width:0%"><span style="width:NaN%;"
+                                                                                  class="wrongBg"></span></strong></em></em>
+                            </li>
+                            <li><span class="daredevel-tree-anchor"></span><input type="checkbox"
+                                                                                  value="544"
+                                                                                  name="icid"><span
+                                    class="daredevel-tree-label">Corporate governance and social responsibility&nbsp;<em
+                                    style="color:red;">(免费)</em></span><em class="f-pa total"><em>0/0/14</em><em
+                                    class="bgGray"><strong style="width:0%"><span style="width:NaN%;"
+                                                                                  class="wrongBg"></span></strong></em></em>
+                            </li>
+                            <li><span class="daredevel-tree-anchor"></span><input type="checkbox"
+                                                                                  value="545"
+                                                                                  name="icid"><span
+                                    class="daredevel-tree-label">The role of accounting&nbsp;<em
+                                    style="color:red;">(免费)</em></span><em class="f-pa total"><em>0/0/18</em><em
+                                    class="bgGray"><strong style="width:0%"><span style="width:NaN%;"
+                                                                                  class="wrongBg"></span></strong></em></em>
+                            </li>
+                            <li><span class="daredevel-tree-anchor"></span><input type="checkbox"
+                                                                                  value="546"
+                                                                                  name="icid"><span
+                                    class="daredevel-tree-label">Control, security and audit&nbsp;<em
+                                    style="color:red;">(免费)</em></span><em class="f-pa total"><em>0/0/10</em><em
+                                    class="bgGray"><strong style="width:0%"><span style="width:NaN%;"
+                                                                                  class="wrongBg"></span></strong></em></em>
+                            </li>
+                            <li><span class="daredevel-tree-anchor"></span><input type="checkbox"
+                                                                                  value="547"
+                                                                                  name="icid"><span
+                                    class="daredevel-tree-label">Identifying and preventing fraud&nbsp;<em
+                                    style="color:red;">(免费)</em></span><em class="f-pa total"><em>0/0/17</em><em
+                                    class="bgGray"><strong style="width:0%"><span style="width:NaN%;"
+                                                                                  class="wrongBg"></span></strong></em></em>
+                            </li>
+                            <li><span class="daredevel-tree-anchor"></span><input type="checkbox"
+                                                                                  value="548"
+                                                                                  name="icid"><span
+                                    class="daredevel-tree-label">Leading and managing people&nbsp;<em
+                                    style="color:red;">(免费)</em></span><em class="f-pa total"><em>0/0/19</em><em
+                                    class="bgGray"><strong style="width:0%"><span style="width:NaN%;"
+                                                                                  class="wrongBg"></span></strong></em></em>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer" style="text-align: center">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">来15道</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">来30道</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">来60道</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+
+    </div>
+    <!-- /.modal-dialog -->
+
+</div>
+<!-- /.modal -->
+
+<!--真题模考 -->
+<div class="modal fade" id="zhentiModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">真题模考</h4>
+            </div>
+            <div class="modal-body">
+                <div class="exerWrap">
+                    <div class="tabCls ">
+                        <em class="current">推荐真题</em>
+                    </div>
+                    <div style="overflow:auto; height:350px" class="tab_box">
+                        <div class="paperlist">
+                            <ul>
+                                <li><em class="lft a1"><h5>F1机考_Mock1<font style="color:red;">(权限控制)</font></h5>
+
+                                    <div><span>已有<strong class="cGreen">144</strong> 人模考</span> <span>平均得分：<strong
+                                            class="cGreen">41</strong></span>
+                                    </div>
+                                </em>
+                                    <button type="button" class="btn btn-primary btn-mini" data-dismiss="modal">立即模考
+                                    </button>
+                                </li>
+
+                                <li><em class="lft a1"><h5>ACCA_F1_BPP练习册-Mock Exam 2</h5>
+
+                                    <div><span>已有<strong class="cGreen">148</strong> 人模考</span> <span>平均得分：<strong
+                                            class="cGreen">47</strong></span>
+                                    </div>
+                                </em>
+                                    <button type="button" class="btn btn-primary btn-mini" data-dismiss="modal">立即模考
+                                    </button>
+                                </li>
+
+                                <li><em class="lft a1"><h5>ACCA_F1_BPP练习册-Mock Exam 1 (Specimen Exam)</h5>
+
+                                    <div><span>已有<strong class="cGreen">79</strong> 人模考</span> <span>平均得分：<strong
+                                            class="cGreen">58</strong></span>
+                                    </div>
+                                </em>
+                                    <button type="button" class="btn btn-primary btn-mini" data-dismiss="modal">立即模考
+                                    </button>
+                                </li>
+
+                                <li><em class="lft a1"><h5>ACCA-F1 Mock Exam<font style="color:red;">(权限控制)</font></h5>
+
+                                    <div><span>已有<strong class="cGreen">49</strong> 人模考</span> <span>平均得分：<strong
+                                            class="cGreen">42</strong></span>
+                                    </div>
+                                </em>
+                                    <button type="button" class="btn btn-primary btn-mini" data-dismiss="modal">立即模考
+                                    </button>
+                                </li>
+
+                                <li><em class="lft a1"><h5>Accountant in Business Specimen Exam applicable from June
+                                    2014</h5>
+
+                                    <div><span>已有<strong class="cGreen">673</strong> 人模考</span> <span>平均得分：<strong
+                                            class="cGreen">33</strong></span>
+                                    </div>
+                                </em>
+                                    <button type="button" class="btn btn-primary btn-mini" data-dismiss="modal">立即模考
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<!--组卷模考 -->
+<div class="modal fade" id="zujuanModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">组卷模考</h4>
+            </div>
+            <div class="modal-body">
+                <div class="exerWrap">
+                    <div class="tabCls ">
+                        <em class="current">组卷模考</em>
+                    </div>
+                    <div style="overflow:auto; height:350px" class="tab_box">
+                        <div class="paperlist">
+                            <ul>
+                                <li><em class="lft a1"><h5>F1机考_Mock1<font style="color:red;">(权限控制)</font></h5>
+
+                                    <div><span>已有<strong class="cGreen">144</strong> 人模考</span> <span>平均得分：<strong
+                                            class="cGreen">41</strong></span>
+                                    </div>
+                                </em>
+                                    <button type="button" class="btn btn-primary btn-mini" data-dismiss="modal">立即模考
+                                    </button>
+                                </li>
+
+                                <li><em class="lft a1"><h5>ACCA_F1_BPP练习册-Mock Exam 2</h5>
+
+                                    <div><span>已有<strong class="cGreen">148</strong> 人模考</span> <span>平均得分：<strong
+                                            class="cGreen">47</strong></span>
+                                    </div>
+                                </em>
+                                    <button type="button" class="btn btn-primary btn-mini" data-dismiss="modal">立即模考
+                                    </button>
+                                </li>
+
+                                <li><em class="lft a1"><h5>ACCA_F1_BPP练习册-Mock Exam 1 (Specimen Exam)</h5>
+
+                                    <div><span>已有<strong class="cGreen">79</strong> 人模考</span> <span>平均得分：<strong
+                                            class="cGreen">58</strong></span>
+                                    </div>
+                                </em>
+                                    <button type="button" class="btn btn-primary btn-mini" data-dismiss="modal">立即模考
+                                    </button>
+                                </li>
+
+                                <li><em class="lft a1"><h5>ACCA-F1 Mock Exam<font style="color:red;">(权限控制)</font></h5>
+
+                                    <div><span>已有<strong class="cGreen">49</strong> 人模考</span> <span>平均得分：<strong
+                                            class="cGreen">42</strong></span>
+                                    </div>
+                                </em>
+                                    <button type="button" class="btn btn-primary btn-mini" data-dismiss="modal">立即模考
+                                    </button>
+                                </li>
+
+                                <li><em class="lft a1"><h5>Accountant in Business Specimen Exam applicable from June
+                                    2014</h5>
+
+                                    <div><span>已有<strong class="cGreen">673</strong> 人模考</span> <span>平均得分：<strong
+                                            class="cGreen">33</strong></span>
+                                    </div>
+                                </em>
+                                    <button type="button" class="btn btn-primary btn-mini" data-dismiss="modal">立即模考
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
 </body>
 </html>
