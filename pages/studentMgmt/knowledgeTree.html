@@ -11,25 +11,25 @@
     <title>Test Cool - Student</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- MetisMenu CSS -->
-    <link href="../bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+    <link href="../../bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
 
     <!-- Timeline CSS -->
-    <link href="../dist/css/timeline.css" rel="stylesheet">
+    <link href="../../dist/css/timeline.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+    <link href="../../dist/css/sb-admin-2.css" rel="stylesheet">
 
     <!-- Morris Charts CSS -->
-    <link href="../bower_components/morrisjs/morris.css" rel="stylesheet">
+    <link href="../../bower_components/morrisjs/morris.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	
 	<!-- Local customization styles -->
-	<link rel="stylesheet" href="../dist/localstyle.css" type="text/css"/>
+	<link rel="stylesheet" href="../../dist/localstyle.css" type="text/css"/>
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -54,7 +54,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Study Cool</a>
+                <a class="navbar-brand" href="../index.html">Study Cool</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -254,12 +254,12 @@
                         <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="profileBasic.html"><i class="fa fa-user fa-fw"></i> 个人资料</a>
+                        <li><a href="../teacherMgmt/profileBasic.html"><i class="fa fa-user fa-fw"></i> 个人资料</a>
                         </li>
                         <li><a href="settings.html"><i class="fa fa-gear fa-fw"></i> 设置</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> 退出</a>
+                        <li><a href="../login.html"><i class="fa fa-sign-out fa-fw"></i> 退出</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -271,90 +271,258 @@
             <!-- /.navbar-static-side -->
         </nav>
 
-        <div id="test-wrapper">
+        
             <!--navTop-->
 			<div id="testheader" class="navbar navbar-default navbar-static-top test-top">
 				<div class="nav navbar-top-links navbar-left">
 					<div class="xmCont">
-						<a class="navbar-brand" href="studentDashBoard.html">初中物理</a>
-						<a class="navbar-brand" href="tasklist.html">作业安排</a><em id="kmItem" class="navbar-brand">jmm20130623</em>
+						<a class="navbar-brand" href="tasklist.html">综合能力评估</a>
 					</div>
 				</div>
 				<div class="nav navbar-top-links navbar-right" >
 					<div class="xmCont">
-						<a class="navbar-brand" href="knowledgeTree.html">练习与模考</a>
-					<a class="navbar-brand" href="knowledgeTree.html">能力评估</a>
-					<a class="navbar-brand" href="myTestList.html">我的练习</a></div>
-				</div>   
+					<a class="navbar-brand" href="../tikuApps/questionDataBase.html">我的题库</a>
+					<a class="navbar-brand" href="#">视频资料</a>
+					</div>
+				</div> 
 
 			   <div class="header-shadow"></div>
 			</div>
 			<!--end navTop-->
-
+		<div id="test-wrapper" class="body-wraper">
             <!-- /.row -->
-           
-        </div>
-        <!-- /#page-wrapper -->
-		<div class="col-lg-12">
-			<div class="col-lg-3" >
-				<div class="panel panel-default" style="margin-top: 30px">
-                        <div class="panel-heading">
-                            <i class="fa fa-bell fa-fw"></i> 日程安排
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <div class="list-group">
-                                <a href="#" class="list-group-item">
-                                    <i class="fa fa-comment fa-fw"></i> 提交物理作业
-                                    <span class="pull-right text-muted small"><em>距离27小时</em>
-                                    </span>
-                                </a>
-                                <a href="#" class="list-group-item">
-                                    <i class="fa fa-twitter fa-fw"></i> 提交数学作业
-                                    <span class="pull-right text-muted small"><em>距离32小时</em>
-                                    </span>
-                                </a>
-                                <a href="#" class="list-group-item">
-                                    <i class="fa fa-envelope fa-fw"></i> 春季运动会
-                                    <span class="pull-right text-muted small"><em>距离16天</em>
-                                    </span>
-                                </a>
-                                <a href="#" class="list-group-item">
-                                    <i class="fa fa-tasks fa-fw"></i> 期中考试
-                                    <span class="pull-right text-muted small"><em>距离42天</em>
-                                    </span>
-                                </a>
-                            </div>
-                            <!-- /.list-group -->
-                            <a href="#" class="btn btn-default btn-block">查看所有活动</a>
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-			</div>
-			<div class="col-lg-9 left">
-				<iframe src="../bower_components/fullcalendar/dist/demos/agenda-views.html" name="targetframe" allowTransparency="true" scrolling="no" frameborder="0" 
-						style="width: 800px; height: 800px">
-				</iframe>
-			</div>
-		</div>
-	</div>
-    <!-- /#wrapper -->
+            <div class="row">
+				<div class="panel panel-green col-lg-12" style="padding: 0px; margin: 0px">
+					<div class="panel-body" style="text-align: center">
+						<h3>能力评估</h3>
+						<!--
+						<div class="col-md-3 testing-tool-list" >
+								checkboxs
+						</div>
+						<div class="panel panel-default col-md-9" style="text-align: left;">
+				
+						</div>
+						-->
+						<div class="col-lg-12 col-md-12" >
+							<!--Learning Progress Summary-->
+							<div class="row">
+								<div class="col-lg-3">
+									<div class="panel panel-info">
+										<div class="panel-body" >
+											<p>学习进度概况</p>
+											<div id="mdc-jm-mathmatics"></div>
+										</div>
+										<!-- /.panel-body -->
+									</div>	
+								</div>	
+								<div class="col-lg-9">
+									<div class="panel panel-info ">
+										<div class="panel-body" >
+											<p>学习进度s分析</p>
+										</div>
+										<!-- /.panel-body -->
+									</div>	
+								</div>
+							</div>
+						</div>
+						<!-- learning progress summary ed-->
+						<!-- Learning progress knowledge tree illustration st-->
+						<div class="row">
+							<div class="col-lg-12">
+							<div id="knowledgeheader0001" class="knowledgetree ktlv0 open">
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" value="0001">
+										初中数学知识点
+									</label>
+								</div>
+							</div>
 
+							<div id="knowledgeheader1001" class="knowledgetree ktlv1 open">
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" value="0001">
+										一，基础知识
+									</label>
+								</div>
+							</div>
+
+							<div id="knowledgeheader1001" class="knowledgetree ktlv2 open">
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" value="0001">
+										㈠、数与代数 A、数与式： 
+									</label>
+								</div>
+							</div>
+
+							<div id="knowledgeheader2001" class="knowledgetree ktlv3 master">
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" value="0001">
+										1、有理数 
+									</label>
+								</div>
+							</div>
+							<div id="knowledgetree3001" class="knowledgetree ktlv4 master">
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" value="0001">
+										有理数：①整数→正整数/0/负整数 ②分数→正分数/负分数 
+									</label>
+								</div>
+							</div>
+							<div id="knowledgeheader3002" class="knowledgetree ktlv4 master">
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" value="0001">
+										数轴：①画一条水平直线，在直线上取一点表示 0（原点），选取某一长度作为单位长度，规定直线上向右的方向为 正方向，就得到数轴。②任何一个有理数都可以用数轴上的一个点来表示。③如果两个数只有符号不同，那么我们 称其中一个数为另外一个数的相反数，也称这两个数互为相反数。在数轴上，表示互为相反数的两个点，位于原点 的两侧，并且与原点距离相等。④数轴上两个点表示的数，右边的总比左边的大。正数大于 0，负数小于 0，正数 大于负数
+									</label>
+									
+								</div>
+							</div>
+							<!--Knowledge tree unit st-->
+							<div id="knowledgeheader3002" class="knowledgetree ktlv4 master">
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" value="0001">
+										加法：①同号相加，取相同的符号，把绝对值相加。②异号相加，绝对值相等时和为 0；绝对值不等时，取绝对值 较大的数的符号，并用较大的绝对值减去较小的绝对值。③一个数与 0 相加不变。 
+									</label>
+									
+								</div>
+							</div>
+							<!-- Knowledge tree unit end-->
+							<!--Knowledge tree unit st-->
+							<div id="knowledgeheader3002" class="knowledgetree ktlv4 master">
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" value="0001">
+										减法：减去一个数，等于加上这个数的相反数。
+									</label>
+									
+								</div>
+							</div>
+							<!-- Knowledge tree unit end-->
+							<!--Knowledge tree unit st-->
+							<div id="knowledgeheader3002" class="knowledgetree ktlv4 master">
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" value="0001">
+										乘法：①两数相乘，同号得正，异号得负，绝对值相乘。②任何数与 0 相乘得 0。③乘积为 1 的两个有理数互为倒 数。 
+									</label>
+									
+								</div>
+							</div>
+							<!-- Knowledge tree unit end-->
+							<!--Knowledge tree unit st-->
+							<div id="knowledgeheader3002" class="knowledgetree ktlv4 master">
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" value="0001">
+										除法：①除以一个数等于乘以一个数的倒数。②0 不能作除数。 
+									</label>
+									
+								</div>
+							</div>
+							<!-- Knowledge tree unit end-->
+							<!--Knowledge tree unit st-->
+							<div id="knowledgeheader3002" class="knowledgetree ktlv4 master">
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" value="0001">
+										乘方：求 N 个相同因数 A 的积的运算叫做乘方，乘方的结果叫幂，A 叫底数，N 叫次数。
+									</label>
+									
+								</div>
+							</div>
+							<!-- Knowledge tree unit end-->
+							<!--Knowledge tree unit st-->
+							<div id="knowledgeheader3002" class="knowledgetree ktlv4 master">
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" value="0001">
+										混合顺序：先算乘法，再算乘除，最后算加减，有括号要先算括号里的。 
+									</label>
+									
+								</div>
+							</div>
+							<!-- Knowledge tree unit end-->
+							<div id="knowledgeheader2002" class="knowledgetree ktlv3 open">
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" value="0001">
+										2、实数
+									</label>
+								</div>
+							</div>
+							<div id="knowledgetree20001" class="knowledgetree ktlv4 learned">
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" value="0001">
+										无理数：无限不循环小数叫无理数  
+									</label>
+								</div>
+							</div>
+							<div id="knowledgeheader20002" class="knowledgetree ktlv4 open">
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" value="0001">
+										平方根：①如果一个正数 X 的平方等于 A，那么这个正数 X 就叫做 A 的算术平方根。②如果一个数 X 的平方等于 A， 那么这个数 X 就叫做 A 的平方根。③一个正数有 2 个平方根/0 的平方根为 0/负数没有平方根。④求一个数 A 的平 方根运算，叫做开平方，其中 A 叫做被开方数。
+									</label>
+								</div>
+							</div>
+
+							<div id="knowledgeheader2003" class="knowledgetree ktlv3 master">
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" value="0001">
+										3、代数式 
+									</label>
+								</div>
+							</div>
+							<div id="knowledgetree20001" class="knowledgetree ktlv4 master">
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" value="0001">
+										代数式：单独一个数或者一个字母也是代数式。 合并同类项：①所含字母相同，并且相同字母的指数也相同的项，叫做同类项。②把同类项合并成一项就叫做合并 同类项。③在合并同类项时，我们把同类项的系数相加，字母和字母的指数不变。 
+									</label>
+								</div>
+							</div>
+							
+						
+						</div>
+						</div>
+						<!-- knowledge tree illustration ed-->
+						
+					</div>
+                <!-- /.col-lg-12 -->
+				</div>
+			</div>
+        <!-- /#page-wrapper -->
+
+		</div>
+    <!-- /#testwrapper -->
+	</div><!-- wrapper -->
     <!-- jQuery -->
-    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <!-- Metis Menu Plugin JavaScript -->
-    <script src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
+    <script src="../../bower_components/metisMenu/dist/metisMenu.min.js"></script>
 
     <!-- DataTables JavaScript -->
-    <script src="../bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
-    <script src="../bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="../dist/js/sb-admin-2.js"></script>
+    <script src="../../bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+    <script src="../../bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
+	
+	<!-- Morris Charts JavaScript -->
+    <script src="../../bower_components/raphael/raphael-min.js"></script>
+    <script src="../../bower_components/morrisjs/morris.min.js"></script>
+    <script src="../../js/morris-data-knowledgetree.js"></script>
+    
+	<!-- Custom Theme JavaScript -->
+    <script src="../../dist/js/sb-admin-2.js"></script>
 
     <!-- Page-Level Demo Scripts - Tables - Use for reference -->
     <script>
@@ -366,9 +534,7 @@
                 responsive: true
         });
     });
-
-	</script>
-
+    </script>
 
 </body>
 

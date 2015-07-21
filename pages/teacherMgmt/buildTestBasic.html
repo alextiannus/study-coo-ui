@@ -11,25 +11,25 @@
     <title>Test Cool - Student</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- MetisMenu CSS -->
-    <link href="../bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+    <link href="../../bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
 
     <!-- Timeline CSS -->
-    <link href="../dist/css/timeline.css" rel="stylesheet">
+    <link href="../../dist/css/timeline.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+    <link href="../../dist/css/sb-admin-2.css" rel="stylesheet">
 
     <!-- Morris Charts CSS -->
-    <link href="../bower_components/morrisjs/morris.css" rel="stylesheet">
+    <link href="../../bower_components/morrisjs/morris.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	
 	<!-- Local customization styles -->
-	<link rel="stylesheet" href="../dist/localstyle.css" type="text/css"/>
+	<link rel="stylesheet" href="../../dist/localstyle.css" type="text/css"/>
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -54,7 +54,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Study Cool</a>
+                <a class="navbar-brand" href="../index.html">Study Cool</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -259,7 +259,7 @@
                         <li><a href="settings.html"><i class="fa fa-gear fa-fw"></i> 设置</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> 退出</a>
+                        <li><a href="../login.html"><i class="fa fa-sign-out fa-fw"></i> 退出</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -272,77 +272,87 @@
         </nav>
 
         <div id="test-wrapper">
-            <!--navTop-->
-			<div id="testheader" class="navbar navbar-default navbar-static-top test-top">
-				<div class="nav navbar-top-links navbar-left">
-					<div class="xmCont">
-						<a class="navbar-brand" href="studentDashBoard.html">初中物理</a>
-						<a class="navbar-brand" href="tasklist.html">作业安排</a><em id="kmItem" class="navbar-brand">jmm20130623</em>
+			<div id="buildtestheader" class="row">
+				<div class="panel panel-green col-lg-12" style="padding: 0px; margin-bottom: 0px">
+					<div class="form-group">
+						<div class="panel-body" style="text-align: center">
+
+							<div class="col-lg-2" >
+								<label>选择知识点</label>
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" value="">初中数学
+									</label>
+								</div>
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" value="">我的知识树
+									</label>
+								</div>
+							</div>
+							<div class="col-lg-2" >
+								<label>选择题源</label>
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" value="">我的题库
+									</label>
+								</div>
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" value="">网络题库
+									</label>
+								</div>
+							</div>
+							<div class="col-lg-2" >
+								<label>试卷结构</label>
+								<input class="form-control build-test-setting" placeholder="选择题数量">
+								<input class="form-control build-test-setting" placeholder="填空题数量">
+								<input class="form-control build-test-setting" placeholder="计算题数量">
+							</div>
+							<div class="col-lg-2" >
+								<label>时间设置</label>
+								<input class="form-control build-test-setting" placeholder="设置限制时间">
+								<input class="form-control build-test-setting" placeholder="设置开始日期">
+								<input class="form-control build-test-setting" placeholder="设置截止日期">
+							</div>
+							<div class="col-lg-2" >
+								<label>其他设置</label>
+										<div class="checkbox">
+											<label>
+												<input type="checkbox" value="">允许计算器
+											</label>
+										</div>
+										<div class="checkbox">
+											<label>
+												<input type="checkbox" value="">开卷
+											</label>
+										</div>
+							</div>
+							<div class="col-lg-2" >
+								<button class="btn btn-default build-test-setting">布置做题</button>
+								<button class="btn btn-default build-test-setting">布置做题</button>
+								<button class="btn btn-default build-test-setting">生成试卷</button>
+							</div>
+						</div>
 					</div>
 				</div>
-				<div class="nav navbar-top-links navbar-right" >
-					<div class="xmCont">
-						<a class="navbar-brand" href="knowledgeTree.html">练习与模考</a>
-					<a class="navbar-brand" href="knowledgeTree.html">能力评估</a>
-					<a class="navbar-brand" href="myTestList.html">我的练习</a></div>
-				</div>   
-
-			   <div class="header-shadow"></div>
 			</div>
-			<!--end navTop-->
 
             <!-- /.row -->
             <div class="row">
 				<div class="panel panel-green col-lg-12" style="padding: 0px; margin: 0px">
 					<div class="panel-body" style="text-align: center">
-						<p>作业说明：截止提交时间２０１３０６２４</p>
+						
 						<div class="col-md-3 testing-tool-list" >
 								<div class="col-lg-1"></div>
 								<div class="col-lg-2">
 									<div class="panel panel-green "  style="width: 248; margin-bottom: 0px">
 										
-									<button class="btn btn-outline btn-success leftpanel-button"  style="text-align: left"><img src="../dist/images/timer001_s.png" style="height: 70; width: 80" />
-										已用时：xxxx
-									</button>
-									<button class="btn btn-outline btn-success leftpanel-button"  style="text-align: left" ><img src="../dist/images/calculator001_s.png" style="height: 70; width: 80;" />计算器</button>
-									<button class="btn btn-outline btn-success leftpanel-button">暂停做题</button>
-									<button class="btn btn-outline btn-success leftpanel-button">提交试卷</button>
+										<button class="btn btn-outline btn-success leftpanel-button">布置作业</button>
+										<button class="btn btn-outline btn-success leftpanel-button">保存试卷</button>
+										<button class="btn btn-outline btn-success leftpanel-button">打印预览</button>
 									</div>
-									<div class="panel panel-green "  style="height: 300; width: 248; margin-top: 0px">
-										<div class="panel panel-heading "  style="background-color: #fdfdfd; color: #5cb85c; border: 0px">完成进度</div>
-										<button class="btn btn-success btn-progress-question-index" >1</button>
-										<button class="btn btn-success btn-progress-question-index" >2</button>
-										<button class="btn btn-success btn-progress-question-index" >3</button>
-										<button class="btn btn-success btn-progress-question-index" >4</button>
-										<button class="btn btn-success btn-progress-question-index" >5</button>
-										<button class="btn btn-success btn-progress-question-index" >6</button>
-										<button class="btn btn-success btn-progress-question-index" >7</button>
-										<button class="btn btn-success btn-progress-question-index" >8</button>
-										<button class="btn btn-success btn-progress-question-index" >9</button>
-										<button class="btn btn-warning btn-progress-question-index" >10</button>
-										<button class="btn btn-success btn-progress-question-index" >11</button>
-										<button class="btn btn-success btn-progress-question-index" >12</button>
-										<button class="btn btn-warning btn-progress-question-index" >13</button>
-										<button class="btn btn-success btn-progress-question-index" >14</button>
-										<button class="btn btn-success btn-progress-question-index" >15</button>
-										<button class="btn btn-success btn-progress-question-index" >16</button>
-										<button class="btn btn-success btn-progress-question-index" >17</button>
-										<button class="btn btn-success btn-progress-question-index" >18</button>
-										<button class="btn btn-success btn-progress-question-index" >19</button>
-										<button class="btn btn-success btn-progress-question-index" >20</button>
-										<button class="btn btn-success btn-progress-question-index" >21</button>
-										<button class="btn btn-success btn-progress-question-index" >22</button>
-										<button class="btn btn-default btn-progress-question-index" >23</button>
-										<button class="btn btn-default btn-progress-question-index" >24</button>
-										<button class="btn btn-default btn-progress-question-index" >25</button>
-										<button class="btn btn-default btn-progress-question-index" >26</button>
-										<button class="btn btn-default btn-progress-question-index" >27</button>
-										<button class="btn btn-default btn-progress-question-index" >28</button>
-										<button class="btn btn-default btn-progress-question-index" >29</button>
-										<button class="btn btn-default btn-progress-question-index" >30</button>
-										
-										
-									</div>
+									
 								</div>
 						</div>
 						<div class="panel panel-default col-md-9" style="text-align: left;">
@@ -743,20 +753,20 @@
     <!-- /#wrapper -->
 
     <!-- jQuery -->
-    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <!-- Metis Menu Plugin JavaScript -->
-    <script src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
+    <script src="../../bower_components/metisMenu/dist/metisMenu.min.js"></script>
 
     <!-- DataTables JavaScript -->
-    <script src="../bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
-    <script src="../bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
+    <script src="../../bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+    <script src="../../bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script src="../dist/js/sb-admin-2.js"></script>
+    <script src="../../dist/js/sb-admin-2.js"></script>
 
     <!-- Page-Level Demo Scripts - Tables - Use for reference -->
     <script>
