@@ -1,0 +1,902 @@
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Test Cool - Student</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="../../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../../bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Timeline CSS -->
+    <link href="../../dist/css/timeline.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="../../bower_components/morrisjs/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Local customization styles -->
+    <link rel="stylesheet" href="../../dist/localstyle.css" type="text/css"/>
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- jQuery -->
+    <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../../bower_components/metisMenu/dist/metisMenu.min.js"></script>
+
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../../dist/js/sb-admin-2.js"></script>
+
+    <!-- dropdown -->
+
+    <script src="../../dist/js/comm.js"></script>
+
+</head>
+
+<body>
+
+<div id="wrapper">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../index.html">Study Cool</a>
+        </div>
+        <!-- /.navbar-header -->
+
+        <ul class="nav navbar-top-links navbar-right">
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <i class="fa fa-envelope fa-fw"></i> <i class="fa fa-caret-down"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-messages">
+                    <li>
+                        <a href="#">
+                            <div>
+                                <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                            </div>
+                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                            </div>
+                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                            </div>
+                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a class="text-center" href="#">
+                            <strong>Read All Messages</strong>
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </li>
+                </ul>
+                <!-- /.dropdown-messages -->
+            </li>
+            <!-- /.dropdown -->
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <i class="fa fa-tasks fa-fw"></i> <i class="fa fa-caret-down"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-tasks">
+                    <li>
+                        <a href="#">
+                            <div>
+                                <p>
+                                    <strong>Task 1</strong>
+                                    <span class="pull-right text-muted">40% Complete</span>
+                                </p>
+
+                                <div class="progress progress-striped active">
+                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40"
+                                         aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                        <span class="sr-only">40% Complete (success)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <p>
+                                    <strong>Task 2</strong>
+                                    <span class="pull-right text-muted">20% Complete</span>
+                                </p>
+
+                                <div class="progress progress-striped active">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20"
+                                         aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                        <span class="sr-only">20% Complete</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <p>
+                                    <strong>Task 3</strong>
+                                    <span class="pull-right text-muted">60% Complete</span>
+                                </p>
+
+                                <div class="progress progress-striped active">
+                                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60"
+                                         aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                        <span class="sr-only">60% Complete (warning)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <p>
+                                    <strong>Task 4</strong>
+                                    <span class="pull-right text-muted">80% Complete</span>
+                                </p>
+
+                                <div class="progress progress-striped active">
+                                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80"
+                                         aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                        <span class="sr-only">80% Complete (danger)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a class="text-center" href="#">
+                            <strong>See All Tasks</strong>
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </li>
+                </ul>
+                <!-- /.dropdown-tasks -->
+            </li>
+            <!-- /.dropdown -->
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-alerts">
+                    <li>
+                        <a href="#">
+                            <div>
+                                <i class="fa fa-comment fa-fw"></i> New Comment
+                                <span class="pull-right text-muted small">4 minutes ago</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                <span class="pull-right text-muted small">12 minutes ago</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <i class="fa fa-envelope fa-fw"></i> Message Sent
+                                <span class="pull-right text-muted small">4 minutes ago</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <i class="fa fa-tasks fa-fw"></i> New Task
+                                <span class="pull-right text-muted small">4 minutes ago</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                <span class="pull-right text-muted small">4 minutes ago</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a class="text-center" href="#">
+                            <strong>See All Alerts</strong>
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </li>
+                </ul>
+                <!-- /.dropdown-alerts -->
+            </li>
+            <!-- /.dropdown -->
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-user">
+                    <li><a href="teacherMgmt/profileBasic.html"><i class="fa fa-user fa-fw"></i> 个人资料</a>
+                    </li>
+                    <li><a href="settings.html"><i class="fa fa-gear fa-fw"></i> 设置</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li><a href="../login.html"><i class="fa fa-sign-out fa-fw"></i> 退出</a>
+                    </li>
+                </ul>
+                <!-- /.dropdown-user -->
+            </li>
+            <!-- /.dropdown -->
+        </ul>
+        <!-- /.navbar-top-links -->
+
+        <!-- /.navbar-static-side -->
+    </nav>
+
+    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0;z-index: auto">
+        <div class="row my-nav">
+
+            <div class="my-nav-lft col-md-offset-2 col-md-3">
+
+                <div class="examall hidden_btn">
+                    <em class="eamall">题库 <i class="iconTiku"></i></em>
+
+                    <div class="nav dropDiv" style="display: none; opacity: 0;">
+                        <div class="navlist">
+                            <dl>
+                                <dt>
+                                    <a href="" class="selec project" data-info="1">数学</a>
+                                </dt>
+                                <dd>
+                                    <a href="" class="selec">初一</a>
+                                    <a href="">初二</a>
+                                    <a href="">初三</a>
+                                    <a href="">高一</a>
+                                    <a href="">高二</a>
+                                    <a href="">高三</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    <a href="" class="selec project" data-info="1">语文</a>
+                                </dt>
+                                <dd>
+                                    <a href="" class="selec">初一</a>
+                                    <a href="">初二</a>
+                                    <a href="">初三</a>
+                                    <a href="">高一</a>
+                                    <a href="">高二</a>
+                                    <a href="">高三</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    <a href="" class="selec project" data-info="1">英语</a>
+                                </dt>
+                                <dd>
+                                    <a href="" class="selec">初一</a>
+                                    <a href="">初二</a>
+                                    <a href="">初三</a>
+                                    <a href="">高一</a>
+                                    <a href="">高二</a>
+                                    <a href="">高三</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    <a href="" class="selec project" data-info="1">物理</a>
+                                </dt>
+                                <dd>
+                                    <a href="" class="selec">初一</a>
+                                    <a href="">初二</a>
+                                    <a href="">初三</a>
+                                    <a href="">高一</a>
+                                    <a href="">高二</a>
+                                    <a href="">高三</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    <a href="" class="selec project" data-info="1">化学</a>
+                                </dt>
+                                <dd>
+                                    <a href="" class="selec">初一</a>
+                                    <a href="">初二</a>
+                                    <a href="">初三</a>
+                                    <a href="">高一</a>
+                                    <a href="">高二</a>
+                                    <a href="">高三</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    <a href="" class="selec project" data-info="1">历史</a>
+                                </dt>
+                                <dd>
+                                    <a href="" class="selec">初一</a>
+                                    <a href="">初二</a>
+                                    <a href="">初三</a>
+                                    <a href="">高一</a>
+                                    <a href="">高二</a>
+                                    <a href="">高三</a>
+                                </dd>
+                            </dl>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="xmCont">
+                    <em id="xmItem">数学</em><em id="kmItem">初一</em>
+                </div>
+                <!--<a href="http://tiku.gaodun.com" class="gaodun"><h1>高顿题库</h1></a>-->
+
+            </div>
+            <div class="col-md-5 my-nav-rgt">
+                <ul class="nav navbar-top-links navbar-right">
+
+                    <li role="presentation" ><a href="questionDataBase.html" class="current">练习与模考</a></li>
+                    <li role="presentation" class=""><a href="assess.html">能力评估</a></li>
+                    <li role="presentation" class=""><a href="myTestList.html">我的练习</a></li>
+                    <li role="presentation" class=""><a href="../studentMgmt/studentDashBoard.html">返回首页</a></li>
+
+                </ul>
+            </div>
+
+
+        </div>
+
+    </nav>
+
+
+    <div id="test-wrapper">
+        <!-- /.row -->
+        <div class="row">
+            <div class="panel panel-green col-lg-12" style="padding: 0px; margin: 0px">
+                <div class="panel-body" style="text-align: center">
+                    <p>作业说明：截止提交时间２０１３０６２４</p>
+
+                    <div class="col-md-3 testing-tool-list">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-2">
+                            <div class="panel panel-green " style="width: 248; margin-bottom: 0px">
+
+                                <button class="btn btn-outline btn-success leftpanel-button" style="text-align: left">
+                                    <img src="../../dist/images/timer001_s.png" style="height: 70; width: 80"/>
+                                    已用时：xxxx
+                                </button>
+                                <button class="btn btn-outline btn-success leftpanel-button" style="text-align: left">
+                                    <img src="../../dist/images/calculator001_s.png" style="height: 70; width: 80;"/>计算器
+                                </button>
+                                <button class="btn btn-outline btn-success leftpanel-button">暂停做题</button>
+                                <button class="btn btn-outline btn-success leftpanel-button">提交试卷</button>
+                            </div>
+                            <div class="panel panel-green " style="height: 300; width: 248; margin-top: 0px">
+                                <div class="panel panel-heading "
+                                     style="background-color: #fdfdfd; color: #5cb85c; border: 0px">完成进度
+                                </div>
+                                <button class="btn btn-success btn-progress-question-index">1</button>
+                                <button class="btn btn-success btn-progress-question-index">2</button>
+                                <button class="btn btn-success btn-progress-question-index">3</button>
+                                <button class="btn btn-success btn-progress-question-index">4</button>
+                                <button class="btn btn-success btn-progress-question-index">5</button>
+                                <button class="btn btn-success btn-progress-question-index">6</button>
+                                <button class="btn btn-success btn-progress-question-index">7</button>
+                                <button class="btn btn-success btn-progress-question-index">8</button>
+                                <button class="btn btn-success btn-progress-question-index">9</button>
+                                <button class="btn btn-warning btn-progress-question-index">10</button>
+                                <button class="btn btn-success btn-progress-question-index">11</button>
+                                <button class="btn btn-success btn-progress-question-index">12</button>
+                                <button class="btn btn-warning btn-progress-question-index">13</button>
+                                <button class="btn btn-success btn-progress-question-index">14</button>
+                                <button class="btn btn-success btn-progress-question-index">15</button>
+                                <button class="btn btn-success btn-progress-question-index">16</button>
+                                <button class="btn btn-success btn-progress-question-index">17</button>
+                                <button class="btn btn-success btn-progress-question-index">18</button>
+                                <button class="btn btn-success btn-progress-question-index">19</button>
+                                <button class="btn btn-success btn-progress-question-index">20</button>
+                                <button class="btn btn-success btn-progress-question-index">21</button>
+                                <button class="btn btn-success btn-progress-question-index">22</button>
+                                <button class="btn btn-default btn-progress-question-index">23</button>
+                                <button class="btn btn-default btn-progress-question-index">24</button>
+                                <button class="btn btn-default btn-progress-question-index">25</button>
+                                <button class="btn btn-default btn-progress-question-index">26</button>
+                                <button class="btn btn-default btn-progress-question-index">27</button>
+                                <button class="btn btn-default btn-progress-question-index">28</button>
+                                <button class="btn btn-default btn-progress-question-index">29</button>
+                                <button class="btn btn-default btn-progress-question-index">30</button>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default col-md-9" style="text-align: left;">
+                        <!--
+                        <div class="panel-heading">
+                            Test Body Panel
+                        </div>
+                        -->
+                        <div class="panel-body">
+                            <!--display questions here -->
+                            <div id="question1" class="panel panel-default panel-que-ans">
+                                <div id="body-question1" class="panel panel-question">
+
+                                    <p>1、118 表示（ ）（单选题）
+                                    </p>
+                                    <ul class="list-unstyled">
+                                        <li>A、11 个 8 连乘</li>
+                                        <li>B、11 乘以 8</li>
+                                        <li>C、8 个 11 连乘</li>
+                                        <li>D、8 个别 1 相加</li>
+                                    </ul>
+                                </div>
+                                <div id="answer-question1" class="panel panel-answer">
+
+                                    <ul class="list-inline">
+                                        <li>答案：</li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="optionsQuestion1" id="optionsQuestion1"
+                                                       value="A" checked>A
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="optionsQuestion1" id="optionsQuestion1"
+                                                       value="B" checked>B
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="optionsQuestion1" id="optionsQuestion1"
+                                                       value="C" checked>C
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="optionsQuestion1" id="optionsQuestion1"
+                                                       value="D" checked>D
+                                            </label>
+                                        </li>
+                                    </ul>
+                                    <div class="panel-footer answer-footer">
+                                        <ul class="list-inline right">
+                                            <li><a href="#" class="fa fa-bell">标记</a></li>
+                                            <li><a href="#" class="fa fa-anchor">收藏</a></li>
+                                            <li><a href="#" class="fa fa-paw">查看解析</a></li>
+                                            <li><a href="#" class="fa fa-warning">纠错</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div id="hint-question1" class="panel panel-answer" hidden>
+                                    解析： 为您筛选最好的解析
+                                </div>
+
+                            </div>
+
+                            <!-- end of question 1-->
+                            <div id="question1" class="panel panel-default panel-que-ans">
+                                <div id="body-question1" class="panel panel-question">
+
+                                    <p>2、118 表示（ ）（单选题）
+                                    </p>
+                                    <ul class="list-unstyled">
+                                        <li>A、11 个 8 连乘</li>
+                                        <li>B、11 乘以 8</li>
+                                        <li>C、8 个 11 连乘</li>
+                                        <li>D、8 个别 1 相加</li>
+                                    </ul>
+                                </div>
+                                <div id="answer-question1" class="panel panel-answer">
+
+                                    <ul class="list-inline">
+                                        <li>答案：</li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="optionsQuestion1" id="optionsQuestion1"
+                                                       value="A" checked>A
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="optionsQuestion1" id="optionsQuestion1"
+                                                       value="B" checked>B
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="optionsQuestion1" id="optionsQuestion1"
+                                                       value="C" checked>C
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="optionsQuestion1" id="optionsQuestion1"
+                                                       value="D" checked>D
+                                            </label>
+                                        </li>
+                                    </ul>
+                                    <div class="panel-footer answer-footer">
+                                        <ul class="list-inline right">
+                                            <li><a href="#" class="fa fa-bell">标记</a></li>
+                                            <li><a href="#" class="fa fa-anchor">收藏</a></li>
+                                            <li><a href="#" class="fa fa-paw">查看解析</a></li>
+                                            <li><a href="#" class="fa fa-warning">纠错</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div id="hint-question1" class="panel panel-answer" hidden>
+                                    解析： 为您筛选最好的解析
+                                </div>
+
+                            </div>
+
+                            <!-- end of question 1-->
+                            <div id="question1" class="panel panel-default panel-que-ans">
+                                <div id="body-question1" class="panel panel-question">
+
+                                    <p>3、118 表示（ ）（单选题）
+                                    </p>
+                                    <ul class="list-unstyled">
+                                        <li>A、11 个 8 连乘</li>
+                                        <li>B、11 乘以 8</li>
+                                        <li>C、8 个 11 连乘</li>
+                                        <li>D、8 个别 1 相加</li>
+                                    </ul>
+                                </div>
+                                <div id="answer-question1" class="panel panel-answer">
+
+                                    <ul class="list-inline">
+                                        <li>答案：</li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="optionsQuestion1" id="optionsQuestion1"
+                                                       value="A" checked>A
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="optionsQuestion1" id="optionsQuestion1"
+                                                       value="B" checked>B
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="optionsQuestion1" id="optionsQuestion1"
+                                                       value="C" checked>C
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="optionsQuestion1" id="optionsQuestion1"
+                                                       value="D" checked>D
+                                            </label>
+                                        </li>
+                                    </ul>
+                                    <div class="panel-footer answer-footer">
+                                        <ul class="list-inline right">
+                                            <li><a href="#" class="fa fa-bell">标记</a></li>
+                                            <li><a href="#" class="fa fa-anchor">收藏</a></li>
+                                            <li><a href="#" class="fa fa-paw">查看解析</a></li>
+                                            <li><a href="#" class="fa fa-warning">纠错</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div id="hint-question1" class="panel panel-answer" hidden>
+                                    解析： 为您筛选最好的解析
+                                </div>
+
+                            </div>
+
+                            <!-- end of question 1-->
+                            <div id="question1" class="panel panel-default panel-que-ans">
+                                <div id="body-question1" class="panel panel-question">
+
+                                    <p>1、118 表示（ ）（单选题）
+                                    </p>
+                                    <ul class="list-unstyled">
+                                        <li>A、11 个 8 连乘</li>
+                                        <li>B、11 乘以 8</li>
+                                        <li>C、8 个 11 连乘</li>
+                                        <li>D、8 个别 1 相加</li>
+                                    </ul>
+                                </div>
+                                <div id="answer-question1" class="panel panel-answer">
+
+                                    <ul class="list-inline">
+                                        <li>答案：</li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="optionsQuestion1" id="optionsQuestion1"
+                                                       value="A" checked>A
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="optionsQuestion1" id="optionsQuestion1"
+                                                       value="B" checked>B
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="optionsQuestion1" id="optionsQuestion1"
+                                                       value="C" checked>C
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="optionsQuestion1" id="optionsQuestion1"
+                                                       value="D" checked>D
+                                            </label>
+                                        </li>
+                                    </ul>
+                                    <div class="panel-footer answer-footer">
+                                        <ul class="list-inline right">
+                                            <li><a href="#" class="fa fa-bell">标记</a></li>
+                                            <li><a href="#" class="fa fa-anchor">收藏</a></li>
+                                            <li><a href="#" class="fa fa-paw">查看解析</a></li>
+                                            <li><a href="#" class="fa fa-warning">纠错</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div id="hint-question1" class="panel panel-answer" hidden>
+                                    解析： 为您筛选最好的解析
+                                </div>
+
+                            </div>
+
+                            <!-- end of question 1-->
+                            <div id="question1" class="panel panel-default panel-que-ans">
+                                <div id="body-question1" class="panel panel-question">
+
+                                    <p>1、118 表示（ ）（单选题）
+                                    </p>
+                                    <ul class="list-unstyled">
+                                        <li>A、11 个 8 连乘</li>
+                                        <li>B、11 乘以 8</li>
+                                        <li>C、8 个 11 连乘</li>
+                                        <li>D、8 个别 1 相加</li>
+                                    </ul>
+                                </div>
+                                <div id="answer-question1" class="panel panel-answer">
+
+                                    <ul class="list-inline">
+                                        <li>答案：</li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="optionsQuestion1" id="optionsQuestion1"
+                                                       value="A" checked>A
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="optionsQuestion1" id="optionsQuestion1"
+                                                       value="B" checked>B
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="optionsQuestion1" id="optionsQuestion1"
+                                                       value="C" checked>C
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="optionsQuestion1" id="optionsQuestion1"
+                                                       value="D" checked>D
+                                            </label>
+                                        </li>
+                                    </ul>
+                                    <div class="panel-footer answer-footer">
+                                        <ul class="list-inline right">
+                                            <li><a href="#" class="fa fa-bell">标记</a></li>
+                                            <li><a href="#" class="fa fa-anchor">收藏</a></li>
+                                            <li><a href="#" class="fa fa-paw">查看解析</a></li>
+                                            <li><a href="#" class="fa fa-warning">纠错</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div id="hint-question1" class="panel panel-answer" hidden>
+                                    解析： 为您筛选最好的解析
+                                </div>
+
+                            </div>
+
+                            <!-- end of question 1-->
+                            <div id="question1" class="panel panel-default panel-que-ans">
+                                <div id="body-question1" class="panel panel-question">
+
+                                    <p>1、118 表示（ ）（单选题）
+                                    </p>
+                                    <ul class="list-unstyled">
+                                        <li>A、11 个 8 连乘</li>
+                                        <li>B、11 乘以 8</li>
+                                        <li>C、8 个 11 连乘</li>
+                                        <li>D、8 个别 1 相加</li>
+                                    </ul>
+                                </div>
+                                <div id="answer-question1" class="panel panel-answer">
+
+                                    <ul class="list-inline">
+                                        <li>答案：</li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="optionsQuestion1" id="optionsQuestion1"
+                                                       value="A" checked>A
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="optionsQuestion1" id="optionsQuestion1"
+                                                       value="B" checked>B
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="optionsQuestion1" id="optionsQuestion1"
+                                                       value="C" checked>C
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="optionsQuestion1" id="optionsQuestion1"
+                                                       value="D" checked>D
+                                            </label>
+                                        </li>
+                                    </ul>
+                                    <div class="panel-footer answer-footer">
+                                        <ul class="list-inline right">
+                                            <li><a href="#" class="fa fa-bell">标记</a></li>
+                                            <li><a href="#" class="fa fa-anchor">收藏</a></li>
+                                            <li><a href="#" class="fa fa-paw">查看解析</a></li>
+                                            <li><a href="#" class="fa fa-warning">纠错</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div id="hint-question1" class="panel panel-answer" hidden>
+                                    解析： 为您筛选最好的解析
+                                </div>
+
+                            </div>
+
+                            <!-- end of question 1-->
+                            <div id="question1" class="panel panel-default panel-que-ans">
+                                <div id="body-question1" class="panel panel-question">
+
+                                    <p>1、118 表示（ ）（单选题）
+                                    </p>
+                                    <ul class="list-unstyled">
+                                        <li>A、11 个 8 连乘</li>
+                                        <li>B、11 乘以 8</li>
+                                        <li>C、8 个 11 连乘</li>
+                                        <li>D、8 个别 1 相加</li>
+                                    </ul>
+                                </div>
+                                <div id="answer-question1" class="panel panel-answer">
+
+                                    <ul class="list-inline">
+                                        <li>答案：</li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="optionsQuestion1" id="optionsQuestion1"
+                                                       value="A" checked>A
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="optionsQuestion1" id="optionsQuestion1"
+                                                       value="B" checked>B
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="optionsQuestion1" id="optionsQuestion1"
+                                                       value="C" checked>C
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="optionsQuestion1" id="optionsQuestion1"
+                                                       value="D" checked>D
+                                            </label>
+                                        </li>
+                                    </ul>
+                                    <div class="panel-footer answer-footer">
+                                        <ul class="list-inline right">
+                                            <li><a href="#" class="fa fa-bell">标记</a></li>
+                                            <li><a href="#" class="fa fa-anchor">收藏</a></li>
+                                            <li><a href="#" class="fa fa-paw">查看解析</a></li>
+                                            <li><a href="#" class="fa fa-warning">纠错</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div id="hint-question1" class="panel panel-answer" hidden>
+                                    解析： 为您筛选最好的解析
+                                </div>
+
+                            </div>
+
+                            <!-- end of question 1-->
+
+                        </div>
+                    </div>
+                </div>
+                <!--
+                <div class="panel-footer">
+                    Panel Footer
+                </div>
+                -->
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+    </div>
+    <!-- /#page-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+
+
+</body>
+
+</html>

@@ -170,149 +170,6 @@ and open the template in the editor.
     height: 38px; /* Height of image */
 }
 
-#navTop {
-    background: #fff none repeat scroll 0 0;
-    border-bottom: 1px solid #a8a8a8;
-    box-shadow: 0 0 10px rgba(50, 50, 50, 0.4);
-    height: 63px;
-    position: relative;
-    z-index: 100;
-}
-
-
-#navTop .container {
-    height: 62px;
-    margin: 0 auto;
-    position: relative;
-    width: 1000px;
-    z-index: 100;
-}
-#navTop .container .lft {
-    line-height: 62px;
-}
-
-
-#navTop .container .lft .examall em {
-    border-color: #fff;
-    border-style: solid;
-    border-width: 0 1px;
-    color: #00980d;
-    display: inline-block;
-    font-size: 24px;
-    padding: 0 16px;
-    position: absolute;
-    white-space: nowrap;
-    word-break: break-all;
-    z-index: 9;
-}
-
-#navTop .container .lft .examall em .iconTiku {
-    background: rgba(0, 0, 0, 0) url("./images/tkIcon.png") no-repeat scroll 0 0;
-    display: inline-block;
-    height: 17px;
-    width: 22px;
-}
-
-#navTop .container .lft .current .eamall {
-    background: #f9f9f9 none repeat scroll 0 0;
-    border-color: #d8d8d8;
-    border-style: solid;
-    border-width: 0 1px;
-    padding-bottom: 1px;
-}
-.dropDiv {
-    background-clip: padding-box;
-    background-color: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 6px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    display: none;
-    list-style: outside none none;
-    margin: 2px 0 0;
-    padding: 5px 3px;
-    z-index: 999;
-}
-
-.dropDiv::before {
-    background: #fff none repeat scroll 0 0;
-    box-shadow: -1px -1px rgba(0, 0, 0, 0.2);
-    content: "";
-    height: 8px;
-    left: 10px;
-    position: absolute;
-    top: -4px;
-    transform: rotate(45deg);
-    width: 8px;
-}
-#navTop  .nav {
-    background: #f9f9f9 none repeat scroll 0 0;
-    border: 1px solid #d8d8d8;
-    border-radius: 0;
-    box-shadow: none;
-    display: none;
-    left: 15px;
-    padding: 10px 0 10px 28px;
-    position: absolute;
-    top: 60px;
-    width: 800px;
-    z-index: 8;
-}
-
-.navlist {
-    overflow: hidden;
-}
-
-.nav dl dd a {
-    color: #969696;
-    height: 26px;
-    line-height: 26px;
-    margin: 0 4px;
-    padding: 0 8px;
-}
-
-.nav dl a {
-    color: #707070;
-}
-
-#navTop .xmCont {
-    float: left;
-    margin-left: 110px;
-}
-
-#navTop .xmCont em {
-    display: inline-block;
-    margin-left: 12px;
-    color: #666;
-}
-
-#navTop .xmCont #xmItem {
-    font-size: 24px;
-    color: #333
-}
-
- #navTop .container .rgt {
-    line-height: 62px;
-}
-#navTop .container .rgt a {
-    display: inline-block;
-    float: left;
-    padding: 0 15px;
-}
-#navTop .container .rgt a:hover {
-    background: #f5f5f5 none repeat scroll 0 0;
-    text-decoration: none;
-}
-#navTop .container .rgt a.current {
-    background: rgba(0, 0, 0, 0) -moz-linear-gradient(90deg, #f7f7f7, #d7d7d7) repeat scroll 0 0;
-    box-shadow: 0 0 2px rgba(50, 50, 50, 0.5);
-}
-
-.lft {
-    float: left;
-}
-.rgt {
-    float: right    ;
-}
 
 .home-wrap {
     background: rgba(0, 0, 0, 0) url("./images/examBg.png") repeat-y scroll 0 -1px;
@@ -868,3 +725,121 @@ and open the template in the editor.
     padding: 0 5px;
     white-space: nowrap;
 }
+
+/* new nav top css */
+
+.my-nav {
+    position: relative;
+    z-index: auto;
+}
+
+.my-nav-lft {
+   padding-top: 5px
+}
+
+.my-nav-lft .examall em {
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 1px;
+    color: #00980d;
+    display: inline-block;
+    font-size: 24px;
+    padding: 0 16px;
+    position: absolute;
+    white-space: nowrap;
+    word-break: break-all;
+    z-index: 9;
+}
+
+.my-nav-lft .examall em .iconTiku {
+    background: rgba(0, 0, 0, 0) url("./images/tkIcon.png") no-repeat scroll 0 0;
+    display: inline-block;
+    height: 17px;
+    width: 22px;
+}
+
+
+.my-nav-lft .xmCont {
+    float: left;
+    margin-left: 110px;
+}
+
+.my-nav-lft .xmCont em {
+    display: inline-block;
+    margin-left: 12px;
+    color: #666;
+}
+
+.my-nav-lft .xmCont #xmItem {
+    font-size: 24px;
+    color: #333
+}
+.my-nav-lft  .nav {
+    background: #f9f9f9 none repeat scroll 0 0;
+    border: 1px solid #d8d8d8;
+    border-radius: 0;
+    box-shadow: none;
+    display: none;
+    left: 30px;
+    padding: 10px 0 10px 28px;
+    position: absolute;
+    top: 50px;
+    width: 800px;
+    z-index: 8;
+}
+.my-nav-rgt a:hover {
+    background: #f5f5f5 none repeat scroll 0 0;
+    text-decoration: none;
+}
+.my-nav-rgt a.current {
+    background: rgba(0, 0, 0, 0) -moz-linear-gradient(90deg, #f7f7f7, #d7d7d7) repeat scroll 0 0;
+    box-shadow: 0 0 2px rgba(50, 50, 50, 0.5);
+}
+.dropDiv {
+    background-clip: padding-box;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    list-style: outside none none;
+    margin: 2px 0 0;
+    padding: 5px 3px;
+    z-index: 999;
+}
+
+.dropDiv::before {
+    background: #fff none repeat scroll 0 0;
+    box-shadow: -1px -1px rgba(0, 0, 0, 0.2);
+    content: "";
+    height: 8px;
+    left: 10px;
+    position: absolute;
+    top: -4px;
+    transform: rotate(45deg);
+    width: 8px;
+}
+
+.navlist {
+    overflow: hidden;
+}
+
+.nav dl dd a {
+    color: #969696;
+    height: 26px;
+    line-height: 26px;
+    margin: 0 4px;
+    padding: 0 8px;
+}
+
+.nav dl a {
+    color: #707070;
+}
+
+.lft {
+    float: left;
+}
+.rgt {
+    float: right;
+}
+/* new nav top css end */

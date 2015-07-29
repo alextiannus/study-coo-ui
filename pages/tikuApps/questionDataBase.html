@@ -313,9 +313,10 @@
 </nav>
 
 
-<div id="navTop">
-    <div class="container clearfix">
-        <div class="lft">
+<nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0;z-index: auto">
+    <div class="row my-nav">
+
+        <div class="my-nav-lft col-md-offset-2 col-md-3">
 
             <div class="examall hidden_btn">
                 <em class="eamall">题库 <i class="iconTiku"></i></em>
@@ -410,21 +411,26 @@
             <!--<a href="http://tiku.gaodun.com" class="gaodun"><h1>高顿题库</h1></a>-->
 
         </div>
+        <div class="col-md-5 my-nav-rgt">
+            <ul class="nav navbar-top-links navbar-right">
 
+                <li role="presentation" ><a href="questionDataBase.html" class="current">练习与模考</a></li>
+                <li role="presentation" class=""><a href="assess.html">能力评估</a></li>
+                <li role="presentation" class=""><a href="myTestList.html">我的练习</a></li>
+                <li role="presentation" class=""><a href="../studentMgmt/studentDashBoard.html">返回首页</a></li>
 
-        <div class="rgt">
-            <a id="myexam" href="questionDataBase.html" class="current">练习与模考</a>
-            <a id="myassess" href="assess.html">能力评估</a>
-            <a id="myexercise" href="myTestList.html">我的练习</a>
+            </ul>
         </div>
+
+
     </div>
 
-</div>
+</nav>
 
 <div id="dbWrapper">
 
     <div class="home-wrap clearfix">
-        <!--0启用,3购课启用，4试听启用-->
+
         <div class="section-wrap">
             <div class="section">
                 <span class="pull-left smartA"></span>
