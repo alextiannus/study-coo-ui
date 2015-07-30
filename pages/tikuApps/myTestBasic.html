@@ -55,6 +55,60 @@
 
     <script src="../../dist/js/comm.js"></script>
 
+    <!-- caculate -->
+    <link rel="stylesheet" href="../../dist/css/CalcSS3.css" type="text/css"/>
+
+
+
+    <script>
+        var second = 0;
+        var t;
+        function timedCount() {
+
+            var hour = parseInt(second / 3600);
+            var min = parseInt(second / 60);
+            if (min >= 60) {
+                min = min % 60
+            }
+            var lastsecs = second % 60;
+
+            $("#timer").text(hour + "时" + min + "分" + lastsecs + "秒");
+
+            second = second + 1
+            t = setTimeout("timedCount()", 1000)
+            //   document.getElementById('start').style.display = "none";
+            // document.getElementById('end').style.display = "";
+
+
+        }
+
+
+        function pauseDo() {
+            clearTimeout(t);
+            $('#stopBtn').modal();
+        }
+        function startDo() {
+            $('#stopBtn').modal('hide');
+            timedCount();
+        }
+
+        function showcal(){
+            $('#caculateDiv').show();
+
+        }
+
+        function  closeCal(){
+            $('#caculateDiv').hide();
+        }
+
+        $(function () {
+            timedCount();
+
+        });
+
+
+    </script>
+
 </head>
 
 <body>
@@ -396,7 +450,7 @@
             <div class="col-md-5 my-nav-rgt">
                 <ul class="nav navbar-top-links navbar-right">
 
-                    <li role="presentation" ><a href="questionDataBase.html" class="current">练习与模考</a></li>
+                    <li role="presentation"><a href="questionDataBase.html" class="current">练习与模考</a></li>
                     <li role="presentation" class=""><a href="assess.html">能力评估</a></li>
                     <li role="presentation" class=""><a href="myTestList.html">我的练习</a></li>
                     <li role="presentation" class=""><a href="../studentMgmt/studentDashBoard.html">返回首页</a></li>
@@ -424,12 +478,16 @@
 
                                 <button class="btn btn-outline btn-success leftpanel-button" style="text-align: left">
                                     <img src="../../dist/images/timer001_s.png" style="height: 70; width: 80"/>
-                                    已用时：xxxx
+                                    已用时：
+                                    <span id="timer"></span>
                                 </button>
-                                <button class="btn btn-outline btn-success leftpanel-button" style="text-align: left">
-                                    <img src="../../dist/images/calculator001_s.png" style="height: 70; width: 80;"/>计算器
+                                <button class="btn btn-outline btn-success leftpanel-button" style="text-align: left" onclick="showcal()">
+                                    <img src="../../dist/images/calculator001_s.png" style="height: 70; width: 80;"/> 计算器
+
                                 </button>
-                                <button class="btn btn-outline btn-success leftpanel-button">暂停做题</button>
+
+                                <button class="btn btn-outline btn-success leftpanel-button" onclick="pauseDo()">暂停做题
+                                </button>
                                 <button class="btn btn-outline btn-success leftpanel-button">提交试卷</button>
                             </div>
                             <div class="panel panel-green " style="height: 300; width: 248; margin-top: 0px">
@@ -471,12 +529,14 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="panel panel-default col-md-9" style="text-align: left;">
                         <!--
                         <div class="panel-heading">
                             Test Body Panel
                         </div>
                         -->
+
                         <div class="panel-body">
                             <!--display questions here -->
                             <div id="question1" class="panel panel-default panel-que-ans">
@@ -798,8 +858,7 @@
                                                        value="C" checked>C
                                             </label>
                                         </li>
-                                        <li>
-                                            <label>
+                                        <li><label>
                                                 <input type="radio" name="optionsQuestion1" id="optionsQuestion1"
                                                        value="D" checked>D
                                             </label>
@@ -895,6 +954,100 @@
 
 </div>
 <!-- /#wrapper -->
+
+<div class="modal fade" id="stopBtn" tabindex="-1" role="dialog" >
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body" style="text-align: center;">
+            暂停做题，休息一下。
+            </div>
+            <div class="modal-footer" style="text-align: center;">
+                <button type="button" class="btn btn-primary"onclick="startDo()">继续做题</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="caculateDiv" style="display: none">
+    <div class="cal-close">
+        <a href="javascript:void(0);" onclick="closeCal()"><i class="fa fa-times-circle "></i></a>
+    </div>
+    <div>
+        <div class="calc-main">
+
+            <div class="calc-display">
+                <span>0</span>
+                <div class="calc-rad">Rad</div>
+                <div class="calc-hold"></div>
+                <div class="calc-buttons">
+                    <div class="calc-info">?</div>
+                    <div class="calc-smaller">&gt;</div>
+                    <div class="calc-ln">.</div>
+                </div>
+            </div>
+            <div class="calc-left">
+                <div><div>2nd</div></div>
+                <div><div>(</div></div>
+                <div><div>)</div></div>
+                <div><div>%</div></div>
+                <div><div>1/x</div></div>
+                <div><div>x<sup>2</sup></div></div>
+                <div><div>x<sup>3</sup></div></div>
+                <div><div>y<sup>x</sup></div></div>
+                <div><div>x!</div></div>
+                <div><div>&radic;</div></div>
+                <div><div class="calc-radxy">
+                    <sup>x</sup><em>&radic;</em><span>y</span>
+                </div></div>
+                <div><div>log</div></div>
+                <div><div>sin</div></div>
+                <div><div>cos</div></div>
+                <div><div>tan</div></div>
+                <div><div>ln</div></div>
+                <div><div>sinh</div></div>
+                <div><div>cosh</div></div>
+                <div><div>tanh</div></div>
+                <div><div>e<sup>x</sup></div></div>
+                <div><div>Deg</div></div>
+                <div><div>&pi;</div></div>
+                <div><div>EE</div></div>
+                <div><div>Rand</div></div>
+            </div>
+            <div class="calc-right">
+                <div><div>mc</div></div>
+                <div><div>m+</div></div>
+                <div><div>m-</div></div>
+                <div><div>mr</div></div>
+                <div class="calc-brown"><div >AC</div></div>
+                <div class="calc-brown"><div>+/&#8211;</div></div>
+                <div class="calc-brown calc-f19"><div>&divide;</div></div>
+                <div class="calc-brown calc-f21"><div>&times;</div></div>
+                <div class="calc-black"><div>7</div></div>
+                <div class="calc-black"><div>8</div></div>
+                <div class="calc-black"><div>9</div></div>
+                <div class="calc-brown calc-f18"><div>&#8211;</div></div>
+                <div class="calc-black"><div>4</div></div>
+                <div class="calc-black"><div >5</div></div>
+                <div class="calc-black"><div>6</div></div>
+                <div class="calc-brown calc-f18"><div>+</div></div>
+                <div class="calc-black"><div>1</div></div>
+                <div class="calc-black"><div>2</div></div>
+                <div class="calc-black"><div>3</div></div>
+
+                <div class="calc-orange calc-eq calc-f17"><div>
+                    <div class="calc-down">=</div>
+                </div></div>
+                <div class="calc-black calc-zero"><div>
+                    <span>0</span>
+                </div></div>
+                <div class="calc-black calc-f21"><div>.</div></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script type="text/javascript" src="../../js/CalcSS3.js"></script>
 
 
 </body>
