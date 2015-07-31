@@ -76,8 +76,6 @@
 
             second = second + 1
             t = setTimeout("timedCount()", 1000)
-            //   document.getElementById('start').style.display = "none";
-            // document.getElementById('end').style.display = "";
 
 
         }
@@ -105,6 +103,65 @@
             timedCount();
 
         });
+
+        function toMark(obj) {
+            var attrVal = $(obj).attr("style");
+
+            if (undefined == attrVal || ""==attrVal){
+                $(obj).attr("style", "color: #aa1111;");
+                $(obj).text("已标记");
+                //todo something ajax.
+            }else{
+                $(obj).attr("style", "");
+                $(obj).text("标记");
+                //todo something ajax.
+            }
+
+
+        }
+        function toFav(obj) {
+            var attrVal = $(obj).attr("style");
+
+            if (undefined == attrVal || ""==attrVal){
+                $(obj).attr("style", "color: #aa1111;");
+                $(obj).text("已收藏");
+                //todo something ajax.
+            }else{
+                $(obj).attr("style", "");
+                $(obj).text("收藏");
+                //todo something ajax.
+            }
+
+
+        }
+
+        function showAnalyse(obj){
+
+            var ulList = $(obj).parent().parent().parent().prev();
+
+            var selectedVal = "";
+            $(ulList).find("input[type='radio']").each(function(i){
+              if($(this).is(':checked')){
+                  selectedVal=$(this).val();
+                  return;
+              }
+
+            });
+
+
+            var ans = "<div><b>你选的答案是："+selectedVal+",正确答案是A</b></div>";
+            $("#hint-question11").prepend(ans);
+            $("#hint-question11").show();
+            $(obj).attr('style','color: #9d9d9d');
+            $(obj).removeAttr('onclick');
+        }
+
+        function submitError() {
+            $('#submitError').modal();
+
+        }
+
+
 
 
     </script>
@@ -553,44 +610,47 @@
                                 </div>
                                 <div id="answer-question1" class="panel panel-answer">
 
-                                    <ul class="list-inline">
+                                    <ul class="list-inline" >
                                         <li>答案：</li>
                                         <li>
                                             <label>
-                                                <input type="radio" name="optionsQuestion1" id="optionsQuestion1"
-                                                       value="A" checked>A
+                                                <input type="radio" name="optionsQuestion11" id="optionsQuestion1"
+                                                       value="A" >A
                                             </label>
                                         </li>
                                         <li>
                                             <label>
-                                                <input type="radio" name="optionsQuestion1" id="optionsQuestion1"
-                                                       value="B" checked>B
+                                                <input type="radio" name="optionsQuestion11" id="optionsQuestion2"
+                                                       value="B" >B
                                             </label>
                                         </li>
                                         <li>
                                             <label>
-                                                <input type="radio" name="optionsQuestion1" id="optionsQuestion1"
-                                                       value="C" checked>C
+                                                <input type="radio" name="optionsQuestion11" id="optionsQuestion3"
+                                                       value="C" >C
                                             </label>
                                         </li>
                                         <li>
                                             <label>
-                                                <input type="radio" name="optionsQuestion1" id="optionsQuestion1"
-                                                       value="D" checked>D
+                                                <input type="radio" name="optionsQuestion11" id="optionsQuestion4"
+                                                       value="D" >D
                                             </label>
                                         </li>
                                     </ul>
                                     <div class="panel-footer answer-footer">
                                         <ul class="list-inline right">
-                                            <li><a href="#" class="fa fa-bell">标记</a></li>
-                                            <li><a href="#" class="fa fa-anchor">收藏</a></li>
-                                            <li><a href="#" class="fa fa-paw">查看解析</a></li>
-                                            <li><a href="#" class="fa fa-warning">纠错</a></li>
+                                            <li><a href="#" class="fa fa-bell" onclick="toMark(this)">标记</a></li>
+                                            <li><a href="#" class="fa fa-anchor" onclick="toFav(this)">收藏</a></li>
+                                            <li><a href="#" class="fa fa-paw" onclick="showAnalyse(this)" > 查看解析</a></li>
+                                            <li><a href="#" class="fa fa-warning" onclick="submitError(this)">纠错</a></li>
                                         </ul>
                                     </div>
                                 </div>
-                                <div id="hint-question1" class="panel panel-answer" hidden>
-                                    解析： 为您筛选最好的解析
+                                <div id="hint-question11" class="panel panel-footer" style="display: none">
+                                    <h4>答案解析：</h4>
+                                    <div>118表示118个1相加</div>
+                                    <h4>【笔记】：</h4>
+                                    <div> <button class="btn btn-primary" type="button">快速添加笔记</button></div>
                                 </div>
 
                             </div>
@@ -955,6 +1015,8 @@
 </div>
 <!-- /#wrapper -->
 
+
+<!-- 暂停按钮-->
 <div class="modal fade" id="stopBtn" tabindex="-1" role="dialog" >
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -968,7 +1030,7 @@
     </div>
 </div>
 
-
+<!-- 计算器-->
 <div id="caculateDiv" style="display: none">
     <div class="cal-close">
         <a href="javascript:void(0);" onclick="closeCal()"><i class="fa fa-times-circle "></i></a>
@@ -1048,6 +1110,46 @@
 
 </div>
 <script type="text/javascript" src="../../js/CalcSS3.js"></script>
+
+
+
+
+<!-- 纠错-->
+<div class="modal fade" id="submitError" tabindex="-1" role="dialog" >
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">study-cool 试题纠错</h4>
+            </div>
+            <div class="modal-body" style="text-align: center;">
+                <div >
+                    <form action="">
+                        <div>为方便我们排查错误，请您详细描述本题错误，例如：</div>
+                        <div class="wrongLst">
+
+                            <label><input type="radio" value="1" name="wrong">错别字</label>
+                            <label><input type="radio" value="2" name="wrong">答案有误</label>
+                            <label><input type="radio" value="3" name="wrong">排版错误</label>
+                            <label><input type="radio" value="4" name="wrong">图片模糊</label>
+                            <label><input type="radio" value="5" name="wrong">答案有异议</label>
+                            <label><input type="radio" value="6" name="wrong">其他错误</label>
+                        </div>
+                        <div>（注意：纠错非提问，如果是有疑问需解答请点击题目下方的提问按钮）</div>
+                        <div>
+                            <textarea rows="5" cols="45" name="textarea" id="appraisal_content"></textarea>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer" style="text-align: center;">
+                <button type="button" class="btn btn-primary"  data-dismiss="modal">提交错误</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 </body>

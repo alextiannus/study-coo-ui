@@ -430,8 +430,8 @@
 		}
 		if (ln) {
 			tmp = tmp.replace(/\./g, '#').
-				replace(/\s/g, ln === 1 ? ' ' : ln === 2 ? ',' : '.').
-				replace(/#/g, ln === 2 ? '.' : ',');
+				replace(/\s/g, ln === 1 ? ' ' : ln === 2 ? '.' : ',').
+				replace(/#/g, ln === 2 ? ',' : '.');
 		}
 		display.firstChild.data = tmp;
 		// for common use: get values of pixels dynamically to stay free from design (...but outside this function)
