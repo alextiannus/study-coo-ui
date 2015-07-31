@@ -161,6 +161,18 @@
 
         }
 
+        function showNote(obj){
+            $("#toNote1").show();
+            $(obj).hide();
+        }
+
+        function addNote(obj){
+            var notes = $(obj).prev().val();
+            var newNotes = "<div>"+notes+"</div>";
+            $(obj).parent().parent().append(newNotes);
+            //todo ajax save info
+            $(obj).parent().hide();
+        }
 
 
 
@@ -650,7 +662,11 @@
                                     <h4>答案解析：</h4>
                                     <div>118表示118个1相加</div>
                                     <h4>【笔记】：</h4>
-                                    <div> <button class="btn btn-primary" type="button">快速添加笔记</button></div>
+                                    <div> <button class="btn btn-primary" type="button" onclick="showNote(this)">快速添加笔记</button></div>
+                                    <div id="toNote1" style="display: none">
+                                        <textarea class="form-control" rows="3"></textarea>
+                                        <button class="btn btn-primary" type="button" onclick="addNote(this)">添加</button>
+                                    </div>
                                 </div>
 
                             </div>

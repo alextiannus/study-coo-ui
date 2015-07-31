@@ -734,7 +734,8 @@ and open the template in the editor.
 }
 
 .my-nav-lft {
-   padding-top: 5px
+   /*padding-top: 5px*/
+    margin-top:15px
 }
 
 .my-nav-lft .examall em {
@@ -783,7 +784,7 @@ and open the template in the editor.
     left: 30px;
     padding: 10px 0 10px 28px;
     position: absolute;
-    top: 50px;
+    top: 32px;
     width: 800px;
     z-index: 8;
 }
