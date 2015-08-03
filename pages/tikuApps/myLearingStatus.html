@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -27,8 +28,6 @@
 
     <!-- Custom Fonts -->
     <link href="../../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="../../dist/localstyle.css" type="text/css"/>
-
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -37,6 +36,8 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <!-- Custom CSS -->
+    <link href="../../dist/localstyle.css" rel="stylesheet">
     <!-- jQuery -->
     <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
 
@@ -46,16 +47,130 @@
     <!-- Metis Menu Plugin JavaScript -->
     <script src="../../bower_components/metisMenu/dist/metisMenu.min.js"></script>
 
+    <!-- Morris Charts JavaScript -->
+    <script src="../../bower_components/raphael/raphael-min.js"></script>
+    <script src="../../bower_components/morrisjs/morris.min.js"></script>
+
     <!-- DataTables JavaScript -->
     <script src="../../bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
     <script src="../../bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
 
+    <!-- Custom Theme JavaScript -->
+    <script src="../../dist/js/sb-admin-2.js"></script>
 
-<script>
-    function showTest(obj){
-        window.location.href="myTestBasic.html";
-    }
-</script>
+
+    <script>
+        function showTest(obj){
+            window.location.href="myTestBasic.html";
+        }
+
+        $(function() {
+
+            Morris.Donut(
+                    {
+                        element: 'mdc-jm-chinese',
+                        data: [{
+                            label: "精通",
+                            value: 12
+                        }, {
+                            label: "熟悉",
+                            value: 30
+                        }, {
+                            label: "初学",
+                            value: 20
+                        }],
+                        resize: true,
+                        colors: [ '#0066FF', '#99FF66',  '#FF0066']
+                    });
+
+            Morris.Donut(
+                    {
+                        element: 'mdc-jm-english',
+                        data: [{
+                            label: "精通",
+                            value: 15
+                        }, {
+                            label: "熟悉",
+                            value: 36
+                        }, {
+                            label: "初学",
+                            value: 21
+                        }],
+                        resize: true,
+                        colors: [ '#0066FF', '#99FF66',  '#FF0066']
+                    });
+            Morris.Donut(
+                    {
+                        element: 'mdc-jm-mathmatics',
+                        data: [{
+                            label: "精通",
+                            value: 32
+                        }, {
+                            label: "熟悉",
+                            value: 50
+                        }, {
+                            label: "初学",
+                            value: 10
+                        }],
+                        resize: true,
+                        colors: [ '#0066FF', '#99FF66',  '#FF0066']
+                    });
+
+            Morris.Donut(
+                    {
+                        element: 'mdc-jm-physics',
+                        data: [{
+                            label: "精通",
+                            value: 16
+                        }, {
+                            label: "熟悉",
+                            value: 21
+                        }, {
+                            label: "初学",
+                            value: 65
+                        }],
+                        resize: true,
+                        colors: [ '#0066FF', '#99FF66',  '#FF0066']
+                    });
+
+            Morris.Donut(
+                    {
+                        element: 'mdc-jm-chemical',
+                        data: [{
+                            label: "精通",
+                            value: 42
+                        }, {
+                            label: "熟悉",
+                            value: 20
+                        }, {
+                            label: "初学",
+                            value: 33
+                        }],
+                        resize: true,
+                        colors: [ '#0066FF', '#99FF66',  '#FF0066']
+                    });
+
+            Morris.Donut(
+                    {
+                        element: 'mdc-jm-biology',
+                        data: [{
+                            label: "精通",
+                            value: 66
+                        }, {
+                            label: "熟悉",
+                            value: 32
+                        }, {
+                            label: "初学",
+                            value: 45
+                        }],
+                        resize: true,
+                        colors: [ '#0066FF', '#99FF66',  '#FF0066']
+                    });
+
+
+        });
+
+    </script>
 </head>
 
 <body>
@@ -271,9 +386,9 @@
                     <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
                 </a>
                 <ul class="dropdown-menu dropdown-user">
-                    <li><a href="../teacherMgmt/profileBasic.html"><i class="fa fa-user fa-fw"></i> 个人资料</a>
+                    <li><a href="studentProfileBasic.html"><i class="fa fa-user fa-fw"></i> 个人资料</a>
                     </li>
-                    <li><a href="settings.html"><i class="fa fa-gear fa-fw"></i> 设置</a>
+                    <li><a href="studentProfileBasic.html"><i class="fa fa-gear fa-fw"></i> 设置</a>
                     </li>
                     <li class="divider"></li>
                     <li><a href="../login.html"><i class="fa fa-sign-out fa-fw"></i> 退出</a>
@@ -285,88 +400,143 @@
         </ul>
         <!-- /.navbar-top-links -->
 
-    </nav>
-    <!--navTop-->
-    <div id="testheader" class="navbar navbar-default navbar-static-top test-top">
-        <div class="nav navbar-top-links navbar-left">
-            <div class="xmCont">
-                <a class="navbar-brand" href="#">初中物理</a>
-                <em class="navbar-brand" style="font-size: 40px">|</em>
-                <a class="navbar-brand" href="myTestList.html">历史练习</a>
-                <a class="navbar-brand" href="myTestErrorList.html">历史错题</a>
-                <a class="navbar-brand" href="myCollectionList.html">收藏习题</a>
-               <!-- <a class="navbar-brand" href="myNoteList.html">习题笔记</a>-->
-            </div>
-        </div>
+        <div class="navbar-default sidebar" role="navigation">
+            <div class="sidebar-nav navbar-collapse">
+                <div class="panel panel-default" style="width: 80%; text-align: center; margin-left: 10%">
+                    <div class="panel-body panel-collapse" style="width: 80%; text-align: center; margin-left: 5%">
+                        <div class="profile-photo-box">
+                            <img src="../../dist/images/assets/Dingbo.jpg" class="profile-photo" alt="profile photo" />
 
-        <div class="nav navbar-top-links navbar-right" >
-            <div class="xmCont">
-                <a class="navbar-brand" href="questionDataBase.html">我的题库</a>
-                <!--	<a class="navbar-brand" href="knowledgeTree.html">能力评估</a>
-                    <a class="navbar-brand" href="myTestList.html">我的练习</a>-->
-            </div>
-        </div>
-
-        <div class="header-shadow"></div>
-    </div>
-    <!--end navTop-->
-    <div id="newTest">
-
-        <!-- /.row -->
-        <div class="row">
-            <div class="col-lg-1"></div>
-            <div class="col-lg-10">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        收藏习题
-                    </div>
-                    <!-- /.panel-heading -->
-                    <div class="panel-body">
-                        <div class="dataTable_wrapper">
-                            <table class="table table-striped table-hover" id="dataTables-taskassigned">
-                                <thead>
-                                <tr>
-                                    <th>题目代号</th>
-                                    <th>题目名称</th>
-                                    <th>收藏数量</th>
-                                    <th>查看收藏题目</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr class="odd gradeX">
-                                    <td>mjm062302</td>
-                                    <td>初中物理试题1</td>
-                                    <td>6</td>
-                                    <td > <button type="button" class="btn btn-primary" onclick="showTest(this)">查看收藏</button></td>
-
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>mjm062302</td>
-                                    <td>初中物理试题2</td>
-                                    <td>7</td>
-                                    <td > <button type="button" class="btn btn-primary" onclick="showTest(this)">查看收藏</button></td>
-
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>mjm062302</td>
-                                    <td>初中物理试题3</td>
-                                    <td>9</td>
-                                    <td > <button type="button" class="btn btn-primary" onclick="showTest(this)">查看收藏</button></td>
-
-                                </tr>
-
-                                </tbody>
-                            </table>
                         </div>
-
+                        <label>丁博</label>
                     </div>
-                    <!-- /.panel-body -->
+
+                    <ul class="nav" id="side-menu">
+                        <li>
+                            <a href="mySubjectList.html"> <i class="fa fa-windows fa-fw"></i> 我的题库</a>
+                        </li>
+                        <li>
+                            <a href="myNoteList.html"><i class="fa fa-pencil fa-fw"></i> 我的笔记</a>
+                        </li>
+                        <li>
+                            <a href="myQuestions.html"><i class="fa fa-question-circle fa-fw"></i> 我的提问 </a>
+                        </li>
+
+                        <li>
+                            <a href="myLearingStatus.html"><i class="fa fa-table fa-fw"></i> 学习进度</a>
+                        </li>
+
+
+                    </ul>
                 </div>
-                <!-- /.panel -->
+
             </div>
-            <div class="col-lg-1"></div>
+            <!-- /.sidebar-collapse -->
+        </div>
+        <!-- /.navbar-static-side -->
+    </nav>
+
+    <div id="page-wrapper">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">学习进度</h1>
+            </div>
             <!-- /.col-lg-12 -->
         </div>
+        <!-- /.row -->
+
+
+        <div class="row">
+            <div class="col-lg-12">
+
+                    <div class="col-lg-4">
+                        <!-- /.panel -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <a href="knowledgetree.html"><i class="fa fa-bar-chart-o fa-fw"></i> 初中语文学习进度</a>
+                            </div>
+                            <div class="panel-body">
+                                <div id="mdc-jm-chinese"></div>
+                                <!--<a href="#" class="btn btn-default btn-block">查看</a>-->
+                            </div>
+                            <!-- /.panel-body -->
+                        </div>
+                    </div>
+                    <!-- /.panel -->
+                    <div class="col-lg-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <a href="knowledgetree.html"><i class="fa fa-bar-chart-o fa-fw"></i> 初中数学学习进度</a>
+                            </div>
+                            <div class="panel-body">
+                                <div id="mdc-jm-mathmatics"></div>
+                                <!--<a href="#" class="btn btn-default btn-block">查看</a>-->
+                            </div>
+                            <!-- /.panel-body -->
+                        </div>
+                    </div>
+
+                    <!-- /.panel -->
+                    <div class="col-lg-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <a href="knowledgetree.html"><i class="fa fa-bar-chart-o fa-fw"></i> 初中英文学习进度</a>
+                            </div>
+                            <div class="panel-body">
+                                <div id="mdc-jm-english"></div>
+                                <!--<a href="#" class="btn btn-default btn-block">查看</a>-->
+                            </div>
+                            <!-- /.panel-body -->
+                        </div>
+                    </div>
+
+                    <!-- /.panel -->
+                    <div class="col-lg-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <a href="knowledgetree.html"><i class="fa fa-bar-chart-o fa-fw"></i> 初中化学学习进度</a>
+                            </div>
+                            <div class="panel-body">
+                                <div id="mdc-jm-chemical"></div>
+                                <!--<a href="#" class="btn btn-default btn-block">查看</a> -->
+                            </div>
+                            <!-- /.panel-body -->
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <a href="knowledgetree.html"><i class="fa fa-bar-chart-o fa-fw"></i> 初中物理学习进度</a>
+                            </div>
+                            <div class="panel-body">
+                                <div id="mdc-jm-physics"></div>
+                            </div>
+                            <!-- /.panel-body -->
+                        </div>
+                    </div>
+
+                    <!-- /.panel -->
+
+                    <div class="col-lg-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <a href="knowledgetree.html"><i class="fa fa-bar-chart-o fa-fw"></i> 初中生物学习进度</a>
+                            </div>
+                            <div class="panel-body">
+                                <a href="#"><div id="mdc-jm-biology"></div></a>
+                            </div>
+                            <!-- /.panel-body -->
+                        </div>
+                    </div> <!-- End of Progress row 3 -->
+
+
+
+
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
     </div>
     <!-- /#page-wrapper -->
 

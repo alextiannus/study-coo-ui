@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -27,8 +28,6 @@
 
     <!-- Custom Fonts -->
     <link href="../../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="../../dist/localstyle.css" type="text/css"/>
-
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -37,20 +36,14 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <!-- jQuery -->
-    <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Custom CSS -->
+    <link href="../../dist/localstyle.css" rel="stylesheet">
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-
-    <!-- Metis Menu Plugin JavaScript -->
-    <script src="../../bower_components/metisMenu/dist/metisMenu.min.js"></script>
-
-    <!-- DataTables JavaScript -->
-    <script src="../../bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
-    <script src="../../bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
-
-
+    <script>
+        function showTest(obj){
+            window.location.href="myTestBasic.html";
+        }
+    </script>
 </head>
 
 <body>
@@ -266,9 +259,9 @@
                     <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
                 </a>
                 <ul class="dropdown-menu dropdown-user">
-                    <li><a href="../teacherMgmt/profileBasic.html"><i class="fa fa-user fa-fw"></i> 个人资料</a>
+                    <li><a href="studentProfileBasic.html"><i class="fa fa-user fa-fw"></i> 个人资料</a>
                     </li>
-                    <li><a href="settings.html"><i class="fa fa-gear fa-fw"></i> 设置</a>
+                    <li><a href="studentProfileBasic.html"><i class="fa fa-gear fa-fw"></i> 设置</a>
                     </li>
                     <li class="divider"></li>
                     <li><a href="../login.html"><i class="fa fa-sign-out fa-fw"></i> 退出</a>
@@ -280,96 +273,226 @@
         </ul>
         <!-- /.navbar-top-links -->
 
-    </nav>
-    <!--navTop-->
-    <div id="testheader" class="navbar navbar-default navbar-static-top test-top">
-        <div class="nav navbar-top-links navbar-left">
-            <div class="xmCont">
-                <a class="navbar-brand" href="#">初中物理</a>
-                <em class="navbar-brand" style="font-size: 40px">|</em>
-                <a class="navbar-brand" href="myTestList.html">历史练习</a>
-                <a class="navbar-brand" href="myTestErrorList.html">历史错题</a>
-                <a class="navbar-brand" href="myCollectionList.html">收藏习题</a>
-                <a class="navbar-brand" href="myNoteList.html">习题笔记</a>
-            </div>
-        </div>
+        <div class="navbar-default sidebar" role="navigation">
+            <div class="sidebar-nav navbar-collapse">
+                <div class="panel panel-default" style="width: 80%; text-align: center; margin-left: 10%">
+                    <div class="panel-body panel-collapse" style="width: 80%; text-align: center; margin-left: 5%">
+                        <div class="profile-photo-box">
+                            <img src="../../dist/images/assets/Dingbo.jpg" class="profile-photo" alt="profile photo" />
 
-        <div class="nav navbar-top-links navbar-right" >
-            <div class="xmCont">
-                <a class="navbar-brand" href="questionDataBase.html">我的题库</a>
-                <!--	<a class="navbar-brand" href="knowledgeTree.html">能力评估</a>
-                    <a class="navbar-brand" href="myTestList.html">我的练习</a>-->
-            </div>
-        </div>
-
-        <div class="header-shadow"></div>
-    </div>
-    <!--end navTop-->
-    <div id="newTest">
-
-        <!-- /.row -->
-        <div class="row">
-            <div class="col-lg-1"></div>
-            <div class="col-lg-10">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        习题笔记
-                    </div>
-                    <!-- /.panel-heading -->
-                    <div class="panel-body">
-                        <div class="dataTable_wrapper">
-                            <table class="table table-striped table-hover" id="dataTables-taskassigned">
-                                <thead>
-                                <tr>
-                                    <th>题目代号</th>
-                                    <th>题目名称</th>
-                                    <th>笔记数量</th>
-                                    <th>查看笔记</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr class="odd gradeX">
-                                    <td>mjm062302</td>
-                                    <td>初中物理试题1</td>
-                                    <td>6</td>
-                                    <td > <button type="button" class="btn btn-primary" data-dismiss="modal">查看笔记</button></td>
-
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>mjm062302</td>
-                                    <td>初中物理试题2</td>
-                                    <td>7</td>
-                                    <td > <button type="button" class="btn btn-primary" data-dismiss="modal">查看笔记</button></td>
-
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>mjm062302</td>
-                                    <td>初中物理试题3</td>
-                                    <td>9</td>
-                                    <td > <button type="button" class="btn btn-primary" data-dismiss="modal">查看笔记</button></td>
-
-                                </tr>
-
-                                </tbody>
-                            </table>
                         </div>
+                        <label>丁博</label>
+                    </div>
 
+                    <ul class="nav" id="side-menu">
+                        <li>
+                            <a href="mySubjectList.html"> <i class="fa fa-windows fa-fw"></i> 我的题库</a>
+                        </li>
+                        <li>
+                            <a href="myNoteList.html"><i class="fa fa-pencil fa-fw"></i> 我的笔记</a>
+                        </li>
+                        <li>
+                            <a href="myQuestions.html"><i class="fa fa-question-circle fa-fw"></i> 我的提问 </a>
+                        </li>
+
+                        <li>
+                            <a href="myLearingStatus.html   "><i class="fa fa-table fa-fw"></i> 学习进度</a>
+                        </li>
+
+
+                    </ul>
+                </div>
+
+            </div>
+            <!-- /.sidebar-collapse -->
+        </div>
+        <!-- /.navbar-static-side -->
+    </nav>
+
+    <div id="page-wrapper">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">我的笔记</h1>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+
+
+                    <div class="panel-body">
+
+
+                        <!-- Tab panes -->
+                        <div class="tab-content" style="margin-top: 10px">
+                            <div class="tab-pane fade in active" id="home-pills">
+
+                                <div class="dataTable_wrapper">
+                                    <table class="table  table-bordered table-hover" id="dataTables-example">
+                                        <thead>
+                                        <tr>
+                                            <th>题目代号</th>
+                                            <th>题目名称</th>
+                                            <th>笔记数量</th>
+                                            <th>知识点覆盖</th>
+                                            <th>查看</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr class="odd gradeX">
+                                            <td>A0001</td>
+                                            <td>初中物理</td>
+                                            <td>4</td>
+                                            <td >三种杠杆， 定滑轮特点...</td>
+                                            <td class="center"><a class="btn btn-success" id="zhishi_btn" onclick="showTest(this)">查看</a></td>
+                                        </tr>
+
+                                        <tr class="odd gradeX">
+                                            <td>A0002</td>
+                                            <td>初中外语</td>
+                                            <td>5</td>
+                                            <td >三种杠杆， 定滑轮特点...</td>
+                                            <td class="center"><a class="btn btn-success" id="zhishi_btn" >查看</a></td>
+                                        </tr>
+                                        <tr class="odd gradeX">
+                                            <td>A0001</td>
+                                            <td>初中化学</td>
+                                            <td>6</td>
+                                            <td >三种杠杆， 定滑轮特点...</td>
+                                            <td class="center"><a class="btn btn-success" id="zhishi_btn" >查看</a></td>
+                                        </tr>
+                                        <tr class="odd gradeX">
+                                            <td>A0003</td>
+                                            <td>初中数学</td>
+                                            <td>3</td>
+                                            <td >三种杠杆， 定滑轮特点...</td>
+                                            <td class="center"><a class="btn btn-success" id="zhishi_btn" >查看</a></td>
+                                        </tr>
+                                        <tr class="odd gradeX">
+                                            <td>A0004</td>
+                                            <td>初中物理</td>
+                                            <td>30</td>
+                                            <td >三种杠杆， 定滑轮特点...</td>
+                                            <td class="center"><a class="btn btn-success" id="zhishi_btn" >查看</a></td>
+                                        </tr>
+                                        <tr class="odd gradeX">
+                                            <td>A0005</td>
+                                            <td>初中物理</td>
+                                            <td>30</td>
+                                            <td >三种杠杆， 定滑轮特点...</td>
+                                            <td class="center"><a class="btn btn-success" id="zhishi_btn" >查看</a></td>
+                                        </tr>
+                                        <tr class="odd gradeX">
+                                            <td>A0006</td>
+                                            <td>初中物理</td>
+                                            <td>30</td>
+                                            <td >三种杠杆， 定滑轮特点...</td>
+                                            <td class="center"><a class="btn btn-success" id="zhishi_btn" >查看</a></td>
+                                        </tr>
+                                        <tr class="odd gradeX">
+                                            <td>A0001</td>
+                                            <td>初中物理</td>
+                                            <td>30</td>
+                                            <td >三种杠杆， 定滑轮特点...</td>
+                                            <td class="center"><a class="btn btn-success" id="zhishi_btn" >查看</a></td>
+                                        </tr>
+                                        <tr class="odd gradeX">
+                                            <td>A0001</td>
+                                            <td>初中物理</td>
+                                            <td>30</td>
+                                            <td >三种杠杆， 定滑轮特点...</td>
+                                            <td class="center"><a class="btn btn-success" id="zhishi_btn" >查看</a></td>
+                                        </tr>
+                                        <tr class="odd gradeX">
+                                            <td>A0001</td>
+                                            <td>初中物理</td>
+                                            <td>30</td>
+                                            <td >三种杠杆， 定滑轮特点...</td>
+                                            <td class="center"><a class="btn btn-success" id="zhishi_btn" >查看</a></td>
+                                        </tr>
+                                        <tr class="odd gradeX">
+                                            <td>A0001</td>
+                                            <td>初中物理</td>
+                                            <td>30</td>
+                                            <td >三种杠杆， 定滑轮特点...</td>
+                                            <td class="center"><a class="btn btn-success" id="zhishi_btn" >查看</a></td>
+                                        </tr>
+                                        <tr class="odd gradeX">
+                                            <td>A0001</td>
+                                            <td>初中物理</td>
+                                            <td>30</td>
+                                            <td >三种杠杆， 定滑轮特点...</td>
+                                            <td class="center"><a class="btn btn-success" id="zhishi_btn" >查看</a></td>
+                                        </tr>
+
+
+
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+
+                        </div>
                     </div>
                     <!-- /.panel-body -->
                 </div>
-                <!-- /.panel -->
             </div>
-            <div class="col-lg-1"></div>
-            <!-- /.col-lg-12 -->
         </div>
+        <!-- /.row -->
     </div>
     <!-- /#page-wrapper -->
 
 </div>
 <!-- /#wrapper -->
 
+<!-- jQuery -->
+<script src="../../bower_components/jquery/dist/jquery.min.js"></script>
 
+<!-- Bootstrap Core JavaScript -->
+<script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
+<!-- Metis Menu Plugin JavaScript -->
+<script src="../../bower_components/metisMenu/dist/metisMenu.min.js"></script>
+
+<!-- Morris Charts JavaScript -->
+<script src="../../bower_components/raphael/raphael-min.js"></script>
+<script src="../../bower_components/morrisjs/morris.min.js"></script>
+
+<!-- DataTables JavaScript -->
+<script src="../../bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+<script src="../../bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="../../dist/js/sb-admin-2.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $('#dataTables-example').DataTable({
+            "oLanguage": {
+                "sLengthMenu": "每页显示 _MENU_ 条记录",
+                "sZeroRecords": "抱歉， 没有找到",
+                "sInfo": "从 _START_ 到 _END_ /共 _TOTAL_ 条数据",
+                "sInfoEmpty": "没有数据",
+                "sInfoFiltered": "(从 _MAX_ 条数据中检索)",
+                "oPaginate": {
+                    "sFirst": "首页",
+                    "sPrevious": "前一页",
+                    "sNext": "后一页",
+                    "sLast": "尾页"
+                },
+            },
+            responsive: true,
+            searching: false,
+            ordering:  false,
+            bLengthChange:false,
+        });
+
+    });
+</script>
 
 </body>
 
