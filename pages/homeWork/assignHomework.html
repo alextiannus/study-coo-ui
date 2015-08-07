@@ -53,6 +53,69 @@
     <!-- Custom Theme JavaScript -->
     <script src="../../dist/js/sb-admin-2.js"></script>
 
+    <!-- data time picker-->
+    <link href="../../bower_components/bootstrap/dist/css/bootstrap-datetimepicker.min.css" rel="stylesheet"
+          media="screen">
+    <script type="text/javascript" src="../../js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="../../js/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+
+    <!-- DataTables JavaScript -->
+    <script src="../../bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+    <script src="../../bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
+
+    <!-- Local customization styles -->
+    <link rel="stylesheet" href="../../dist/localstyle.css" type="text/css"/>
+
+    <script>
+
+        $(function () {
+
+            $('.start_datetime').datetimepicker({
+                language: 'zh-CN',
+                weekStart: 1,
+                todayBtn: true,
+                autoclose: true,
+                todayHighlight: true,
+                startView: 2,
+                forceParse: true,
+                showMeridian: true
+            });
+
+            $('.end_datetime').datetimepicker({
+                language: 'zh-CN',
+                weekStart: 1,
+                todayBtn: true,
+                autoclose: true,
+                todayHighlight: true,
+                startView: 2,
+                forceParse: true,
+                showMeridian: true
+            });
+
+            $('#dataTables-3').DataTable({
+                "oLanguage": {
+                    "sLengthMenu": "每页显示 _MENU_ 条记录",
+                    "sZeroRecords": "抱歉， 没有找到",
+                    "sInfo": "从 _START_ 到 _END_ /共 _TOTAL_ 条数据",
+                    "sInfoEmpty": "没有数据",
+                    "sInfoFiltered": "(从 _MAX_ 条数据中检索)",
+                    "oPaginate": {
+                        "sFirst": "首页",
+                        "sPrevious": "前一页",
+                        "sNext": "后一页",
+                        "sLast": "尾页"
+                    },
+                },
+                responsive: true,
+                searching: false,
+                ordering: false,
+                bLengthChange: false,
+                "aLengthMenu": [[1, 25, 50, -1], [1, 25, 50, "All"]],
+                "bInfo": false,
+            });
+        });
+
+    </script>
 
 </head>
 
@@ -425,145 +488,308 @@
     </nav>
 
     <div id="page-wrapper">
-        <div class="row " style="height: 200px">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="col-lg-4   text-info panel panel-green" style="margin-top: 10px;height: 150px;">
-                    <div class="row" style="margin-top: 40px">
-                        <div class="col-md-4">
-                            <i class="fa fa-plus-square  fa-fw fa-4x"></i>
-                        </div>
-                        <div class="col-md-5 ">
-                            <button class="btn btn-primary btn-lg" type="button">添加班级</button>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-offset-1 text-info  text-info panel panel-primary"
-                     style="margin-top: 10px;height: 150px">
-                    <div class="row" style="margin-top: 40px">
-                        <div class="col-md-4">
-                            <i class="fa fa-history   fa-fw fa-4x"></i>
-                        </div>
-                        <div class="col-md-5 ">
-                            <button class="btn btn-primary btn-lg" type="button">申请记录</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- /.col-lg-12 -->
-        </div>
         <!-- /.row -->
         <div class="row">
             <!-- /.col-lg-8 -->
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
+                        <label>布置作业</label>
+                    </div>
+
+                    <div class="panel-body" style="color: #00b3ee">
                         <div class="row">
-                            <div class="col-md-10">
-                                <b>二年级2班</b> 班号：C690820
+                            <div class="form-group col-md-6">
+                                <label for="dtp_input1" class="col-md-3 control-label">开始时间：</label>
+
+                                <div class="input-group date start_datetime col-md-8" data-date=""
+                                     data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
+                                    <input class="form-control" size="16" type="text" value="" readonly>
+                                    <span class="input-group-addon"><span
+                                            class="glyphicon glyphicon-remove"></span></span>
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                                </div>
+                                <input type="hidden" id="dtp_input1" value=""/><br/>
                             </div>
-                            <div class="col-md-2">
-                                <a href="/teacher/clazz/clazzedit/690820.vpage">修改班级<i
-                                        class="fa fa-angle-double-right  fa-fw "></i> </a>
+                            <div class="form-group col-md-6">
+                                <label for="dtp_input2" class="col-md-3 control-label">结束时间：</label>
+
+                                <div class="input-group date end_datetime col-md-8" data-date=""
+                                     data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input2">
+                                    <input class="form-control" size="16" type="text" value="" readonly>
+                                    <span class="input-group-addon"><span
+                                            class="glyphicon glyphicon-remove"></span></span>
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                                </div>
+                                <input type="hidden" id="dtp_input2" value=""/><br/>
                             </div>
                         </div>
+
+                        <div class="row">
+                            <div class="col-md-1 text-right"><label>班级： </label></div>
+                            <div class="col-md-9">
+                                <label class="col-md-2"><input type="checkbox" value="">初一 二班</label>
+                                <label class="col-md-2"><input type="checkbox" value="">初二 三班</label>
+                                <label class="col-md-2"><input type="checkbox" value="">初二 六班</label>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <label>选择知识点</label>
                     </div>
 
                     <div class="panel-body">
-                        <div class="row" style="height: 145px">
-                            <div class="col-md-2 col-md-offset-1" style="border-right: solid #569dff;height: 100%">
-                                <div class="row" style="color: #0088CC">班级学生：30人</div>
-                                <div class="row">&nbsp;</div>
-                                <div class="row"><a class="btn btn-info" href=" classroomBasic.html">学生详情</a></div>
-
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h5>北京初一 二年级下（新版）</h5>
+                                <button class="btn  btn-success "><i class="fa fa-refresh fa-fw"></i> 换教材
+                                </button>
                             </div>
-                            <div class="col-md-7 col-md-offset-1">
-                                <div class="col-md-3">
-                                    <div class="row" style="color: #0088CC"><i class="fa fa-user  fa-fw fa-5x"></i>
-                                    </div>
-                                    <div class="row">&nbsp;</div>
-                                    <div class="row">数学老师：陈晨</div>
-                                    <div class="row"><a class="btn btn-info" href="selectSubject.html">转让班级</a></div>
+                            <div class="panel panel-info col-md-8 " style="color: #00b3ee">
+                                <div class="row form-group col-md-offset-1">
+                                    <input id="optionsRadios1" type="radio" value="1" name="optionsRadios">
+                                    有余数的除法
                                 </div>
-                                <div class="col-md-3">
-                                    <div class="row" style="color: #0088CC"><i class="fa fa-user  fa-fw fa-5x"></i>
-                                    </div>
-                                    <div class="row">&nbsp;</div>
-                                    <div class="row">英语老师：李四</div>
+                                <div class="row form-group col-md-offset-1">
+                                    <input id="optionsRadios1" type="radio" value="1" name="optionsRadios">
+                                    混合运算
                                 </div>
-                                <div class="col-md-3">
-                                    <div class="row" style="color: #0088CC"><i class="fa fa-user  fa-fw fa-5x"></i>
-                                    </div>
-                                    <div class="row">&nbsp;</div>
-                                    <div class="row">语文老师：张三</div>
+                                <div class="row form-group col-md-offset-1">
+                                    <input id="optionsRadios1" type="radio" value="1" name="optionsRadios">
+                                    对称与方向
+                                </div>
+                                <div class="row form-group col-md-offset-1">
+                                    <input id="optionsRadios1" type="radio" value="1" name="optionsRadios">
+                                    万以内数的认识
+                                </div>
+                                <div class="row form-group col-md-offset-1">
+                                    <input id="optionsRadios1" type="radio" value="1" name="optionsRadios">
+                                    千克与克的认识
                                 </div>
                             </div>
                         </div>
 
                     </div>
-
                 </div>
 
-            </div>
-        </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <label>作业概况</label>
+                    </div>
 
-        <div class="row">
-            <!-- /.col-lg-8 -->
-            <div class="col-lg-12">
+                    <div class="panel-body" style="color: #1483d8">
+                        <div class="row">
+                            <label class="col-md-offset-1">总时长：45分钟</label>
+                        </div>
+                        <div class="row">
+                            <label class="col-md-offset-1">知识点练习 20 道，计算练习 10 道，同步习题 5 道
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <div class="row">
-                            <div class="col-md-10">
-                                <b>三级7班</b> 班号：C690822
-                            </div>
-                            <div class="col-md-2">
-                                <a href="/teacher/clazz/clazzedit/690820.vpage">修改班级<i
-                                        class="fa fa-angle-double-right  fa-fw "></i> </a>
-                            </div>
+                            <div class="col-md-3"><label>知识点练习</label></div>
+                            <div class="col-md-offset-9"><a href="#"><i class="fa fa-trash-o   fa-fw "></i> 清空</a></div>
                         </div>
+
                     </div>
 
                     <div class="panel-body">
-                        <div class="row" style="height: 145px">
-                            <div class="col-md-2 col-md-offset-1" style="border-right: solid #569dff;height: 100%">
-                                <div class="row" style="color: #0088CC">班级学生：20人</div>
-                                <div class="row">&nbsp;</div>
-                                <div class="row"><a class="btn btn-info" href="classroomBasic.html">学生详情</a></div>
-
+                        <div class="row">
+                            <div class="col-md-3">
+                                有余数的除法
                             </div>
-                            <div class="col-md-7 col-md-offset-1">
-                                <div class="col-md-3">
-                                    <div class="row" style="color: #0088CC"><i class="fa fa-user  fa-fw fa-5x"></i>
-                                    </div>
-                                    <div class="row">&nbsp;</div>
-                                    <div class="row">数学老师：陈晨</div>
-                                    <div class="row"><a class="btn btn-info" href="selectSubject.html">转让班级</a></div>
+                            <div class="panel panel-info col-md-8 " style="color: #00b3ee">
+                                <div class="row form-group col-md-offset-1">
+                                    <input id="optionsRadios1" type="radio" value="1" name="optionsRadios">
+                                    预习
+                                    <select style="width: 100px">
+                                        <option>0 题</option>
+                                        <option>5 题</option>
+                                        <option>10 题</option>
+                                        <option>15 题</option>
+                                        <option>20 题</option>
+                                    </select>
+
                                 </div>
-                                <div class="col-md-3">
-                                    <div class="row" style="color: #0088CC"><i class="fa fa-user  fa-fw fa-5x"></i>
-                                    </div>
-                                    <div class="row">&nbsp;</div>
-                                    <div class="row">英语老师：李四</div>
+                                <div class="row form-group col-md-offset-1">
+                                    <input id="optionsRadios1" type="radio" value="1" name="optionsRadios">
+                                    巩固
+                                    <select style="width: 100px">
+                                        <option>0 题</option>
+                                        <option>5 题</option>
+                                        <option>10 题</option>
+                                        <option>15 题</option>
+                                        <option>20 题</option>
+                                    </select>
                                 </div>
-                                <div class="col-md-3">
-                                    <div class="row" style="color: #0088CC"><i class="fa fa-user  fa-fw fa-5x"></i>
-                                    </div>
-                                    <div class="row">&nbsp;</div>
-                                    <div class="row">语文老师：张三</div>
+                                <div class="row form-group col-md-offset-1">
+                                    <input id="optionsRadios1" type="radio" value="1" name="optionsRadios">
+                                    拓展
+                                    <select style="width: 100px">
+                                        <option>0 题</option>
+                                        <option>5 题</option>
+                                        <option>10 题</option>
+                                        <option>15 题</option>
+                                        <option>20 题</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
 
                     </div>
+                </div>
 
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-md-2"><label>计算练习</label></div>
+                            <div class="col-md-offset-5 col-md-3">
+                                <button class="btn  btn-primary "><i class="fa  fa-clock-o  fa-fw"></i> 10分钟计算练习
+                                </button>
+                            </div>
+
+                            <div class="col-md-1"><a href="#"><i class="fa fa-trash-o   fa-fw "></i> 清空</a></div>
+                        </div>
+
+                    </div>
+
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-3">
+                                有余数的除法的计算
+                            </div>
+                            <div class="panel panel-info col-md-8 " style="color: #00b3ee">
+                                <div class="row form-group col-md-offset-1">
+                                    <input id="optionsRadios1" type="radio" value="1" name="optionsRadios">
+
+                                    <select style="width: 100px">
+                                        <option>0 题</option>
+                                        <option>5 题</option>
+                                        <option>10 题</option>
+                                        <option>15 题</option>
+                                        <option>20 题</option>
+                                    </select>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-md-2"><label>同步习题</label></div>
+                            <div class="col-md-offset-5 col-md-3">
+                                <button class="btn  btn-primary "><i class="fa  fa-clock-o  fa-fw"></i> 布置10道同步习题
+                                </button>
+                            </div>
+
+                            <div class="col-md-1"><a href="#"><i class="fa fa-trash-o   fa-fw "></i> 清空</a></div>
+                        </div>
+
+                    </div>
+
+                    <div class="panel-body">
+
+                        <div class="row" id="chooseSync">
+                            <span class="darkColor col-md-offset-1"><i class="fa fa-pencil-square fa-fw fa-2x"></i></span>
+                            <span class="darkColor"><i class="fa fa-pencil-square fa-fw fa-2x"></i></span>
+                            <span class="darkColor"><i class="fa fa-pencil-square fa-fw fa-2x"></i></span>
+                            <span class="darkColor"><i class="fa fa-pencil-square fa-fw fa-2x"></i></span>
+                            <span class="darkColor"><i class="fa fa-pencil-square fa-fw fa-2x"></i></span>
+                            <span class="darkColor"><i class="fa fa-pencil-square fa-fw fa-2x"></i></span>
+                            <span class="darkColor"><i class="fa fa-pencil-square fa-fw fa-2x"></i></span>
+                            <span class="darkColor"><i class="fa fa-pencil-square fa-fw fa-2x"></i></span>
+                            <span class="darkColor"><i class="fa fa-pencil-square fa-fw fa-2x"></i></span>
+                            <span class="darkColor"><i class="fa fa-pencil-square fa-fw fa-2x"></i></span>
+
+
+                        </div>
+                        <div class="dataTable_wrapper">
+                            <table class="table  table-bordered table-hover" id="dataTables-3">
+                                <thead>
+                                <tr>
+                                    <th>
+                                        题目内容
+                                        <span style="padding-left: 600px">
+                                            <button class="btn  btn-primary ">选入</button>
+                                            <button class="btn  btn-danger">纠错</button>
+
+                                        </span>
+                                    </th>
+
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr class="odd gradeX">
+                                    <td>题目1 内容。。。。。。</td>
+                                </tr>
+                                <tr class="odd gradeX">
+                                    <td>题目2 内容。。。。。。</td>
+                                </tr>
+                                <tr class="odd gradeX">
+                                    <td>题目3 内容。。。。。。</td>
+                                </tr>
+                                <tr class="odd gradeX">
+                                    <td>题目4 内容。。。。。。</td>
+                                </tr>
+                                <tr class="odd gradeX">
+                                    <td>题目5 内容。。。。。。</td>
+                                </tr>
+                                <tr class="odd gradeX">
+                                    <td>题目6 内容。。。。。。</td>
+                                </tr>
+                                <tr class="odd gradeX">
+                                    <td>题目7 内容。。。。。。</td>
+                                </tr>
+                                <tr class="odd gradeX">
+                                    <td>题目3 内容。。。。。。</td>
+                                </tr>
+                                <tr class="odd gradeX">
+                                    <td>题目3 内容。。。。。。</td>
+                                </tr>
+                                <tr class="odd gradeX">
+                                    <td>题目3 内容。。。。。。</td>
+                                </tr>
+                                <tr class="odd gradeX">
+                                    <td>题目3 内容。。。。。。</td>
+                                </tr>
+                                <tr class="odd gradeX">
+                                    <td>题目3 内容。。。。。。</td>
+                                </tr>
+                                <tr class="odd gradeX">
+                                    <td>题目3 内容。。。。。。</td>
+                                </tr>
+
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
                 </div>
 
             </div>
+
         </div>
-        <!-- /.row -->
-        <!-- /.row -->
     </div>
-    <!-- /#page-wrapper -->
+
+    <!-- /.row -->
+    <!-- /.row -->
+</div>
+<!-- /#page-wrapper -->
 
 </div>
 <!-- /#wrapper -->
