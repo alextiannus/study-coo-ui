@@ -53,6 +53,48 @@
     <!-- Custom Theme JavaScript -->
     <script src="../../dist/js/sb-admin-2.js"></script>
 
+    <!-- data time picker-->
+    <link href="../../bower_components/bootstrap/dist/css/bootstrap-datetimepicker.min.css" rel="stylesheet"
+          media="screen">
+    <script type="text/javascript" src="../../js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="../../js/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+
+    <!-- DataTables JavaScript -->
+    <script src="../../bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+    <script src="../../bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
+
+    <!-- Local customization styles -->
+    <link rel="stylesheet" href="../../dist/localstyle.css" type="text/css"/>
+
+    <script>
+
+        $(function () {
+
+
+            $('#dataTables-3').DataTable({
+                "oLanguage": {
+                    "sLengthMenu": "每页显示 _MENU_ 条记录",
+                    "sZeroRecords": "抱歉， 没有找到",
+                    "sInfo": "从 _START_ 到 _END_ /共 _TOTAL_ 条数据",
+                    "sInfoEmpty": "没有数据",
+                    "sInfoFiltered": "(从 _MAX_ 条数据中检索)",
+                    "oPaginate": {
+                        "sFirst": "首页",
+                        "sPrevious": "前一页",
+                        "sNext": "后一页",
+                        "sLast": "尾页"
+                    },
+                },
+                responsive: true,
+                searching: false,
+                ordering: false,
+                bLengthChange: false,
+                "aLengthMenu": [[5, 25, 50, -1], [5, 25, 50, "All"]],
+                //  "bInfo": false,
+            });
+        });
+
+    </script>
 
 </head>
 
@@ -309,18 +351,18 @@
                         <a href="../teacherMgmt/teacherDashBoard.html"><i class="fa fa-dashboard fa-fw"></i> 首页</a>
                     </li>
                     <li>
-                        <a href="myClazzList.html"><i class="fa fa-bar-chart-o fa-fw"></i> 我的班级</a>
+                        <a href="../class/myClazzList.html"><i class="fa fa-bar-chart-o fa-fw"></i> 我的班级</a>
 
                         <!-- /.nav-second-level -->
                     </li>
                     <li>
-                        <a href="classroomBasic.html"><i class="fa fa-edit  fa-fw"></i> 作业<span class="fa arrow"></span></a>
+                        <a href="../class/classroomBasic.html"><i class="fa fa-edit  fa-fw"></i> 作业<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="../homeWork/assignHomework.html">布置作业</a>
+                                <a href="assignHomework.html">布置作业</a>
                             </li>
                             <li>
-                                <a href="../homeWork/manageHomeWork.html">管理作业</a>
+                                <a href="manageHomeWork.html">管理作业</a>
                             </li>
                             <li>
                                 <a href="../homeWork/homeWorkHistory.html">作业历史</a>
@@ -425,145 +467,86 @@
     </nav>
 
     <div id="page-wrapper">
-        <div class="row " style="height: 200px">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="col-lg-4   text-info panel panel-green" style="margin-top: 10px;height: 150px;">
-                    <div class="row" style="margin-top: 40px">
-                        <div class="col-md-4">
-                            <i class="fa fa-plus-square  fa-fw fa-4x"></i>
-                        </div>
-                        <div class="col-md-5 ">
-                            <button class="btn btn-primary btn-lg" type="button">添加班级</button>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-offset-1 text-info  text-info panel panel-primary"
-                     style="margin-top: 10px;height: 150px">
-                    <div class="row" style="margin-top: 40px">
-                        <div class="col-md-4">
-                            <i class="fa fa-history   fa-fw fa-4x"></i>
-                        </div>
-                        <div class="col-md-5 ">
-                            <button class="btn btn-primary btn-lg" type="button">申请记录</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- /.col-lg-12 -->
-        </div>
         <!-- /.row -->
         <div class="row">
             <!-- /.col-lg-8 -->
             <div class="col-lg-12">
+
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <div class="row">
-                            <div class="col-md-10">
-                                <b>二年级2班</b> 班号：C690820
-                            </div>
-                            <div class="col-md-2">
-                                <a href="/teacher/clazz/clazzedit/690820.vpage">修改班级<i
-                                        class="fa fa-angle-double-right  fa-fw "></i> </a>
-                            </div>
+                            <div class="col-md-2"><label>
+                                二年级2班
+                            </label></div>
+
                         </div>
+
                     </div>
 
                     <div class="panel-body">
-                        <div class="row" style="height: 145px">
-                            <div class="col-md-2 col-md-offset-1" style="border-right: solid #569dff;height: 100%">
-                                <div class="row" style="color: #0088CC">班级学生：30人</div>
-                                <div class="row">&nbsp;</div>
-                                <div class="row"><a class="btn btn-info" href=" classroomBasic.html">学生详情</a></div>
 
-                            </div>
-                            <div class="col-md-7 col-md-offset-1">
-                                <div class="col-md-3">
-                                    <div class="row" style="color: #0088CC"><i class="fa fa-user  fa-fw fa-5x"></i>
-                                    </div>
-                                    <div class="row">&nbsp;</div>
-                                    <div class="row">数学老师：陈晨</div>
-                                    <div class="row"><a class="btn btn-info" href="selectSubject.html">转让班级</a></div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="row" style="color: #0088CC"><i class="fa fa-user  fa-fw fa-5x"></i>
-                                    </div>
-                                    <div class="row">&nbsp;</div>
-                                    <div class="row">英语老师：李四</div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="row" style="color: #0088CC"><i class="fa fa-user  fa-fw fa-5x"></i>
-                                    </div>
-                                    <div class="row">&nbsp;</div>
-                                    <div class="row">语文老师：张三</div>
-                                </div>
-                            </div>
+
+                        <div class="dataTable_wrapper">
+                            <table class="table  table-bordered table-hover" id="dataTables-3">
+                                <thead>
+                                <tr>
+                                    <th>作业时间</th>
+                                    <th>知识点</th>
+                                    <th>操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr class="odd gradeX">
+                                    <td>2015年8月8日 ~ 2015年8月8日 23:00</td>
+                                    <td>方向与位置</td>
+
+                                    <td class="center">
+                                        <a class="btn btn-success" id="zhishi_btn" onclick="showTest(this)">查看详情</a>
+                                        <a class="btn btn-success" id="zhishi_btn" onclick="showTest(this)">查看成绩</a>
+                                        <a class="btn btn-success" id="zhishi_btn" onclick="showTest(this)">查看错误</a>
+                                    </td>
+                                </tr>
+
+
+
+
+                                </tbody>
+                            </table>
                         </div>
 
                     </div>
-
                 </div>
 
-            </div>
-        </div>
 
-        <div class="row">
-            <!-- /.col-lg-8 -->
-            <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <div class="row">
-                            <div class="col-md-10">
-                                <b>三级7班</b> 班号：C690822
-                            </div>
-                            <div class="col-md-2">
-                                <a href="/teacher/clazz/clazzedit/690820.vpage">修改班级<i
-                                        class="fa fa-angle-double-right  fa-fw "></i> </a>
-                            </div>
+                            <div class="col-md-2"><label>
+                                二年级2班
+                            </label></div>
+
                         </div>
+
                     </div>
 
                     <div class="panel-body">
-                        <div class="row" style="height: 145px">
-                            <div class="col-md-2 col-md-offset-1" style="border-right: solid #569dff;height: 100%">
-                                <div class="row" style="color: #0088CC">班级学生：20人</div>
-                                <div class="row">&nbsp;</div>
-                                <div class="row"><a class="btn btn-info" href="classroomBasic.html">学生详情</a></div>
 
-                            </div>
-                            <div class="col-md-7 col-md-offset-1">
-                                <div class="col-md-3">
-                                    <div class="row" style="color: #0088CC"><i class="fa fa-user  fa-fw fa-5x"></i>
-                                    </div>
-                                    <div class="row">&nbsp;</div>
-                                    <div class="row">数学老师：陈晨</div>
-                                    <div class="row"><a class="btn btn-info" href="selectSubject.html">转让班级</a></div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="row" style="color: #0088CC"><i class="fa fa-user  fa-fw fa-5x"></i>
-                                    </div>
-                                    <div class="row">&nbsp;</div>
-                                    <div class="row">英语老师：李四</div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="row" style="color: #0088CC"><i class="fa fa-user  fa-fw fa-5x"></i>
-                                    </div>
-                                    <div class="row">&nbsp;</div>
-                                    <div class="row">语文老师：张三</div>
-                                </div>
-                            </div>
-                        </div>
+
+                      暂无数据
 
                     </div>
-
                 </div>
 
+
             </div>
+
         </div>
-        <!-- /.row -->
-        <!-- /.row -->
     </div>
-    <!-- /#page-wrapper -->
+
+    <!-- /.row -->
+    <!-- /.row -->
+</div>
+<!-- /#page-wrapper -->
 
 </div>
 <!-- /#wrapper -->
