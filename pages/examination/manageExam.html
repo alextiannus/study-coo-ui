@@ -70,6 +70,27 @@
 
         $(function () {
 
+            $('.start_datetime').datetimepicker({
+                language: 'zh-CN',
+                weekStart: 1,
+                todayBtn: true,
+                autoclose: true,
+                todayHighlight: true,
+                startView: 2,
+                forceParse: true,
+                showMeridian: true
+            });
+
+            $('.end_datetime').datetimepicker({
+                language: 'zh-CN',
+                weekStart: 1,
+                todayBtn: true,
+                autoclose: true,
+                todayHighlight: true,
+                startView: 2,
+                forceParse: true,
+                showMeridian: true
+            });
 
             $('#dataTables-3').DataTable({
                 "oLanguage": {
@@ -90,7 +111,7 @@
                 ordering: false,
                 bLengthChange: false,
                 "aLengthMenu": [[5, 25, 50, -1], [5, 25, 50, "All"]],
-              //  "bInfo": false,
+                //"bInfo": false,
             });
         });
 
@@ -356,13 +377,14 @@
                         <!-- /.nav-second-level -->
                     </li>
                     <li>
-                        <a href="../class/classroomBasic.html"><i class="fa fa-edit  fa-fw"></i> 作业<span class="fa arrow"></span></a>
+                        <a href="../class/classroomBasic.html"><i class="fa fa-edit  fa-fw"></i> 作业<span
+                                class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
                                 <a href="assignHomework.html">布置作业</a>
                             </li>
                             <li>
-                                <a href="manageHomeWork.html">管理作业</a>
+                                <a href="../homeWork/manageHomeWork.html">管理作业</a>
                             </li>
                             <li>
                                 <a href="../homeWork/homeWorkHistory.html">作业历史</a>
@@ -474,120 +496,82 @@
 
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <div class="row">
-                            <div class="col-md-2"><label>管理作业</label></div>
-
-                        </div>
-
+                        <label>管理测验</label>
                     </div>
 
                     <div class="panel-body">
-
-
                         <div class="dataTable_wrapper">
                             <table class="table  table-bordered table-hover" id="dataTables-3">
                                 <thead>
                                 <tr>
-                                    <th>作业时间</th>
-                                    <th>班级</th>
-                                    <th>完成人数</th>
-                                    <th>未完成人数</th>
-                                    <th>操作</th>
+                                    <th>
+                                        测验时间
+                                    </th>
+                                    <th>
+                                        班级
+                                    </th>
+                                    <th>
+                                        试卷名称
+                                    </th>
+                                    <th>
+                                        完成人数
+                                    </th>
+                                    <th>
+                                        未完成人数
+                                    </th>
+                                    <th>
+                                        操作
+                                    </th>
+
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr class="odd gradeX">
-                                    <td>2015年8月8日 ~ 2015年8月8日 23:00</td>
-                                    <td>二年级3班</td>
-                                    <td>30</td>
-                                    <td >5</td>
-                                    <td class="center"><a class="btn btn-success" id="zhishi_btn" onclick="showTest(this)">检查作业</a></td>
+                                    <td>2015年8月13日 17:51 - 2015年8月14日 23:00</td>
+                                    <td>二年级2班</td>
+                                    <td>有余数的除法测验卷</td>
+                                    <td>0</td>
+                                    <td>45</td>
+
+                                    <td>
+                                        <button class="btn  btn-primary ">删除</button>
+                                        <button class="btn  btn-primary ">预览</button>
+                                        <button class="btn  btn-primary ">调整时间</button>
+                                    </td>
                                 </tr>
 
                                 <tr class="odd gradeX">
-                                    <td>2015年8月8日 ~ 2015年8月8日 23:00</td>
-                                    <td>二年级5班</td>
-                                    <td>26</td>
-                                    <td >4</td>
-                                    <td class="center"><a class="btn btn-success" id="zhishi_btn" onclick="showTest(this)">检查作业</a></td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>2015年8月8日 ~ 2015年8月8日 23:00</td>
-                                    <td>三年级9班</td>
-                                    <td>28</td>
-                                    <td >2</td>
-                                    <td class="center"><a class="btn btn-success" id="zhishi_btn" onclick="showTest(this)">检查作业</a></td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>2015年8月8日 ~ 2015年8月8日 23:00</td>
-                                    <td>二年级7班</td>
-                                    <td>38</td>
-                                    <td >5</td>
-                                    <td class="center"><a class="btn btn-success" id="zhishi_btn" onclick="showTest(this)">检查作业</a></td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>2015年8月8日 ~ 2015年8月8日 23:00</td>
-                                    <td>二年级6班</td>
-                                    <td>42</td>
-                                    <td >5</td>
-                                    <td class="center"><a class="btn btn-success" id="zhishi_btn" onclick="showTest(this)">检查作业</a></td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>2015年8月8日 ~ 2015年8月8日 23:00</td>
+                                    <td>2015年8月13日 17:51 - 2015年8月14日 23:00</td>
                                     <td>二年级3班</td>
-                                    <td>30</td>
-                                    <td >5</td>
-                                    <td class="center"><a class="btn btn-success" id="zhishi_btn" onclick="showTest(this)">检查作业</a></td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>2015年8月8日 ~ 2015年8月8日 23:00</td>
-                                    <td>二年级3班</td>
-                                    <td>30</td>
-                                    <td >5</td>
-                                    <td class="center"><a class="btn btn-success" id="zhishi_btn" onclick="showTest(this)">检查作业</a></td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>2015年8月8日 ~ 2015年8月8日 23:00</td>
-                                    <td>二年级3班</td>
-                                    <td>30</td>
-                                    <td >5</td>
-                                    <td class="center"><a class="btn btn-success" id="zhishi_btn" onclick="showTest(this)">检查作业</a></td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>2015年8月8日 ~ 2015年8月8日 23:00</td>
-                                    <td>二年级3班</td>
-                                    <td>30</td>
-                                    <td >5</td>
-                                    <td class="center"><a class="btn btn-success" id="zhishi_btn" onclick="showTest(this)">检查作业</a></td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>2015年8月8日 ~ 2015年8月8日 23:00</td>
-                                    <td>二年级3班</td>
-                                    <td>30</td>
-                                    <td >5</td>
-                                    <td class="center"><a class="btn btn-success" id="zhishi_btn" onclick="showTest(this)">检查作业</a></td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>2015年8月8日 ~ 2015年8月8日 23:00</td>
-                                    <td>二年级3班</td>
-                                    <td>30</td>
-                                    <td >5</td>
-                                    <td class="center"><a class="btn btn-success" id="zhishi_btn" onclick="showTest(this)">检查作业</a></td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>2015年8月8日 ~ 2015年8月8日 23:00</td>
-                                    <td>二年级3班</td>
-                                    <td>30</td>
-                                    <td >5</td>
-                                    <td class="center"><a class="btn btn-success" id="zhishi_btn" onclick="showTest(this)">检查作业</a></td>
+                                    <td>有余数的除法测验卷</td>
+                                    <td>3</td>
+                                    <td>45</td>
+
+                                    <td>
+                                        <button class="btn  btn-primary ">删除</button>
+                                        <button class="btn  btn-primary ">预览</button>
+                                        <button class="btn  btn-primary ">调整时间</button>
+                                    </td>
                                 </tr>
 
+                                <tr class="odd gradeX">
+                                    <td>2015年8月13日 17:51 - 2015年8月14日 23:00</td>
+                                    <td>二年级4班</td>
+                                    <td>有余数的除法测验卷</td>
+                                    <td>1</td>
+                                    <td>45</td>
+
+                                    <td>
+                                        <button class="btn  btn-primary ">删除</button>
+                                        <button class="btn  btn-primary ">预览</button>
+                                        <button class="btn  btn-primary ">调整时间</button>
+                                    </td>
+                                </tr>
 
 
                                 </tbody>
                             </table>
                         </div>
-
                     </div>
                 </div>
 
