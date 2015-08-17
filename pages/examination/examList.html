@@ -90,9 +90,17 @@
                 ordering: false,
                 bLengthChange: false,
                 "aLengthMenu": [[5, 25, 50, -1], [5, 25, 50, "All"]],
-                //  "bInfo": false,
+                //"bInfo": false,
             });
         });
+
+        function editExam(obj){
+            window.location.href="../teacherMgmt/buildTestBasic.html"
+        }
+
+        function removeExam(obj){
+            alert("remove.");
+        }
 
     </script>
 
@@ -356,13 +364,14 @@
                         <!-- /.nav-second-level -->
                     </li>
                     <li>
-                        <a href="../class/classroomBasic.html"><i class="fa fa-edit  fa-fw"></i> 作业<span class="fa arrow"></span></a>
+                        <a href="../class/classroomBasic.html"><i class="fa fa-edit  fa-fw"></i> 作业<span
+                                class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="assignHomework.html">布置作业</a>
+                                <a href="../homeWork/assignHomework.html">布置作业</a>
                             </li>
                             <li>
-                                <a href="manageHomeWork.html">管理作业</a>
+                                <a href="../homeWork/manageHomeWork.html">管理作业</a>
                             </li>
                             <li>
                                 <a href="../homeWork/homeWorkHistory.html">作业历史</a>
@@ -474,77 +483,61 @@
 
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <div class="row">
-                            <div class="col-md-2"><label>
-                                二年级2班
-                            </label></div>
-
-                        </div>
-
+                        <label>试卷列表</label>
                     </div>
 
                     <div class="panel-body">
-
-
                         <div class="dataTable_wrapper">
                             <table class="table  table-bordered table-hover" id="dataTables-3">
                                 <thead>
                                 <tr>
-                                    <th>学期</th>
-                                    <th>作业次数</th>
-                                    <th>学生数</th>
-                                    <th>上次作业时间</th>
-                                    <th>操作</th>
+                                    <th>
+                                        试卷编号
+                                    </th>
+                                    <th>
+                                        试卷名称
+                                    </th>
+                                    <th>
+                                        题量
+                                    </th>
+                                    <th>
+                                        创建时间
+                                    </th>
+                                    <th>
+                                        操作
+                                    </th>
+
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr class="odd gradeX">
-                                    <td>2014-2015学年第一学期学习成绩报告</td>
-                                    <td>6</td>
-                                    <td>45</td>
-                                    <td>2015年06月03日</td>
-                                    <td class="center">
-                                        <a class="btn btn-success" id="zhishi_btn" onclick="showTest(this)">查看报告</a>
+                                    <td>CH32001</td>
+                                    <td>数学期末测验卷</td>
+                                    <td>50 </td>
+                                    <td> 2015-08-13 17:50:59</td>
+
+                                    <td>
+                                        <button class="btn  btn-primary "  onclick="editExam(this)">编辑</button>
+                                        <button class="btn  btn-primary " onclick="removeExam(this)">删除</button>
                                     </td>
                                 </tr>
 
                                 <tr class="odd gradeX">
-                                    <td>2014-2015学年第二学期学习成绩报告</td>
-                                    <td>4</td>
-                                    <td>45</td>
-                                    <td>2015年08月05日</td>
-                                    <td class="center">
-                                        <a class="btn btn-success" id="zhishi_btn" onclick="showTest(this)">查看报告</a>
+                                    <td>CH32004</td>
+                                    <td>语文期末测验卷</td>
+                                    <td>45 </td>
+                                    <td> 2015-08-13 17:50:59</td>
+
+                                    <td>
+                                        <button class="btn  btn-primary " onclick="editExam(this)">编辑</button>
+                                        <button class="btn  btn-primary " onclick="removeExam(this)">删除</button>
                                     </td>
                                 </tr>
-
-
 
 
                                 </tbody>
                             </table>
                         </div>
-
-                    </div>
-                </div>
-
-
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <div class="row">
-                            <div class="col-md-2"><label>
-                                二年级2班
-                            </label></div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="panel-body">
-
-
-                        此班没有学期报告信息
-
                     </div>
                 </div>
 

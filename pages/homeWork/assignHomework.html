@@ -68,6 +68,10 @@
 
     <script>
 
+        function addToList(idIndex){
+            alert(idIndex);
+        }
+
         $(function () {
 
             $('.start_datetime').datetimepicker({
@@ -112,8 +116,17 @@
                 bLengthChange: false,
                 "aLengthMenu": [[1, 25, 50, -1], [1, 25, 50, "All"]],
                 "bInfo": false,
+                "footerCallback": function (tfoot, data, start, end, display) {
+
+                    var htmls ='<button class="btn  btn-primary " onclick="addToList('+end+')">选入</button> <button class="btn  btn-danger">纠错</button>';
+                    tfoot.getElementsByTagName('th')[0].innerHTML =htmls;
+                }
+
+
             });
         });
+
+
 
     </script>
 
@@ -377,7 +390,8 @@
                         <!-- /.nav-second-level -->
                     </li>
                     <li>
-                        <a href="../class/classroomBasic.html"><i class="fa fa-edit  fa-fw"></i> 作业<span class="fa arrow"></span></a>
+                        <a href="../class/classroomBasic.html"><i class="fa fa-edit  fa-fw"></i> 作业<span
+                                class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
                                 <a href="assignHomework.html">布置作业</a>
@@ -427,7 +441,7 @@
                                 <a href="../teacherMgmt/buildTestForm.html">配置模板</a>
                             </li>
                             <li>
-                                <a href="../teacherMgmt/buildTestBasic.html">试卷列表</a>
+                                <a href="../examination/examList.html">试卷列表</a>
                             </li>
 
                         </ul>
@@ -703,35 +717,37 @@
 
                     <div class="panel-body">
 
-                        <div class="row" id="chooseSync">
-                            <span class="darkColor col-md-offset-1"><i class="fa fa-pencil-square fa-fw fa-2x"></i></span>
-                            <span class="darkColor"><i class="fa fa-pencil-square fa-fw fa-2x"></i></span>
-                            <span class="darkColor"><i class="fa fa-pencil-square fa-fw fa-2x"></i></span>
-                            <span class="darkColor"><i class="fa fa-pencil-square fa-fw fa-2x"></i></span>
-                            <span class="darkColor"><i class="fa fa-pencil-square fa-fw fa-2x"></i></span>
-                            <span class="darkColor"><i class="fa fa-pencil-square fa-fw fa-2x"></i></span>
-                            <span class="darkColor"><i class="fa fa-pencil-square fa-fw fa-2x"></i></span>
-                            <span class="darkColor"><i class="fa fa-pencil-square fa-fw fa-2x"></i></span>
-                            <span class="darkColor"><i class="fa fa-pencil-square fa-fw fa-2x"></i></span>
-                            <span class="darkColor"><i class="fa fa-pencil-square fa-fw fa-2x"></i></span>
 
-
-                        </div>
                         <div class="dataTable_wrapper">
                             <table class="table  table-bordered table-hover" id="dataTables-3">
                                 <thead>
                                 <tr>
                                     <th>
-                                        题目内容
-                                        <span style="padding-left: 600px">
-                                            <button class="btn  btn-primary ">选入</button>
-                                            <button class="btn  btn-danger">纠错</button>
+                                        <div class="row" id="chooseSync">
+                                            <span class="darkColor col-md-offset-1"><i class="fa fa-pencil-square fa-fw fa-2x"></i>1</span>
+                                            <span class="darkColor"><i class="fa fa-pencil-square fa-fw fa-2x"></i>2</span>
+                                            <span class="darkColor"><i class="fa fa-pencil-square fa-fw fa-2x"></i>3</span>
+                                            <span class="darkColor"><i class="fa fa-pencil-square fa-fw fa-2x"></i>4</span>
+                                            <span class="darkColor"><i class="fa fa-pencil-square fa-fw fa-2x"></i>5</span>
+                                            <span class="darkColor"><i class="fa fa-pencil-square fa-fw fa-2x"></i>6</span>
+                                            <span class="darkColor"><i class="fa fa-pencil-square fa-fw fa-2x"></i>7</span>
+                                            <span class="darkColor"><i class="fa fa-pencil-square fa-fw fa-2x"></i>8</span>
+                                            <span class="darkColor"><i class="fa fa-pencil-square fa-fw fa-2x"></i>9</span>
+                                            <span class="darkColor"><i class="fa fa-pencil-square fa-fw fa-2x"></i>10</span>
 
-                                        </span>
+
+                                        </div>
+
                                     </th>
 
                                 </tr>
                                 </thead>
+                                <tfoot>
+                                <tr>
+                                    <th style="text-align:right"></th>
+
+                                </tr>
+                                </tfoot>
                                 <tbody>
                                 <tr class="odd gradeX">
                                     <td>题目1 内容。。。。。。</td>
