@@ -854,3 +854,11 @@ and open the template in the editor.
 	font-weight: bold;
 	font: x-large/110% "New Century Schoolbook", serif;
 }
+
+.t-collect-table-th {
+    background: rgba(0, 0, 0, 0) url("./images/table_th.png") no-repeat scroll 0 0;
+    height: 80px;
+    margin: 0;
+    padding: 0;
+    width: 120px;
+}
