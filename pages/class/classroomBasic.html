@@ -254,9 +254,9 @@
                         <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="profileBasic.html"><i class="fa fa-user fa-fw"></i> 个人资料</a>
+                        <li><a href="teacherProfileBasic.html"><i class="fa fa-user fa-fw"></i> 个人资料</a>
                         </li>
-                        <li><a href="settings.html"><i class="fa fa-gear fa-fw"></i> 设置</a>
+                        <li><a href="teacherProfileBasic.html"><i class="fa fa-gear fa-fw"></i> 设置</a>
                         </li>
                         <li class="divider"></li>
                         <li><a href="../login.html"><i class="fa fa-sign-out fa-fw"></i> 退出</a>
@@ -268,6 +268,146 @@
             </ul>
             <!-- /.navbar-top-links -->
 
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            </div>
+                            <!-- /input-group -->
+                        </li>
+                        <li>
+                            <a href="../teacherMgmt/teacherDashBoard.html"><i class="fa fa-dashboard fa-fw"></i> 首页</a>
+                        </li>
+                        <li>
+                            <a href="../class/myClazzList.html"><i class="fa fa-bar-chart-o fa-fw"></i> 我的班级</a>
+
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"> <i class="fa fa-book  fa-fw"></i> 我的题库<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="../tikuApps/selectSubject.html">新建试卷</a>
+                                </li>
+                                <li>
+                                    <a href="../examination/examList.html">试卷列表</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-edit  fa-fw"></i> 作业<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="../homeWork/assignHomework.html">布置作业</a>
+                                </li>
+                                <li>
+                                    <a href="../homeWork/manageHomeWork.html">管理作业</a>
+                                </li>
+                                <li>
+                                    <a href="../homeWork/homeWorkHistory.html">作业历史</a>
+                                </li>
+                                <li>
+                                    <a href="../homeWork/homeWorkReport.html">学期报告</a>
+                                </li>
+
+                            </ul>
+
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-tasks fa-fw"></i> 测验<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="../examination/assignExam.html">布置测验</a>
+                                </li>
+                                <li>
+                                    <a href="../examination/manageExam.html">管理测验</a>
+                                </li>
+                                <li>
+                                    <a href="../examination/ExamReport.html">历史与报告</a>
+                                </li>
+
+                            </ul>
+
+                            <!-- /.nav-second-level -->
+                        </li>
+
+                        <li>
+                            <a href="#"><i class="fa fa-wrench fa-fw"></i> 上传试卷<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="../teacherMgmt/buildTestBasic.html">智能生成</a>
+                                </li>
+                                <li>
+                                    <a href="../teacherMgmt/editExam.html">手动配置</a>
+                                </li>
+                                <li>
+                                    <a href="../teacherMgmt/buildTestForm.html">配置模板</a>
+                                </li>
+
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../studentMgmt/calendarBasic.html"><i class="fa fa-table fa-fw"></i> 我的日历</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-book  fa-fw"></i> 教学资料<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <!--  <li>
+                                      <a href="../tikuApps/mySubjectList.html">我的题库</a>
+                                  </li>-->
+                                <li>
+                                    <a href="../tikuApps/newTestList.html">搜索资料</a>
+                                </li>
+                                <li>
+                                    <a href="../tikuApps/newTestList.html">最新资料</a>
+                                </li>
+
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-sitemap fa-fw"></i> 知识点归纳<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="../studentMgmt/knowledgeTree.html">初中物理知识点总结</a>
+                                </li>
+                                <li>
+                                    <a href="../studentMgmt/knowledgeTree.html">初中物理奥林匹克竞赛知识点总结</a>
+                                </li>
+                                <li>
+                                    <a href="../studentMgmt/knowledgeTree.html">+添加知识树</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-files-o fa-fw"></i> 学习视频<span class="fa arrow"></span></a>
+                            <!--
+                            <ul class="nav nav-second-level">
+                                 <li>
+                                     <a href="blank.html">Blank Page</a>
+                                 </li>
+                                 <li>
+                                     <a href="login.html">Login Page</a>
+                                 </li>
+                             </ul>
+                            -->
+                            <!-- /.nav-second-level -->
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
             <!-- /.navbar-static-side -->
         </nav>
 

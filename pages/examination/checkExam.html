@@ -90,12 +90,47 @@
                 ordering: false,
                 bLengthChange: false,
                 "aLengthMenu": [[5, 25, 50, -1], [5, 25, 50, "All"]],
-              //  "bInfo": false,
+                //  "bInfo": false,
+            });
+
+            $('#dataTables-1').DataTable({
+                "oLanguage": {
+                    "sLengthMenu": "每页显示 _MENU_ 条记录",
+                    "sZeroRecords": "抱歉， 没有找到",
+                    "sInfo": "从 _START_ 到 _END_ /共 _TOTAL_ 条数据",
+                    "sInfoEmpty": "没有数据",
+                    "sInfoFiltered": "(从 _MAX_ 条数据中检索)",
+                    "oPaginate": {
+                        "sFirst": "首页",
+                        "sPrevious": "前一页",
+                        "sNext": "后一页",
+                        "sLast": "尾页"
+                    },
+                },
+                responsive: true,
+                searching: false,
+                ordering: false,
+                bLengthChange: false,
+                "aLengthMenu": [[5, 25, 50, -1], [5, 25, 50, "All"]],
+                //  "bInfo": false,
             });
         });
 
-        function checkHomeWork(obj){
-            window.location.href="checkHomeWork.html";
+        function addComment() {
+            $('#addComment').modal();
+        }
+
+        function quickAdd(obj){
+
+            $("#commentTxt").val( $("#commentTxt").val() +$(obj).val());
+        }
+
+        function quickSigAdd(obj){
+            $("#commentSigTxt").val( $("#commentSigTxt").val() +$(obj).val());
+        }
+
+        function addSingelComment(){
+            $('#addSingelComment').modal();
         }
     </script>
 
@@ -480,7 +515,12 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <div class="row">
-                            <div class="col-md-2"><label>管理作业</label></div>
+                            <div class="col-md-2"><label>
+                                四川成都市第七中学
+                            </label></div>
+                            <div class="col-md-2"><label>
+                                二年级2班
+                            </label></div>
 
                         </div>
 
@@ -488,110 +528,134 @@
 
                     <div class="panel-body">
 
+                        <div class="panel panel-default text-center">
+                            <div class="panel-heading ">
+                              <label> 数学期中测试</label>
+                            </div>
+                            <div class="panel-body">
+                                <div class="row form-group text-center">
+                                    <div class="col-md-2 col-md-offset-2 panel panel-green">
+                                        <div class="row text-center">完成学生</div>
+                                        <div class="row text-center">45</div>
+                                    </div>
+                                    <div class="col-md-2 col-md-offset-1 panel panel-green">
+                                        <div class="row text-center ">部分完成学生</div>
+                                        <div class="row text-center">1</div>
+                                    </div>
+                                    <div class="col-md-2 col-md-offset-1 panel panel-green">
+                                        <div class="row text-center">未做学生</div>
+                                        <div class="row text-center">2</div>
+                                    </div>
 
-                        <div class="dataTable_wrapper">
-                            <table class="table  table-bordered table-hover" id="dataTables-3">
-                                <thead>
-                                <tr>
-                                    <th>作业时间</th>
-                                    <th>班级</th>
-                                    <th>完成人数</th>
-                                    <th>未完成人数</th>
-                                    <th>操作</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr class="odd gradeX">
-                                    <td>2015年8月8日 ~ 2015年8月8日 23:00</td>
-                                    <td>二年级3班</td>
-                                    <td>30</td>
-                                    <td >5</td>
-                                    <td class="center"><a class="btn btn-success" id="zhishi_btn" onclick="checkHomeWork(this)">检查作业</a></td>
-                                </tr>
+                                </div>
 
-                                <tr class="odd gradeX">
-                                    <td>2015年8月8日 ~ 2015年8月8日 23:00</td>
-                                    <td>二年级5班</td>
-                                    <td>26</td>
-                                    <td >4</td>
-                                    <td class="center"><a class="btn btn-success" id="zhishi_btn" onclick="checkHomeWork(this)">检查作业</a></td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>2015年8月8日 ~ 2015年8月8日 23:00</td>
-                                    <td>三年级9班</td>
-                                    <td>28</td>
-                                    <td >2</td>
-                                    <td class="center"><a class="btn btn-success" id="zhishi_btn" onclick="checkHomeWork(this)">检查作业</a></td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>2015年8月8日 ~ 2015年8月8日 23:00</td>
-                                    <td>二年级7班</td>
-                                    <td>38</td>
-                                    <td >5</td>
-                                    <td class="center"><a class="btn btn-success" id="zhishi_btn" onclick="checkHomeWork(this)">检查作业</a></td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>2015年8月8日 ~ 2015年8月8日 23:00</td>
-                                    <td>二年级6班</td>
-                                    <td>42</td>
-                                    <td >5</td>
-                                    <td class="center"><a class="btn btn-success" id="zhishi_btn" onclick="checkHomeWork(this)">检查作业</a></td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>2015年8月8日 ~ 2015年8月8日 23:00</td>
-                                    <td>二年级3班</td>
-                                    <td>30</td>
-                                    <td >5</td>
-                                    <td class="center"><a class="btn btn-success" id="zhishi_btn" onclick="checkHomeWork(this)">检查作业</a></td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>2015年8月8日 ~ 2015年8月8日 23:00</td>
-                                    <td>二年级3班</td>
-                                    <td>30</td>
-                                    <td >5</td>
-                                    <td class="center"><a class="btn btn-success" id="zhishi_btn" onclick="checkHomeWork(this)">检查作业</a></td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>2015年8月8日 ~ 2015年8月8日 23:00</td>
-                                    <td>二年级3班</td>
-                                    <td>30</td>
-                                    <td >5</td>
-                                    <td class="center"><a class="btn btn-success" id="zhishi_btn" onclick="checkHomeWork(this)">检查作业</a></td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>2015年8月8日 ~ 2015年8月8日 23:00</td>
-                                    <td>二年级3班</td>
-                                    <td>30</td>
-                                    <td >5</td>
-                                    <td class="center"><a class="btn btn-success" id="zhishi_btn" onclick="checkHomeWork(this)">检查作业</a></td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>2015年8月8日 ~ 2015年8月8日 23:00</td>
-                                    <td>二年级3班</td>
-                                    <td>30</td>
-                                    <td >5</td>
-                                    <td class="center"><a class="btn btn-success" id="zhishi_btn" onclick="checkHomeWork(this)">检查作业</a></td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>2015年8月8日 ~ 2015年8月8日 23:00</td>
-                                    <td>二年级3班</td>
-                                    <td>30</td>
-                                    <td >5</td>
-                                    <td class="center"><a class="btn btn-success" id="zhishi_btn" onclick="checkHomeWork(this)">检查作业</a></td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>2015年8月8日 ~ 2015年8月8日 23:00</td>
-                                    <td>二年级3班</td>
-                                    <td>30</td>
-                                    <td >5</td>
-                                    <td class="center"><a class="btn btn-success" id="zhishi_btn" onclick="checkHomeWork(this)">检查作业</a></td>
-                                </tr>
+                                <div class="panel panel-info text-center">
+                                    <div class="panel-heading">
+                                        高频错题
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="dataTable_wrapper">
+                                            <table class="table  table-bordered table-hover" id="dataTables-1">
+                                                <thead>
+                                                <tr>
+                                                    <th>题目</th>
+                                                    <th>题型</th>
+                                                    <th>考点</th>
+                                                    <th>答对人数</th>
+                                                    <th>答错人数</th>
+                                                    <th>失分率</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr class="odd gradeX">
+                                                    <td>6</td>
+                                                    <td>判断</td>
+                                                    <td>余数的含义以及与除数的关系</td>
+                                                    <td>3</td>
+                                                    <td>40</td>
+                                                    <td>90%</td>
+
+                                                </tr>
+                                                <tr class="odd gradeX">
+                                                    <td>7</td>
+                                                    <td>填空</td>
+                                                    <td>方位运算</td>
+                                                    <td>3</td>
+                                                    <td>40</td>
+                                                    <td>90%</td>
+
+                                                </tr>
+                                                <tr class="odd gradeX">
+                                                    <td>22</td>
+                                                    <td>填空</td>
+                                                    <td>混合运算</td>
+                                                    <td>3</td>
+                                                    <td>40</td>
+                                                    <td>90%</td>
+
+                                                </tr>
 
 
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
 
-                                </tbody>
-                            </table>
+                                <div class="panel panel-info text-center">
+                                    <div class="panel-heading">
+                                        全班成绩
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="dataTable_wrapper">
+                                            <table class="table  table-bordered table-hover" id="dataTables-3">
+                                                <thead>
+                                                <tr>
+                                                    <th>名次</th>
+                                                    <th>姓名</th>
+                                                    <th>成绩</th>
+                                                    <th>完成用时</th>
+                                                    <th>操作</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr class="odd gradeX">
+                                                    <td>1</td>
+                                                    <td>刘德华</td>
+                                                    <td>90分</td>
+                                                    <td>45分0秒</td>
+                                                    <td><a href="../tikuApps/myTestBasic.html" class="btn btn-success">预览</a></td>
+
+                                                </tr>
+                                                <tr class="odd gradeX">
+                                                    <td>1</td>
+                                                    <td>张学友</td>
+                                                    <td>99分</td>
+                                                    <td>45分0秒</td>
+                                                    <td><a href="../tikuApps/myTestBasic.html" class="btn btn-success">预览</a></td>
+
+                                                </tr>
+                                                <tr class="odd gradeX">
+                                                    <td>1</td>
+                                                    <td>郭富城</td>
+                                                    <td>94分</td>
+                                                    <td>45分0秒</td>
+                                                    <td><a href="../tikuApps/myTestBasic.html" class="btn btn-success">预览</a></td>
+
+                                                </tr>
+
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
+
+
+
 
                     </div>
                 </div>
@@ -609,6 +673,8 @@
 
 </div>
 <!-- /#wrapper -->
+
+
 
 
 </body>
