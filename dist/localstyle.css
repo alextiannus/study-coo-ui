@@ -862,3 +862,8 @@ and open the template in the editor.
     padding: 0;
     width: 120px;
 }
+
+.body-pa-wrapper{
+    margin: 20px;
+    background-color: #fff;
+}
